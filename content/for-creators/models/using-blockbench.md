@@ -49,7 +49,7 @@ You can also use the [objtonodebox](https://github.com/regulus79/objtonodebox) P
 
 Blockbench supports rigging models if you select the Animate tab in the top right corner. These animations are kept when exporting to GLTF. As of 5.10 Luanti now supports GLTF models with animations, which makes it possible to export an animated model directly from Blockbench into Luanti.
 
-<!-- TODO Insert more detailed instructions on doing animated models with Blockbench here -->
+{{% comment %}} TODO Insert more detailed instructions on doing animated models with Blockbench here {{% /comment %}}
 
 Older versions of Luanti only supported the .b3d and .x model formats for animated models. These are both very ancient model formats that Blockbench cannot export natively, so you would need to go via Blender to make animated models for Luanti as it is the only modern 3D modeling software with a functioning B3D exporter. See [Using Blender](/models/using-blender) on the Luanti Wiki for more information.
 
