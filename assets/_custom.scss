@@ -15,5 +15,8 @@ aside nav ul {
   }
   li {
     margin: 0; // HB adds margin, we increase line-height instead
+    label {
+      align-items: center; // expand/collapse icon needs to be centered now
+    }
   }
 }
