@@ -1,8 +1,10 @@
+// For compatibility with our Hugo Book (HB) theme, we need SCSS
+// However, please use vanilla CSS for simplicity in case we port to a simpler theme :)
+
 .container {
-  max-width: 90rem;
+  max-width: 90rem; // HB default is 80rem
 }
 
 .markdown img {
-  /* Circumvent SCSS min function, we need the browser's one */
-  max-width: #{"min(100%, 32rem)"};
+  max-width: calc(min(100%, 32rem)); // HB default is 100%
 }

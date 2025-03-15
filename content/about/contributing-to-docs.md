@@ -13,7 +13,7 @@ aliases:
 
 # Contributing to Docs
 
-Luanti Documentation is written in Markdown and transformed into HTML by [Hugo](https://gohugo.io), a free and open-source static site generator. The source code is currently hosted on GitHub and deployed with GitHub Actions.
+Luanti Documentation is written in Markdown and transformed into HTML by [Hugo](https://gohugo.io), a free and open-source static site generator. The source code is currently hosted on GitHub and deployed with GitHub Actions. The look and feel of the site is primarily driven by the Hugo Book (HB) theme, with changes applied as described in [HB's readme](https://github.com/alex-shpak/hugo-book#hugo-book-theme).
 
 ## Local Development
 
@@ -121,7 +121,7 @@ If you move or rename a Markdown file, add an [`aliases`](https://gohugo.io/cont
 - Use webp images instead of jpg, png, or others
 - Add a [language](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting) to code blocks
 
-### Merge policies
+### Merge Policies
 
 Please announce changes (in optional minutes) in the #luanti-docs IRC/Discord/Matrix channel
 
