@@ -11,9 +11,9 @@
 
 aside nav ul {
   a {
-    line-height: 2;
+    line-height: 2; // increase clickable area
   }
   li {
-    margin: 0;
+    margin: 0; // HB adds margin, we increase line-height instead
   }
 }
