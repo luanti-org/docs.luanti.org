@@ -18,7 +18,7 @@ There are two ways to change the controls: Either by using the options menu acce
 ### PC
 
 {{< notice note >}}
-Starting from 5.12.0, keybindings are defined based on the scancode (i.e. location on the keyboard) instead of the keycode ("marking on the keycap") of the keys. The default controls shown below are based on the US layout and may be different for other layouts. For example, the default key for zooming is "Y" on the German layout, and the default key for moving forward is "Z" on the French layout.
+[Starting from 5.12.0](https://github.com/luanti-org/luanti/pull/14964), keybindings are defined based on the scancode (i.e. location on the keyboard) instead of the keycode ("marking on the keycap") of the keys. The default controls shown below are based on the US layout and may be different for other layouts. For example, the default key for zooming is "Y" on the German layout, and the default key for moving forward is "Z" on the French layout.
 {{< /notice >}}
 
 The PC version of Luanti uses mouse and keyboard. These are the controls of the PC version:
