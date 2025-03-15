@@ -8,3 +8,12 @@
 .markdown img {
   max-width: calc(min(100%, 32rem)); // HB default is 100%
 }
+
+aside nav ul {
+  a {
+    line-height: 2;
+  }
+  li {
+    margin: 0;
+  }
+}
