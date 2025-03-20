@@ -29,7 +29,7 @@ Welcome to Luanti! This page explains what Luanti is all about, how to get it, a
 - To run Luanti, open the extracted directory and look for the `bin` (binary) directory. Inside the `bin` directory is the Luanti executable, `luanti.exe`.
   - If you want a desktop shortcut or the like, just make create a shortcut to this executable.
 
-If you prefer use package manager, you can install [Luanti](https://packages.msys2.org/base/mingw-w64-luanti) from [MSYS2](https://www.msys2.org/) distro (both `luanti.exe` and `luantiserver.exe` available).
+If you prefer to use a package manager, you can install [Luanti as an MSYS2 package](https://packages.msys2.org/base/mingw-w64-luanti) (both `luanti.exe` and `luantiserver.exe` are available).
 
 ### macOS
 
