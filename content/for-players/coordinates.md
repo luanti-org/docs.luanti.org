@@ -21,10 +21,10 @@ The values for X, Y and Z work like this:
 
 - If you go up, Y increases
 - If you go down, Y decreases
-- If you follow the sun, X increases
-- If you go to the reverse direction, X decreases
-- Look to the sun's direction, then turn 90° to the right and go forwards: Z increases
-- Look to the sun's direction, then turn 90° to the left and go forwards: Z decreases
+- If you follow the sun (ie. go East), X increases
+- If you go to the reverse direction (go West), X decreases
+- Look to the sun's direction, then turn 90° to the right and go forwards (go North): Z increases
+- Look to the sun's direction, then turn 90° to the left and go forwards (go South): Z decreases
 - The side length of a full cube is 1
 
 ## Finding your coordinates
@@ -45,3 +45,6 @@ There are also mods which add tools which, when you carry then, show you the coo
 
 - [Orienteering](https://content.luanti.org/packages/Wuzzy/orienteering/)
 - [Compass GPS](https://forum.luanti.org/viewtopic.php?t=9373)
+
+And a client-side mod that will show you the coordinates using geographical (latitude/longitude) or Cartesian coordinates (x/z):
+- [alarm_watch](https://github.com/HubTou/alarm_watch)
