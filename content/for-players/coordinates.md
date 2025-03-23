@@ -21,10 +21,10 @@ The values for X, Y and Z work like this:
 
 - If you go up, Y increases
 - If you go down, Y decreases
-- If you follow the sun (ie. go East), X increases
-- If you go to the reverse direction (go West), X decreases
-- Look to the sun's direction, then turn 90° to the right and go forwards (go North): Z increases
-- Look to the sun's direction, then turn 90° to the left and go forwards (go South): Z decreases
+- East, X increases
+- West, X decreases
+- North, Z increases
+- South, Z decreases
 - The side length of a full cube is 1
 
 ## Finding your coordinates
