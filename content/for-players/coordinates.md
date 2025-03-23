@@ -19,13 +19,15 @@ This refers to the position where X=5, Y=45 and Z=-12. The 3 letters are called 
 
 The values for X, Y and Z work like this:
 
-- If you go up, Y increases
-- If you go down, Y decreases
+If you go:
+- up, Y increases
+- down, Y decreases
 - East, X increases
 - West, X decreases
 - North, Z increases
 - South, Z decreases
-- The side length of a full cube is 1
+
+The side length of a full cube is 1
 
 ## Finding your coordinates
 
@@ -46,5 +48,5 @@ There are also mods which add tools which, when you carry then, show you the coo
 - [Orienteering](https://content.luanti.org/packages/Wuzzy/orienteering/)
 - [Compass GPS](https://forum.luanti.org/viewtopic.php?t=9373)
 
-And a client-side mod that will show you the coordinates using geographical (latitude/longitude) or Cartesian coordinates (x/z):
-- [alarm_watch](https://github.com/HubTou/alarm_watch)
+And a client-side mod (general [installation instructions](https://docs.luanti.org/for-players/installing-client-side-mods/)) that will show you the coordinates using geographical (latitude/longitude) or Cartesian coordinates (x/z):
+- [alarm_watch](https://github.com/HubTou/alarm_watch) (specific [installation instructions](https://github.com/HubTou/alarm_watch?tab=readme-ov-file#installation))
