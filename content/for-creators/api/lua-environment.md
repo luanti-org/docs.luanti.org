@@ -9,13 +9,13 @@ aliases:
 Luanti uses Lua 5.1. The environment in which Luanti executes mods depends on four factors:
 
 1. The operating system
-2. The Luanti build: LuaJIT or PUC Lua 5.1
+2. The Luanti build: [LuaJIT](/for-creators/api/luajit) (default) or PUC Lua 5.1
 3. The mod type: Client-side or server-side
 4. The mod environment: Secure or insecure
 
 ## Platform Independence / Portability
 
-See the [Lua 5.1 Reference Manual](https://www.lua.org/manual/5.1/manual.html) for platform- and OS-environment-dependant Lua features. These include:
+See the [Lua 5.1 Reference Manual](https://www.lua.org/manual/5.1/manual.html) for platform- and OS-environment-dependent Lua features. These include:
 
 - Locale, affecting pattern matching (character classes) and character codes used by `string.char` and `string.byte`
 - Large parts of the `os` library, particularly `os.execute` (only available in an insecure environment)
