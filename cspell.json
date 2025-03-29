@@ -953,5 +953,6 @@
   // flagWords - list of words to be always considered incorrect
   // This is useful for offensive words and common spelling errors.
   // For example "hte" should be "the"
-  "flagWords": ["hte"]
+  // "dependant" is a real noun but almost always a typo for "dependent" (adj)
+  "flagWords": ["hte", "dependant"]
 }

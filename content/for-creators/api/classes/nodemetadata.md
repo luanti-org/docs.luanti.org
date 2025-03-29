@@ -53,7 +53,7 @@ The most notable advantage of this over calling `core.show_formspec` in `on_righ
 
 The client can immediately show the FormSpec; the second approach requires the client to first inform the server of the interaction, to which the server then responds with the FormSpec. This takes one round-trip time (RTT).
 
-The obvious disadvantage is that FormSpecs can't be dynamically generated in response to user interaction; formspecs must be mostly static. To alleviate this, formspecs provide context-dependant placeholders like the `context` or `current_player` inventory locations (see FormSpec).
+The obvious disadvantage is that FormSpecs can't be dynamically generated in response to user interaction; formspecs must be mostly static. To alleviate this, formspecs provide context-dependent placeholders like the `context` or `current_player` inventory locations (see FormSpec).
 
 {{< notice info >}}
 The `context` inventory location can only be used in FormSpecs using the special `formspec` NodeMetaData field. FormSpecs shown using `core.show_formspec` must use `nodemeta:<X>,<Y>,<Z>` to reference inventories instead.

@@ -20,8 +20,8 @@ Required dependencies need to be resolved for a mod to be allowed. You can alway
 Optional dependencies can be used to provide additional functionality if a mod exists. If you want to use API functions of the mod, you will need to check if the mod exists using `core.get_modpath` (it will return nil if the mod isn't loaded).
 
 ```lua
-if core.get_modpath('optionally_dependant_mod') then
-    -- Code for when optionally_dependant_mod exists
+if core.get_modpath('optionally_dependent_mod') then
+    -- Code for when optionally_dependent_mod exists
 end
 ```
 
