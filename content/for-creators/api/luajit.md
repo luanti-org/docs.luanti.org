@@ -6,6 +6,7 @@ aliases:
   - /LuaJIT_differences
   - /luajit-differences
   - /content-dev/luajit-differences
+  - /for-engine-devs/luajit
 ---
 
 # LuaJIT
