@@ -63,7 +63,7 @@ These are called *regressions*: Something that used to work no longer does.
 
 Regressions are not strictly limited to documented behavior:
 The documentation is not a practically complete specification,
-so exceptions will be made as is sensible.
+so exceptions are commonly made, where the engine developers work to preserve a previous behavior even if it was undocumented.
 Depending on the impact, regressions concerning undocumented behavior
 may also be considered important enough to be fixed.
 
@@ -77,6 +77,9 @@ If you find out that behavior unexpectedly changed, please
 You need to decide whether older clients not supporting newer features
 is game-breaking and older clients have to be prevented from playing,
 or whether you can implement sensible fallbacks.
+
+When writing a game you can provide an appropriate default value for `protocol_version_min`
+in `minetest.conf` to facilitate this.
 
 {{< notice tip >}}
 You can use `core.get_player_information` to get protocol versions and `core.protocol_versions`

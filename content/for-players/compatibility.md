@@ -9,7 +9,7 @@ safely upgrade your client and continue playing the games and joining the server
 
 {{< notice tip >}}
 Check out the compatibility notes in [the changelog](https://docs.luanti.org/about/changelog/)
-when upgrading.
+before upgrading.
 {{< /notice >}}
 
 ## Client and Server
@@ -57,6 +57,8 @@ However, once you open a world with a newer Luanti version,
 that world need no longer be compatible with older Luanti versions,
 e.g. because compression has been upgraded or legacy serialization formats
 have been upgraded to more modern ones.
+
+If you want to be on the safe side, make regular backups of your worlds.
 
 ## Command-Line Interface
 
