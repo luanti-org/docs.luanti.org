@@ -8,6 +8,15 @@ aliases:
 
 # Releasing Luanti
 
+The [feature freeze](#feature-freeze) and release date is set by core developers.
+
+Historically, the Minetest release intervals were in between half and an entire year. To deliver bugfixes and features more quickly, the goal is to release more often.
+
+ * Goal: January, April, July, October
+ * A release before November should be prioritized because the Game Jam ([2024 forum post](https://forum.luanti.org/viewtopic.php?t=31059)) would like to make use of new features.
+
+Patch releases are exempted from this schedule.
+
 ## Checklist
 
 ```
@@ -41,9 +50,15 @@ aliases:
 
 ### Announce a feature freeze
 
-(_Skip for patch releases_) Usually, a **feature freeze for one week is announced in #luanti-dev**. New features aren't accepted in this time and people focus on finding and fixing bugs. To find high priority issues faster, consider linking a release candidate binary to get more test results. This release candidate is usually also posted on the forums (News section).
+(_Skip for patch releases_)
 
-The feature freeze and release date is set by core developers.
+New features aren't accepted in this time and people focus on finding and fixing bugs.
+
+1. Move all open feature PRs of the current [milestone](https://github.com/luanti-org/luanti/milestones) to the next one.
+2. Announce the **feature freeze in /topic of [#luanti-dev](/about/irc)**.
+3. Post the release candidate builds on the forums ([News section](https://forum.luanti.org/viewforum.php?f=18)) and (optional) as pre-release on GitHub ([Releases page](https://github.com/luanti-org/luanti/releases)).
+   * This helps to find high priority issues faster.
+   * You may use the buildbot/CI artifacts from `master`. If needed: do provide manual signing instructions for the MacOS and Android builds.
 
 ### Autogenerate files
 
