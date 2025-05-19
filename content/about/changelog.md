@@ -10,6 +10,83 @@ aliases:
 
 Note that not all changes made to the code between releases are listed here. Fixes to bugs that were introduced after the previous release, small internal changes, code style fixes, and changes of the like are not listed. If you want a list of _every_ change made between releases see the [commit log](https://github.com/luanti-org/luanti/commits/master).
 
+## 5.11.0 → 5.12.0
+
+Released on 23 May 2025.
+
+### Deprecations and compatibility notes
+- 5.12.0 is the first build to use SDL2 for window and input handling
+  - Key bindings (i.e. hotkeys) now use [scancodes](https://en.wikipedia.org/wiki/Scancode) instead of printable characters. After updating Luanti, the user will be prompted to verify and/or reassign their game hotkeys.
+- Saved worlds that were newly created (or migrated) by 5.12.0 can no longer be loaded by older versions. Worlds that are played over the network are unaffected.
+  - Details: instead of a unified `pos` field for `x`, `y` and `z`, the coordinates are now saved individually. This makes the database more accessible by external tools. ([even more details](https://github.com/luanti-org/luanti/pull/15768)]
+- Lua API: The node/item registration functions now use stricter checks to avoid bad practices in mods.
+- Lua API: "Perlin noise" (and related functions) were renamed to "Fractal value noise". The old API remains accessible, yet without any deprecation warnings.
+- Lua API: The tool capabilities of the optional `"hand"` inventory slot now entirely overwrite the default hand. For clients < 5.12.0, default groupcaps were not overwritten by the `"hand"` slot.
+- Remote media: The client will now use GET requests to allow static media hosting. ([details, writeup](https://github.com/luanti-org/luanti/pull/15885#issuecomment-2708510220))
+
+### Client / Audiovisuals
+- Fix some models not rendering correctly as nodes (_appgurueu_)
+- Android: Fixed a bug where fonts could turn black when leaving a world while the app is running in the background (_grorp_)
+- Change of the default appearance: buttons now have a flat appearance (_siliconsniffer_)
+- Improved caching for generated textures (speed-up) (_sfan5_)
+- Closing dialogues from the pause menu now shows the pause menu again (_SmallJoker_)
+- Better texture filtering handling to avoid blurriness (_sfan5_)
+- The keybinding dialogue is now implemented in Lua and can be found in the Settings dialogue (_y5nw_)
+- Main menu: The SDL version is now shown in the "About" tab (_y5nw_)
+- Main menu: new "Reviews" tab for ContentDB entries (_rubenwardy_)
+- The inventory now animates animated nodes (_cx385_)
+- Many (SDL) input handling changes (_y5nw_)
+- Dynamic media is again properly cached on client-side (_ashtrayoz_)
+- Android: new interaction modes (camera movement/dig/punch), changeable by settings (_grorp_)
+- Invalid mods are no longer listed in the mod selection (_JosiahWI_)
+- Z-fighting fixes for certain node (or tile overlay) combinations (_sfan5_)
+- `Sneak` and `Aux1` toggle mode setting (_maplemedley_)
+- Removed broken fall bobbing effect (_sfan5_)
+- New Android setting defaults related to the view range (_sfan5_)
+- Fixed fallback fonts not being used when the server provided custom fonts (_y5nw_)
+- Fixes dynamic shadows performance regression (_sfan5_)
+  - This can be tweaked using the setting `performance_tradeoffs`.
+- Improved main menu server list behavior (_siliconsniffer_)
+
+### World / Server / Environment
+- Improved mapblock load/save performance (_Desour_)
+- More (performance-) efficient container for (Lua) object tracking (_appgurueu_)
+- Server texture packs are now documented in `doc/texture_packs.md` (_cx385_)
+- Reduced network traffic for some pre-join data for clients >= 5.12.0 (_sfan5_)
+- `/msg` now returns an echo of the sent contents (_GreenXenith_)
+- Decoration placement performance optimization (_kno10_)
+- IPv6 is now enabled by default (_sfan5_)
+- More accurate collision code (_kno10_)
+- `load_mod_* = false` lines are no longer written to `world.mt` (_appgurueu_)
+
+### Script API / Modding
+- glTF models: Local transforms no longer affect a skinned mesh. This bug used to cause wrong rendering. (_appgurueu_)
+  - Tip: To avoid the bug on older Luanti client versions, simply remove the offending local transforms.
+  - You can use [glTF validator](https://github.khronos.org/glTF-Validator/) to check whether your models are affected. The `NODE_SKINNED_MESH_LOCAL_TRANSFORMS` warning should not appear.
+- Fix `visual_scale` not applying to skeletally animated meshes when used for nodes (_appgurueu_)
+- New formspec element `allow_close[<bool>]` to prevent formspecs from closing (_v-rob_)
+  - This only works for clients >= 5.12.0
+- Various API documentation improvements (_cx384_, _grorp_, _Desour_)
+- Fixed LBMs sometimes not being executed on newly generated mapblocks (_sfan5_)
+- New function `table.copy_with_metatables` (_appgurueu_)
+- `core.item_drop` now returns the spawned `obj` (_SmallJoker_)
+- New `visual = "node"` option for entities to make it look like a regular node. (_sfan5_)
+  - Clients prior to 5.12.0-dev cannot see this entity.
+  - The builtin falling node entity was converted too.
+- `InvRef:remove_item` now allows filtering by metadata (_andriyndev_)
+- Basic API to restrict the available camera modes (1st, 3rd back, 3rd front) (_sfan5_)
+
+### Misc / Maintenance
+- MacOS now uses SDL2 by too by default (_sfence_)
+- Various mapblock-related optimizations (_lhofhansl_)
+- Many fixes and improvements for the OpenGL code (_sfan5_)
+- Server/Client settings are now annotated more clearly (_grorp_)
+- Other error/crash fixes (_deveee_, _sfan5_)
+- Various build fixes and updates (many contributors)
+- Unittest additions (_appgurueu_, _sfan5_, _kno10_)
+- SDL input corrections, fixes (_Desour_)
+- Various code cleanups and corrections (_appgurueu_, _sfan5_, _cx385_)
+
 ## 5.10.0 → 5.11.0
 
 Released on 14th February 2025.
