@@ -16,9 +16,9 @@ Released on 23 May 2025.
 
 ### Deprecations and compatibility notes
 - 5.12.0 is the first build to use SDL2 for window and input handling
-  - Key bindings (i.e. hotkeys) now use [scancodes](https://en.wikipedia.org/wiki/Scancode) instead of printable characters. After updating Luanti, the user will be prompted to verify and/or reassign their game hotkeys.
-- Saved worlds that were newly created (or migrated) by 5.12.0 can no longer be loaded by older versions. Worlds that are played over the network are unaffected.
-  - Details: instead of a unified `pos` field for `x`, `y` and `z`, the coordinates are now saved individually. This makes the database more accessible by external tools. ([even more details](https://github.com/luanti-org/luanti/pull/15768)]
+  - Key bindings now use [scancodes](https://kbdlayout.info/kbdusx/scancodes) instead of printable characters. After updating Luanti, the user will be prompted to verify and/or reassign their game hotkeys.
+- Saved worlds that were newly created (or migrated using `luanti(server) --migrate`) by 5.12.0 can no longer be loaded by older versions. Worlds that are played over the network are unaffected.
+  - Details: instead of a unified `pos` field for `x`, `y` and `z`, the coordinates are now saved individually. This makes the database more accessible by external tools. ([even more details](https://github.com/luanti-org/luanti/pull/15768))
 - Lua API: The node/item registration functions now use stricter checks to avoid bad practices in mods.
 - Lua API: "Perlin noise" (and related functions) were renamed to "Fractal value noise". The old API remains accessible, yet without any deprecation warnings.
 - Lua API: The tool capabilities of the optional `"hand"` inventory slot now entirely overwrite the default hand. For clients < 5.12.0, default groupcaps were not overwritten by the `"hand"` slot.
