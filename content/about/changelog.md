@@ -16,8 +16,8 @@ Released on 23 May 2025.
 
 ### Deprecations and compatibility notes
 - 5.12.0 is the first build to use SDL2 for window and input handling
-  - Key bindings now use [scancodes](https://kbdlayout.info/kbdusx/scancodes) instead of printable characters. After updating Luanti, the user will be prompted to verify and/or reassign their game hotkeys.
-- Saved worlds that were newly created (or migrated using `luanti(server) --migrate`) by 5.12.0 can no longer be loaded by older versions. Worlds that are played over the network are unaffected.
+  - Key bindings are now based on scancodes (i.e. key positions) instead of keycodes ("marking on the keycap"). After updating Luanti, the user will be prompted to verify and/or reassign their key bindings. See also: [Controls](/for-players/controls)
+- Saved worlds that were newly created (or migrated using `luanti(server) (--server) --migrate ... --world ...`) by 5.12.0 can no longer be loaded by older versions. Worlds that are played over the network are unaffected.
   - Details: instead of a unified `pos` field for `x`, `y` and `z`, the coordinates are now saved individually. This makes the database more accessible by external tools. ([even more details](https://github.com/luanti-org/luanti/pull/15768))
 - Lua API: The node/item registration functions now use stricter checks to avoid bad practices in mods.
 - Lua API: "Perlin noise" (and related functions) were renamed to "Fractal value noise". The old API remains accessible, yet without any deprecation warnings.
@@ -38,7 +38,6 @@ Released on 23 May 2025.
 - Many (SDL) input handling changes (_y5nw_)
 - Dynamic media is again properly cached on client-side (_ashtrayoz_)
 - Android: new interaction modes (camera movement/dig/punch), changeable by settings (_grorp_)
-- Invalid mods are no longer listed in the mod selection (_JosiahWI_)
 - Z-fighting fixes for certain node (or tile overlay) combinations (_sfan5_)
 - `Sneak` and `Aux1` toggle mode setting (_maplemedley_)
 - Removed broken fall bobbing effect (_sfan5_)
