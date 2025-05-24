@@ -10,12 +10,12 @@ aliases:
 
 The [feature freeze](#feature-freeze) and release date is set by core developers.
 
-In the past, the team aimed to release every 6 months. Whilst this was sometimes met, releases were usually delayed by months. To deliver bugfixes and features more quickly, the goal is to consistently release every 3 months - without delaying releases for specific features.
+In the past, the team aimed to release every 6 months. Whilst this was sometimes met, releases were usually delayed by months. To deliver bugfixes and features quicker, the goal is to consistently release every 3 months without delaying for non-critical features.
 
  * Goal: January, April, July, October
  * A release before November should be prioritized because the Game Jam ([2024 forum post](https://forum.luanti.org/viewtopic.php?t=31059)) would like to make use of new features.
 
-Patch releases are exempted from this schedule.
+Patch releases are exempt from this schedule.
 
 ## Checklist
 
@@ -52,12 +52,12 @@ Patch releases are exempted from this schedule.
 
 (_Skip for patch releases_)
 
-New features aren't accepted in this time and people focus on finding and fixing bugs.
+New features aren't accepted during this time while people focus on finding and fixing bugs.
 
 1. Move all open feature PRs of the current [milestone](https://github.com/luanti-org/luanti/milestones) to the next one.
 2. Announce the **feature freeze in /topic of [#luanti-dev](/about/irc)**.
 3. Post the release candidate builds on the forums ([News section](https://forum.luanti.org/viewforum.php?f=18)) and (optional) as pre-release on GitHub ([Releases page](https://github.com/luanti-org/luanti/releases)).
-   * This helps to find high priority issues faster.
+   * This helps to find high-priority issues faster.
    * You may use the buildbot/CI artifacts from `master`. If needed: do provide manual signing instructions for the MacOS and Android builds.
 
 ### Autogenerate files
