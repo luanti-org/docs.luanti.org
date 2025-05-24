@@ -10,7 +10,7 @@ aliases:
 
 The [feature freeze](#feature-freeze) and release date is set by core developers.
 
-Historically, the Minetest release intervals were in between half and an entire year. To deliver bugfixes and features more quickly, the goal is to release more often.
+In the past, the team aimed to release every 6 months. Whilst this was sometimes met, releases were usually delayed by months. To deliver bugfixes and features more quickly, the goal is to consistently release every 3 months - without delaying releases for specific features.
 
  * Goal: January, April, July, October
  * A release before November should be prioritized because the Game Jam ([2024 forum post](https://forum.luanti.org/viewtopic.php?t=31059)) would like to make use of new features.
