@@ -21,6 +21,7 @@ Released on 23 May 2025.
   - Details: instead of a unified `pos` field for `x`, `y` and `z`, the coordinates are now saved individually. This makes the database more accessible by external tools. ([even more details](https://github.com/luanti-org/luanti/pull/15768))
 - Lua API: The node/item registration functions now use stricter checks to avoid bad practices in mods.
 - Lua API: "Perlin noise" (and related functions) were renamed to "Fractal value noise". The old API remains accessible, yet without any deprecation warnings.
+  - The old name was inappropriate: Luanti has always implemented value noise, *not* perlin noise.
 - Lua API: The tool capabilities of the optional `"hand"` inventory slot now entirely overwrite the default hand. For clients < 5.12.0, default groupcaps were not overwritten by the `"hand"` slot.
 - Remote media: The client will now use GET requests to allow static media hosting. ([details, writeup](https://github.com/luanti-org/luanti/pull/15885#issuecomment-2708510220))
 
