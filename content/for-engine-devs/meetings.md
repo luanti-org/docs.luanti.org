@@ -28,8 +28,10 @@ Add your points here. Most important comes first.
 
 **PR discussion/reviews**
 
-- Do we want to keep passwords stored in plain text and [#14129](https://github.com/luanti-org/luanti/pull/14129) with passwords stored in plain text (and close [#14196](https://github.com/luanti-org/luanti/pull/14196) as unwanted)?
-- The original author of [#13811](https://github.com/luanti-org/luanti/pull/13811) comes up with an idea for `class BitField` -> see [here](https://github.com/luanti-org/luanti/pull/13811/files#diff-2be35250aa71dc4852f4955c67e13cabe131c20b7373cc92385484b391aa8f62). If we like this idea, there is possibility to create separate PR for `class BitField` and review and merge it before #13811, so that PR will be smaller and less complex for reviewing.
+- Is it important that passwords are not stored excessively long in plain text in memory?
+  If unimportant, [#14129](https://github.com/luanti-org/luanti/pull/14129) and [#14196](https://github.com/luanti-org/luanti/pull/14196) should be closed.
+- The original author of [#13811](https://github.com/luanti-org/luanti/pull/13811) introduced a `class BitField` -> see [here](https://github.com/luanti-org/luanti/pull/13811/files#diff-2be35250aa71dc4852f4955c67e13cabe131c20b7373cc92385484b391aa8f62).
+  If we like this class, we could create a separate PR for it and review and merge it before #13811, so that the latter will be smaller and easier to review.
 
 Also consider:
 
