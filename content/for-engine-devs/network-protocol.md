@@ -11,9 +11,9 @@ aliases:
 
 The high-level protocol is clearly written down and updated in [networkprotocol.h](https://github.com/luanti-org/luanti/blob/master/src/network/networkprotocol.h).
 
-For specifics, refer to [client.cpp](https://github.com/luanti-org/luanti/blob/master/src/client.cpp) and [server.cpp](https://github.com/luanti-org/luanti/blob/master/src/server.cpp) for the sending, and [clientpackethandler.cpp](https://github.com/luanti-org/luanti/blob/master/src/network/clientpackethandler.cpp) and [serverpackethandler.cpp](https://github.com/luanti-org/luanti/blob/master/src/network/serverpackethandler.cpp) for the receiving.
+For specifics, refer to [client.cpp](https://github.com/luanti-org/luanti/blob/master/src/client/client.cpp) and [server.cpp](https://github.com/luanti-org/luanti/blob/master/src/server.cpp) for the sending, and [clientpackethandler.cpp](https://github.com/luanti-org/luanti/blob/master/src/network/clientpackethandler.cpp) and [serverpackethandler.cpp](https://github.com/luanti-org/luanti/blob/master/src/network/serverpackethandler.cpp) for the receiving.
 
-There is also an ascii art inside [clientiface.h](https://github.com/luanti-org/luanti/blob/master/src/clientiface.h) describing the protocol from a high level perspective.
+There is also an ascii art inside [clientiface.h](https://github.com/luanti-org/luanti/blob/master/src/server/clientiface.h) describing the protocol from a high level perspective.
 
 Actual minimum protocol version is: **24**. This corresponds to version **0.4.11**.
 
