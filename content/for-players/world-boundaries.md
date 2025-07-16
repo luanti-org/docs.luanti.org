@@ -9,7 +9,7 @@ aliases:
 
 Luanti's world is not infinitely large. Therefore, you can theoretically reach the world boundaries if you just travel far enough. How easy it would be for a player to reach the boundary depends on what movement options are provided by the game, or if the game has allocated certain vertical or horizontal space for separate dimensions that are teleported to in gameplay.
 
-The world boundary is an invisible barrier which isn't supposed to be passed by normal means. Beyond the world boundaries, no node can be placed and there is just an endless void technically occupied by the Ignore node. Luanti's world is a huge cube with a side length of ca. 60000 blocks and the dimensions (X, Y and Z) ranges from −30912 to 30927 by default. The theoretical boundaries are at the signed 16-bit integer limit, but have been cut short in order to reduce bugs that may be exhibited at the theoretical boundary.
+The world boundary is an invisible barrier which isn't supposed to be passed by normal means. Beyond the world boundaries, no node can be placed and there is just an endless void technically occupied by the Ignore node. Luanti's world is a huge cube with a side length of ca. 60000 nodes and the dimensions (X, Y and Z) ranges from −30912 to 30927 by default. The theoretical boundaries are at the signed 16-bit integer limit, but have been cut short in order to reduce bugs that may be exhibited at the theoretical boundary.
 
 You can view your current position by pressing the F5 (default Debug key) on your keyboard, but this debug information can be disabled by games using the `basic_debug` HUD flag. In which case they may have other means to determine your position in the world.
 
