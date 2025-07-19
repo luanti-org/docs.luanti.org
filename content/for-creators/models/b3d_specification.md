@@ -80,7 +80,7 @@ if file_version/100>my_version/100
 EndIf
 
 if file_version Mod 100>my_version Mod 100
-   ;file is a more recent version, but should still be backwardly compatbile with what we can
+   ;file is a more recent version, but should still be backwardly compatible with what we can
 handle!
 EndIf
 ```
@@ -248,8 +248,8 @@ BB3D
     MESH                      ; the mesh
       -1                      ; brush: no brush
       VRTS                    ; vertices in the mesh
-        0                     ; no normal/color info in verts
-        0,0                   ; no texture coords in verts
+        0                     ; no normal/color info in vertices
+        0,0                   ; no texture coords in vertices
         {x,y,z...}            ; vertex coordinates
       TRIS                    ; triangles in the mesh
         -1                    ; no brush for this triangle

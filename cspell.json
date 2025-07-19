@@ -82,6 +82,10 @@
     "Břetislav",
     "Brod",
     "brunob",
+    "BRUS",
+    "Brushalpha",
+    "Brushblend",
+    "Brushcolor",
     "BuckarooBanzay",
     "buildable",
     "buildbot",
@@ -198,7 +202,6 @@
     "Dumbledor",
     "dummyball",
     "Dungeongen",
-    "erle",
     "Ekdohibs",
     "elagin",
     "emax",
@@ -208,6 +211,7 @@
     "Emojigit",
     "Entitystring",
     "Eran",
+    "erle",
     "errfunc",
     "errorstream",
     "EVDF",
@@ -835,6 +839,7 @@
     "tenplus",
     "Termos",
     "Ternadim",
+    "TEXS",
     "textdomain",
     "textlist",
     "theviper",
@@ -860,6 +865,7 @@
     "Treegen",
     "Treer",
     "Triagers",
+    "TRIS",
     "TTTTTA",
     "tukkek",
     "Tumeni",
@@ -908,6 +914,7 @@
     "Voxelarea",
     "Voxelibre",
     "voxelmanip",
+    "VRTS",
     "wallmounted",
     "Warr",
     "WASD",
@@ -961,5 +968,8 @@
   // This is useful for offensive words and common spelling errors.
   // For example "hte" should be "the"
   // "dependant" is a real noun but almost always a typo for "dependent" (adj)
-  "flagWords": ["hte", "dependant"]
+  "flagWords": [
+    "hte",
+    "dependant"
+  ]
 }
