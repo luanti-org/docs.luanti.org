@@ -198,7 +198,6 @@
     "Dumbledor",
     "dummyball",
     "Dungeongen",
-    "erle",
     "Ekdohibs",
     "elagin",
     "emax",
@@ -208,6 +207,7 @@
     "Emojigit",
     "Entitystring",
     "Eran",
+    "erle",
     "errfunc",
     "errorstream",
     "EVDF",
@@ -884,6 +884,7 @@
     "upvaluejoin",
     "Upvalues",
     "urandom",
+    "usemtl",
     "userlimit",
     "valgrind",
     "Valkey",
@@ -961,5 +962,8 @@
   // This is useful for offensive words and common spelling errors.
   // For example "hte" should be "the"
   // "dependant" is a real noun but almost always a typo for "dependent" (adj)
-  "flagWords": ["hte", "dependant"]
+  "flagWords": [
+    "hte",
+    "dependant"
+  ]
 }
