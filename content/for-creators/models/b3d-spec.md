@@ -1,6 +1,5 @@
 ---
 title: Blitz3d file format specification
-slug: blitz3d-spec
 ---
 
 # Blitz3d file format specification
