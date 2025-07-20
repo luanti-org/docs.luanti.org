@@ -64,7 +64,8 @@ In rigid animation, nodes (meshes or parents of meshes) in the models node hiera
 in skeletal animation, bones can be animated, and multiple bones may influence vertices via weights.
 Rigid animation can be achieved as a special case of skeletal animation by having a bone to which all vertices of a mesh are attached with weight 1.
 
-Nodes do not support animations; entities and the `model[]` formspec element do.
+Nodes do not support model animations (they do however support animating tiles);
+entities and the `model[]` formspec element do support model animations.
 
 ### Materials and textures
 
