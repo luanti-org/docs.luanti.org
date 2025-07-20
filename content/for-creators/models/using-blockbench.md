@@ -6,25 +6,31 @@ aliases:
 
 # Using Blockbench
 
-Blockbench is a 3D modelling software designed for making low-poly and voxel models, making it suitable for making Luanti models. As Blockbench supports exporting to .obj it is very easy to create static models and export them directly into Luanti.
+Blockbench is a 3D modelling software designed for making low-poly and voxel models, making it suitable for making Luanti models.
+As Blockbench supports exporting to `.obj` it is very easy to create static models and export them directly into Luanti.
 
-It is also possible to use Blockbench for making nodeboxes for Luanti, as well as making animated models that can be directly exported as GLTF in Luanti 5.10 and newer.
+It is also possible to use Blockbench for making nodeboxes for Luanti, as well as making animated models that can be directly exported as glTF in Luanti 5.10 and newer.
 
 ## Static models
 
-When opening Blockbench and creating a new model it will ask you about the model type. Pick _Generic Model_, which has no limitations and allows you to export for use with Luanti:
+When opening Blockbench and creating a new model it will ask you about the model type.
+Pick _Generic Model_, which has no limitations and allows you to export for use with Luanti:
 
 ![](/images/using_blockbench/generic_model.webp)
 
-Once created, you are now in the editor which allows you to start modelling. Create some cubes, resize them and move them around, or create meshes where you can manipulate individual vertices.
+Once created, you are now in the editor which allows you to start modelling.
+Create some cubes, resize them and move them around, or create meshes where you can manipulate individual vertices.
 
-In terms of scale and the origin, the origin in Blockbench is the same as the origin in Luanti. So e.g. for a cube model mimicking a full node, the cube would have the position of (-8,-8,-8), size of (16,16,16) and centred around the origin:
+In terms of scale and the origin, the origin in Blockbench is the same as the origin in Luanti.
+So e.g. for a cube model mimicking a full node, the cube would have the position of (-8, -8, -8),
+size of (16, 16, 16), and center on the origin:
 
 ![](/images/using_blockbench/full_block.webp)
 
-[Export your model](#exporting-a-model) into the `models`-directory of your mod.
+[Export your model](#exporting-a-model) into the `models` directory of your mod.
 
-Since Luanti does not use embedded texture information or material files, you need to specify the texture location in the code. For example, for a node with a `drawtype` of `mesh` you specify the model textures in the tiles table:
+Since Luanti does not use embedded texture information or material files, you need to specify the texture location in the code.
+For example, for a node with a `drawtype` of `mesh` you specify the model textures in the tiles table:
 
 ```lua
 core.register_node(":test:red_block", {
@@ -35,7 +41,9 @@ core.register_node(":test:red_block", {
 })
 ```
 
-Even if you have exported your model, **make sure to save a .bbproject project file too!** While Blockbench can import existing models from a `.gltf` or `.obj` file, some amount of data gets lost during this process. It's best to save a project file and check it into git such that you or someone else can come back to edit the model at a later date if necessary.
+Even if you have exported your model, **make sure to save a `.bbproject` project file too!**
+While Blockbench can import existing models from a `.gltf` or `.obj` file, some amount of data gets lost during this process.
+It's best to save a project file and check it into git such that you or someone else can come back to edit the model at a later date if necessary.
 
 ## Nodeboxes
 
@@ -47,31 +55,41 @@ You can also use the [objtonodebox](https://github.com/regulus79/objtonodebox) P
 
 ## Animated models
 
-Blockbench supports rigging models if you select the Animate tab in the top right corner. These animations are kept when exporting to GLTF. As of 5.10 Luanti now supports GLTF models with animations, which makes it possible to export an animated model directly from Blockbench into Luanti.
+Blockbench supports rigging models if you select the "Animate" tab in the top right corner.
+These animations are kept when exporting to glTF.
+As of 5.10, Luanti now supports glTF models with animations, which makes it possible to export an animated model directly from Blockbench into Luanti.
 
 {{% comment %}} TODO Insert more detailed instructions on doing animated models with Blockbench here {{% /comment %}}
 
-Older versions of Luanti only supported the .b3d and .x model formats for animated models. These are both very ancient model formats that Blockbench cannot export natively, so you would need to go via Blender to make animated models for Luanti as it is the only modern 3D modeling software with a functioning B3D exporter. See [Using Blender](/models/using-blender) on the Luanti Wiki for more information.
+Older versions of Luanti only supported the `.b3d` and `.x` model formats for animated models.
+These are both very ancient model formats that Blockbench cannot export natively, so you would need to go via Blender to make animated models for Luanti as it is the only modern 3D modeling software with a functioning `.b3d` exporter.
+See [Using Blender](/models/using-blender) for more information.
 
 ## Exporting a model
 
-Among other options Blockbench supports exporting models as `gltf` or `obj` files, which can later be loaded by Luanti.
+Among other options Blockbench supports exporting models as `.gltf` or `.obj` files, which can later be loaded by Luanti.
 
-Models shall be exported into the `models` directory of your mod. Textures may either go into the `textures` directory or into the `models` directory - Luanti will find them in either.
+Models shall be exported into the `models` directory of your mod.
+Textures may either go into the `textures` directory or into the `models` directory - Luanti will find them in either.
 
 While Blockbench uses an internal block size of 16, Luanti expects a different size depending on the file format.
 
 ### glTF
 
-Luanti expects `gltf`-files to use a node size of [10.0](https://github.com/luanti-org/luanti/blob/master/src/constants.h#L61) which requires Blockbench to scale down its internal model by a factor of 1.6.
+Luanti expects `gltf` files to use a node size of 10,
+which requires Blockbench to scale down its internal model by a factor of `1.6 = 16 / 10`.
 
-To export your model select _File_ > _Export_ > _Export glTF Model_ and enter "1.6" as _Model Export Scale_. Also make sure to uncheck _Embed Textures_ as those are not supported by Luanti and will rise a warning in the logs whenever this model is loaded.
+To export your model select _File_ > _Export_ > _Export glTF Model_ and enter "1.6" as _Model Export Scale_.
+Also make sure to uncheck _Embed Textures_ as those are not supported by Luanti and will raise a warning in the logs whenever the model is loaded.
 
 ![A dialog titled "Export Options" with "Model Export Scale" set to "1.6" and "Embed Textures" unchecked; both fields are highlighted](/images/using_blockbench/export_gltf.webp)
 
-### .obj
+### `.obj`
 
-Luanti expects `obj`-files to use a block size of 1.0 which requires Blockbench to scale down its internal model by a factor of 16. While this is the default behavior the scale factor can be configured under: _File_ > _Preferences_ _Settings…_ > _Export_ > _Model Export Scale_
+Luanti expects `obj`-files to use a block size of 1,
+which requires Blockbench to scale down its internal model by a factor of 16.
+
+While this is the default behavior the scale factor can be configured under: _File_ > _Preferences_ _Settings…_ > _Export_ > _Model Export Scale_
 
 To export your model select _File_ > _Export_ > _Export OBJ Model_
 

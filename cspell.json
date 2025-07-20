@@ -198,7 +198,6 @@
     "Dumbledor",
     "dummyball",
     "Dungeongen",
-    "erle",
     "Ekdohibs",
     "elagin",
     "emax",
@@ -208,6 +207,7 @@
     "Emojigit",
     "Entitystring",
     "Eran",
+    "erle",
     "errfunc",
     "errorstream",
     "EVDF",
@@ -375,6 +375,7 @@
     "keymap",
     "Kezi",
     "khonkhortisan",
+    "Khronos",
     "KikaRz",
     "kilbith",
     "killme",
@@ -738,6 +739,7 @@
     "schmitz",
     "Schreiber",
     "Schur",
+    "Scratchapixel",
     "scriptapi",
     "scrollbars",
     "sdkmanager",
@@ -961,5 +963,8 @@
   // This is useful for offensive words and common spelling errors.
   // For example "hte" should be "the"
   // "dependant" is a real noun but almost always a typo for "dependent" (adj)
-  "flagWords": ["hte", "dependant"]
+  "flagWords": [
+    "hte",
+    "dependant"
+  ]
 }
