@@ -43,12 +43,13 @@ The project goals have been vaguely described as something along the lines of â€
 [Minetest-delta](https://github.com/erlehmann/minetest-delta) was a fork of Luanti, maintained in mid-2011, with the goal of adding more experimental features to Luanti. Some contributions like papyrus, cacti and jungles have since been merged in Luanti.
 
 ### WebCraft 3D
-**[WebCraft 3D](https://drive.google.com/file/d/1ZkJYlcTFxERlSV_z6O_XxqSr-buwqUal/view?usp=sharing)** this is a minetest fork of 5.11.0 maintainance active
+**[WebCraft 3D](https://drive.google.com/file/d/1ZkJYlcTFxERlSV_z6O_XxqSr-buwqUal/view?usp=sharing)** is a Minetest fork based on version 5.11.0, actively maintained and under development.  
 
-this game has server and no game installed by default yet but is still in dev and the drive link is the apk download we also has a web asm version to
-we have no current place on play store but we like luanti and are version of the game may go through many changes in the future including the mainmenu.
-at **[Web ASM version](https://cww.etherdeck.org/htdocs/cww.webcraft.org/www)**
-**[github](https://github.com/gitmaster12345677808/WebCraft-3D-)**
+This game includes a server but does not come with a default game installed. It is still in development, and the APK is available for download via the provided link. We also have a WebAssembly version available at **[Web ASM version](https://cww.etherdeck.org/htdocs/cww.webcraft.org/www)**.  
+
+Currently, WebCraft 3D is not available on the Play Store. We are inspired by Luanti, and our version of the game may undergo significant changes in the future, including updates to the main menu.  
+
+**[GitHub](https://github.com/gitmaster12345677808/WebCraft-3D-)**
 
 
 ### Minetest-M13
