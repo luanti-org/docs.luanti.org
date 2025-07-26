@@ -45,7 +45,7 @@ Yet not released.
 - Newly spawned entities now have a persistent GUID, see `ObjectRef;get_guid()` (_sfence_, _Desour_)
 
 ### Misc / Maintenance
-- Many various code improvements and cleanps (_sfan5_, _PtiLuky_)
+- Many various code improvements and cleanups (_sfan5_, _PtiLuky_)
 - Improved unittests (_sfan5_, _lhofhansl_)
 - Model skeleton animation cleanups, test and documentation (_appgurueu_)
 - The CMake files now include header files for Visual Studio (Code) (_PtiLuky_)
