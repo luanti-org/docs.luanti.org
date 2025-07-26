@@ -10,6 +10,47 @@ aliases:
 
 Note that not all changes made to the code between releases are listed here. Fixes to bugs that were introduced after the previous release, small internal changes, code style fixes, and changes of the like are not listed. If you want a list of _every_ change made between releases see the [commit log](https://github.com/luanti-org/luanti/commits/master).
 
+## 5.12.0 → 5.13.0
+
+Yet not released.
+
+### Deprecations and compatibility notes
+- Vector passed to C++ API functions may no longer have `nil` components.
+  - This change can reveal logic issues within mods.
+
+### Client / Audiovisuals
+- 9-slice formspec image buttons now display correctly with `gui_scaling_filter` (_Krock_)
+- Fixed an issue where main menu dialogs could overlap upon start (_grorp_)
+- Tabs in formspecs can now be changed using Ctrl(+Shift)+Tab (_siliconsniffer_)
+- The formspec element `model[]` now supports floating-point frames (_appgurueu_)
+- The minimap now correctly displays `drawtype = "air"` nodes (_Xeno333_)
+- Main menu ContentDB usability improvements (_grorp_)
+- Meshgen (i.e. visible mapblocks) code cleanups and improvements (_sfan5_)
+- Add keybinding for world close key (`keymap_close_world`) (_DragonWrangler1_)
+- Relaxed path checks in the main menu to allow downloading mods to symlinked directories (_sfan5_)
+
+### World / Server / Environment
+- The Luanti version is now printed after the ASCI logo (_sfan5_)
+- Fix main menu hang caused by dropped DNS packets (_sfan5_)
+- Fix newline conversion in formspecs on Windows (copy & paste) (_PtiLuky_)
+- Fix crash caused by empty particle spawner texture (_Krock_)
+
+### Script API / Modding
+- Various lua_api.md improvements (_grorp_, _jordan4ibanez_, _Xeno333_, _TheEt1234_)
+- Empty Voxel Manipulators can be created using `VoxelManip:initialize()` (_sfan5_)
+- Fixed an issue where sizeless text input formspecs would incorrectly send `ExitButton` as text (_Krock_)
+- `core.show_formspec` now allows showing a player inventory (_Krock_)
+- `core.get_node_raw` is now a public API (_sfan5_)
+- New API function `core.get_mapgen_chunksize()` (_sfan5_)
+- Newly spawned entities now have a persistent GUID, see `ObjectRef;get_guid()` (_sfence_, _Desour_)
+
+### Misc / Maintenance
+- Many various code improvements and cleanps (_sfan5_, _PtiLuky_)
+- Improved unittests (_sfan5_, _lhofhansl_)
+- Model skeleton animation cleanups, test and documentation (_appgurueu_)
+- The CMake files now include header files for Visual Studio (Code) (_PtiLuky_)
+
+
 ## 5.11.0 → 5.12.0
 
 Released on 23 May 2025.
