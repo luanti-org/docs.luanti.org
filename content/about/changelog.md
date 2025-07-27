@@ -15,7 +15,7 @@ Note that not all changes made to the code between releases are listed here. Fix
 Yet not released.
 
 ### Deprecations and compatibility notes
-- Vector passed to C++ API functions may no longer have `nil` components.
+- Vectors passed to C++ API functions may no longer have `nil` components.
   - This change can reveal logic issues within mods.
 
 ### Client / Audiovisuals
@@ -30,7 +30,7 @@ Yet not released.
 - Relaxed path checks in the main menu to allow downloading mods to symlinked directories (_sfan5_)
 
 ### World / Server / Environment
-- The Luanti version is now printed after the ASCI logo (_sfan5_)
+- The Luanti version is now printed after the ASCII logo (_sfan5_)
 - Fix main menu hang caused by dropped DNS packets (_sfan5_)
 - Fix newline conversion in formspecs on Windows (copy & paste) (_PtiLuky_)
 - Fix crash caused by empty particle spawner texture (_Krock_)
@@ -42,13 +42,13 @@ Yet not released.
 - `core.show_formspec` now allows showing a player inventory (_Krock_)
 - `core.get_node_raw` is now a public API (_sfan5_)
 - New API function `core.get_mapgen_chunksize()` (_sfan5_)
-- Newly spawned entities now have a persistent GUID, see `ObjectRef;get_guid()` (_sfence_, _Desour_)
+- Newly spawned entities now have a persistent GUID, see `ObjectRef:get_guid()` (_sfence_)
 
 ### Misc / Maintenance
 - Many various code improvements and cleanups (_sfan5_, _PtiLuky_)
-- Improved unittests (_sfan5_, _lhofhansl_)
+- Improved unit tests (_sfan5_, _lhofhansl_)
 - Model skeleton animation cleanups, test and documentation (_appgurueu_)
-- The CMake files now include header files for Visual Studio (Code) (_PtiLuky_)
+- Header files are now added as CMake sources (useful for Visual Studio (Code)) (_PtiLuky_)
 
 
 ## 5.11.0 → 5.12.0
