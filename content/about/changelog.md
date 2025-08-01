@@ -12,7 +12,7 @@ Note that not all changes made to the code between releases are listed here. Fix
 
 ## 5.12.0 → 5.13.0
 
-Yet not released.
+Released on 1 August 2025.
 
 ### Deprecations and compatibility notes
 - Vectors passed to C++ API functions may no longer have `nil` components.
