@@ -167,6 +167,13 @@ float weight                ; how much the vertex is affected
 The `BONE` chunk describes a bone. Weights are applied to the mesh described in the enclosing `ANIM` -
 in 99% of cases, this will simply be the `MESH` contained in the root `NODE` chunk.
 
+{{< notice note >}}
+There may be multiple meshes containing multiple sets of vertices
+("mesh buffers" in Irrlicht parlance),
+yet there is only a single `vertex_id` for each weight.
+This ID is global and refers to the order vertices appear in the file (c.f. `CB3DMeshFileLoader.(cpp|h)` in Irrlicht).
+{{< /notice >}}
+
 ### `KEYS`
 
 ```
