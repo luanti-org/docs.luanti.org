@@ -76,6 +76,10 @@ While Blockbench uses an internal block size of 16, Luanti expects a different s
 
 ### glTF
 
+{{< notice warning >}}
+Blockbench versions prior to 4.7.0 suffer from [a bug](https://github.com/JannisX11/blockbench/issues/1743) which flips texture coordinates along the Y axis when exporting glTF models. Using a recent Blockbench version is **strongly recommended**. (Alternatively you can also fix the UV coordinates in Blender, or flip the textures as a workaround.)
+{{< /notice >}}
+
 Luanti expects `gltf` files to use a node size of 10,
 which requires Blockbench to scale down its internal model by a factor of `1.6 = 16 / 10`.
 
