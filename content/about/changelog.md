@@ -29,7 +29,7 @@ Note that not all changes made to the code between releases are listed here. Fix
 ### World / Server / Environment
 - `core.parse_coordinates` now returns a `vector` object (_sfan5_)
 - Supported backends are shown in the `--help` output. (_sfan5_)
-- Reliablity improvement on mapblock loading/unloading during generation (_Montandalar_)
+- Reliability improvement on mapblock loading/unloading during generation (_Montandalar_)
 - Node dig particles are sent to all other players. (_sfan5_)
 - Improved networking for batch particle sending (_appgurueu_)
 
