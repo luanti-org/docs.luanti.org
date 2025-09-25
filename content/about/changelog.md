@@ -10,6 +10,49 @@ aliases:
 
 Note that not all changes made to the code between releases are listed here. Fixes to bugs that were introduced after the previous release, small internal changes, code style fixes, and changes of the like are not listed. If you want a list of _every_ change made between releases see the [commit log](https://github.com/luanti-org/luanti/commits/master).
 
+## 5.13.0 → 5.14.0
+
+*To be released in October 2025.*
+
+### Deprecations and compatibility notes
+- Removed broken interlaced 3D rendering mode (`3d_mode = interlaced`) (_sfan5_)
+
+### Client / Audiovisuals
+- Android: open input dialog on double tap with physical keyboard (_siliconsniffer_)
+- Speed up of texture loading (by caching search paths) (_sfan5_)
+- The minimap now correctly shows the color of overlay tiles (_sfan5_)
+- 3D models: Interpolated bone position works again (_appgurueu_)
+- World buttons are no longer shown when no world is selected (_birdlover32767_)
+- Text inputs now handle Ctrl+Shift+Left/Right inputs for text selection (_SmallJoker_)
+- Chat messages and server connections are now logged (_Sokomine_, _sfan5_)
+
+### World / Server / Environment
+- `core.parse_coordinates` now returns a `vector` object (_sfan5_)
+- Supported backends are shown in the `--help` output. (_sfan5_)
+- Reliablity improvement on mapblock loading/unloading during generation (_Montandalar_)
+- Node dig particles are sent to all other players. (_sfan5_)
+- Improved networking for batch particle sending (_appgurueu_)
+
+### Script API / Modding
+- The callback `on_timer(...)` now provides node and timeout information. (_sfan5_)
+- Add back the missing endElement in parseTag for `<action>` (_Emojigit_)
+- Allow floating-point numbers for `HTTPRequest.timeout` (_whosit_)
+- Add API to cancel async jobs (_y5nw_)
+- Additional control in `core.dynamic_add_media(...)` to hint client to save media to the cache (_sfan5_)
+- Improvements to the mod profiler, Capture Tracy zones (_DS_)
+- Add `exclude_player` (filter) to `ParticleSpawner` (_sfan5_)
+- Add `core.strip_escapes(...)` (_sfan5_)
+- `core.generate_decorations(...)` may now use the correct biome map (_repetetivestrain_)
+- New feature to scale nametags by distance (_sfan5_)
+
+### Misc / Maintenance
+- Build system maintenance (_sfan5_, _rubenwardy_, _AFCMS_, _ProunceDev_)
+- Lua API improvements (_sfan5_, _cx384_, _Zughy_)
+- Code cleanup and bugfixes (_sfan5_, _DS_, _SmallJoker_, _y5nw_)
+- Memory optimization of "empty" blocks (_lhofhansl_)
+- Additional safety checks (_sfan5_, _SmallJoker_)
+
+
 ## 5.12.0 → 5.13.0
 
 Released on 1 August 2025.
