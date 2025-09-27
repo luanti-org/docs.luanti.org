@@ -42,7 +42,7 @@ Note that not all changes made to the code between releases are listed here. Fix
 - Improvements to the mod profiler, Capture Tracy zones (_DS_)
 - Add `exclude_player` (filter) to `ParticleSpawner` (_sfan5_)
 - Add `core.strip_escapes(...)` (_sfan5_)
-- `core.generate_decorations(...)` may now use the correct biome map (_repetetivestrain_)
+- `core.generate_decorations(...)` may now use the correct biome map (_repetitivestrain_)
 - New feature to scale nametags by distance (_sfan5_)
 
 ### Misc / Maintenance
