@@ -12,7 +12,7 @@ Note that not all changes made to the code between releases are listed here. Fix
 
 ## 5.13.0 → 5.14.0
 
-*To be released in October 2025.*
+Released on 5 October 2025.
 
 ### Deprecations and compatibility notes
 - Removed broken interlaced 3D rendering mode (`3d_mode = interlaced`) (_sfan5_)
