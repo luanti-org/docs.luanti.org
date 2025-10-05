@@ -13,10 +13,6 @@ Usually this is a more efficient means of transferring for servers with large am
 
 If a media file required on the server doesn't exist on the remote server or the media server can't be connected to for some reason, it will fall back to the traditional transfer method. This also applies if cURL support or the `enable_remote_media_server` setting is disabled.
 
-## Public Instance
-
-Sofar generously hosts a [remote media server](https://github.com/minetest-tools/mtmediasrv) at https://minetestmedia.foo-projects.org/ for public usage. It does a nightly check of cdb for [packages with a git source](https://forum.luanti.org/viewtopic.php?p=421837#p421837) to add their media. A list of the package remotes can be found [here](https://minetestmedia.foo-projects.org/remotes). For further details and updates checkout this forum thread: https://forum.luanti.org/viewtopic.php?t=18951.
-
 ## Technical info
 
 **In version 5.11.0 or before:**  
