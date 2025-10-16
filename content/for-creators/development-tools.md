@@ -33,6 +33,7 @@ In addition to this list, you can also see the [Development Tools](https://conte
 ## Syntax highlighting/autocompletion
 
 - Minetest Tools ([VSCode marketplace](https://marketplace.visualstudio.com/items?itemName=GreenXenith.minetest-tools), [OpenVSX](https://open-vsx.org/extension/GreenXenith/minetest-tools/)): Extension for VSCode and other Code - OSS based code editors that provides Lua API autocompletion and more
+- [Luanti API](https://git.minetest.land/archie/luanti-api/): type documentation for the Lua language server
 
 ## Schematics
 

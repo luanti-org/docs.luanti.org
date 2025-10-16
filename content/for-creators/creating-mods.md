@@ -20,6 +20,7 @@ Here are some useful tools that most modders use when making Luanti mods:
 
 - [Visual Studio Code](https://code.visualstudio.com/)/[VSCodium](https://vscodium.com/), a powerful code editor. We've also published Minetest Tools, an extension for Luanti code completion available on [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=GreenXenith.minetest-tools) and [Open VSX Registry](https://open-vsx.org/extension/GreenXenith/minetest-tools).
 - [luacheck](https://github.com/lunarmodules/luacheck), a static analysis tool for Lua. See the [luacheck chapter of the Luanti Modding Book](https://rubenwardy.com/minetest_modding_book/en/quality/luacheck.html) for more information on how to use it with Luanti.
+- [Lua Language Server](https://luals.github.io/) with type documentation by [Archie](https://git.minetest.land/archie/luanti-api/)
 
 ## See also
 
