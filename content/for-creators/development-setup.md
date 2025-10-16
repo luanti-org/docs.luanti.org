@@ -68,7 +68,7 @@ For VS Code, you would put add this to settings.json (User):
 
 ```json
 {
-  "Lua.workspace.library": "/home/user/luanti-api"
+  "Lua.workspace.library": ["/home/user/luanti-api"]
 }
 ```
 
@@ -105,6 +105,6 @@ file to the project root:
 ```json
 {
   "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
-  "workspace.library": "./luanti-api"
+  "workspace.library": ["./luanti-api"]
 }
 ```
