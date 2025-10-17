@@ -13,7 +13,7 @@ aliases:
 You can use any text editor to write mods,
 but it is recommended to pick an editor
 that supports the Language Server Protocol (LSP).
-The LSP provides autocompletions and diagnostics
+The LSP provides auto completions and diagnostics
 to aid you in development.
 
 Examples of Editors that support the LSP are:
