@@ -1,9 +1,5 @@
 ---
 title: Development Setup
-aliases:
-  - /Development_Setup
-  - /development-setup
-  - /content-dev/development-setup
 ---
 
 # Development Setup
@@ -12,7 +8,7 @@ aliases:
 
 You can use any text editor to write mods,
 but it is recommended to pick an editor
-that supports the Language Server Protocol (LSP).
+that supports the [Language Server Protocol (LSP)](https://microsoft.github.io/language-server-protocol/).
 The LSP provides auto completions and diagnostics
 to aid you in development.
 
@@ -44,7 +40,13 @@ The type documentation allows autocompletion
 including type hints to be shown in your editor.
 
 We will use [Luanti API](https://git.minetest.land/archie/luanti-api/)
-as a source of type documentation.
+as a source of type documentation. Please note
+that this is not an official project and that
+it is experimental! If you would not like
+to proceed with with downloading that
+repository, you can adapt the below instructions
+for the path `<Luanti installation>/builtin` to
+get untyped completions.
 
 There are two ways to setup autocompletion with this.
 
