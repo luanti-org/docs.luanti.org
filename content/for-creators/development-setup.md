@@ -32,7 +32,7 @@ LSP plugin.
 If your editor does not bundle the language server, you need to
 [install it](https://luals.github.io/#install) on the operating system level.
 
-## Configuring the Language Server
+## Setting up autocompletion
 
 ### Downloading the type documentation
 
@@ -42,15 +42,18 @@ including type hints to be shown in your editor.
 We will use [Luanti API](https://git.minetest.land/archie/luanti-api/)
 as a source of type documentation. Please note
 that this is not an official project and that
-it is experimental! If you would not like
+it is experimental! For more context, you can
+take a look at [this issue](https://github.com/luanti-org/luanti/issues/13926).
+
+If you would not like
 to proceed with with downloading that
 repository, you can adapt the below instructions
 for the path `<Luanti installation>/builtin` to
 get untyped completions.
 
-There are two ways to setup autocompletion with this.
+There are two ways to setup autocompletion.
 
-### 1. Globally
+### Option 1: Globally
 
 Download the repository "luanti-api" and put it somewhere on
 your PC. Find guidance on how to download the repository as
@@ -74,7 +77,7 @@ For VS Code, you would put add this to settings.json (User):
 }
 ```
 
-### 2. Per project
+### Option 2: Per project
 
 You can configure the autocompletion per project. First, you
 need to add the type documentation as a git submodule.
