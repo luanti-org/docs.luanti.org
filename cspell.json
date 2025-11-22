@@ -287,6 +287,7 @@
     "GLTF",
     "gltfutil",
     "godrays",
+    "gons",
     "GOTBLOCKS",
     "gradlew",
     "grantme",
@@ -559,6 +560,8 @@
     "myapi",
     "myblock",
     "mymillwork",
+    "mymod",
+    "mymodel",
     "mypaint",
     "namespacing",
     "nametag",
@@ -878,6 +881,7 @@
     "Treer",
     "Triagers",
     "TRIS",
+    "TrueNAS",
     "TTTTTA",
     "tukkek",
     "Tumeni",
@@ -976,8 +980,7 @@
     "ZLIBWAPI",
     "zstd",
     "zstride",
-    "Zughy",
-    "TrueNAS"
+    "Zughy"
   ],
   // flagWords - list of words to be always considered incorrect
   // This is useful for offensive words and common spelling errors.
