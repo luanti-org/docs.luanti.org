@@ -203,18 +203,22 @@ You might want to set up some hotkeys so that you can easily do this without hav
 
 ## Exporting
 
-1.  Save your scene
-    1.  Export as a .b3d or .x file if skinned, or .obj if static
-    2.  Save with the name: models/animal_yourname.b3d
-2.  Save the texture
-    1.  UV Window → Image → Save As Image
-    2.  Save with the name: textures/animal_yourname_yourname_mesh.png
+1. Save your scene
+    1. Export as a `.b3d`, `.x` or `.gltf` / `.glb` file if skinned, or `.obj` if static
+    2. Save as: `mymod/models/mymod_mymodel.b3d` (for example)
+2. Save the texture
+	1. UV Window > Image > Save As Image
+	2. Save as: `mymod/textures/mymod_mymodel.png` (for example)
 
 ### Exporting `.obj`
 
-`.obj` file support is built into most known versions of Blender, so just use the provided built-in plugin.
+`.obj` file support is built into Blender natively. For Luanti, you need to:
 
-**Make sure that you check to export the material groups**, otherwise any models with multiple materials will not texture properly inside Luanti. See [this forum thread](https://forum.luanti.org/viewtopic.php?t=22990).
+* Make sure that you check to **export the material groups**.
+	* Otherwise any models with multiple materials will not texture properly inside Luanti.
+    * See [this forum thread](https://forum.luanti.org/viewtopic.php?t=22990) for more details.
+* Make sure to tick **Geometry > Triangulated Mesh**.
+	* Models may render incorrectly if n-gons are exported.
 
 There is no need to write the material (`.mtl`) file as Luanti will not parse it. It can be safely deleted.
 However, writing it may be necessary to work around [a Blender export bug](https://projects.blender.org/blender/blender/issues/127542)

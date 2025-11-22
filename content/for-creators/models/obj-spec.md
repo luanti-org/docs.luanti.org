@@ -39,6 +39,19 @@ Luanti supports the following commands:
 * Vertex coordinates: `v <x> <y> <z>`
 * Texture coordinates: `vt <u> <v>`
 * Vertex normals: `vn <x> <y> <z>`
+* Faces:
+  * Vertex coordinates only: `f vi1 vi2 vi3`
+  	* `vi1`, `vi2`, `vi3` are 1-based indices into the list of vertex coordinates
+  	  in the order they appear in the file.
+  * Vertex & texture coordinates: `f vi1/ti1 vi2/ti2 vi3/ti3`
+    * Similar to the above, but adds texture coordinate indices `ti{1,2,3}`.
+  * Vertex & texture coordinates and normals: `f vi1/ti1/ni1 vi2/ti2/ni2 vi3/ti3/ni3`
+    * Adds normal indices `ni{1,2,3}`.
+  * Vertex coordinates & normals: `f vi1//ni1 vi2//ni2 vi3//ni3`
+    * Same as the above format with texture coordinates omitted.
+  * There is limited support for n-gons by specifying more than three vertices,
+    but this **should not** be relied on: The simple fan triangulation does not work correctly in all cases.
+    **Always triangulate your models.**
 * Groups: `g <name>` (recommended) or `usemtl <name>` introduce a new group
   * Choosing unique names is recommended; avoid empty groups
   * Subsequent faces belong to a new material (separate texture / tile)
