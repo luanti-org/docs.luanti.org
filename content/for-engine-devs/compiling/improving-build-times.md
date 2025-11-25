@@ -51,7 +51,7 @@ These may reduce build times further, but at cost of some functionality being mi
 
 - `-DENABLE_LTO=OFF` to disable LTO which may make linking take longer than expected. This is disabled by default in Debug builds.
 - `-DBUILD_UNITTESTS=OFF` which may save some time when doing full rebuilds. May not be useful if you want to actually run the unit tests.
-- `-ENABLE_GETTEXT=OFF` disables PO->MO compilation, if this takes a while to finish. Translations will be disabled in the resulting build.
+- `-DENABLE_GETTEXT=OFF` disables PO->MO compilation, if this takes a while to finish. Translations will be disabled in the resulting build.
 
 ## When in a hurry
 
