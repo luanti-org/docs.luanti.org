@@ -17,7 +17,7 @@ For the log dating 2011-11-07, the subject discussion starts at the end.
 
 Simply put, [nodes](/for-players/nodes) are the "cubes" that make the world.
 
-A node in Luanti is a cubic section of the world with the size 1×1×1 set in a 3-D raster. Each node has one, and only one distinct type like dirt, sand, stone, air, water source, etc. Every node in the world has whole-number coordinates like (4,6,12). This means you can't place a node at a position like (4.5, 7.553, -64.5). There can only be node per 3-D position, e.g. there can't be a stone _and_ sand node at the same position.
+A node in Luanti is a cubic section of the world with the size 1×1×1 set in a 3-D raster. Each node has one, and only one distinct type like dirt, sand, stone, air, water source, etc. Every node in the world has whole-number coordinates like (4,6,12). This means you can't place a node at a position like (4.5, 7.553, -64.5). There can only be one node per 3-D position, e.g. there can't be a stone _and_ sand node at the same position.
 
 Nodes are most recognizable as the cubes that make the world, like blocks of dirt, sand or stone, but this is a simplification, because things that don't _look_ like a cube (like stairs, slabs, plants, and even air (=empty space) are considered nodes, too. Nodes in Luanti are the equivalent to blocks in Minecraft.
 
