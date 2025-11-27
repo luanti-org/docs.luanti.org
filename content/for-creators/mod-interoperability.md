@@ -152,7 +152,7 @@ Making a block truly indestructible in normal gameplay is not really obvious, so
          description = "Indestructible Block",
          is_ground_content = false,
          on_blast = function() end,
-         on_destruct = function () end,
+         on_destruct = function() end,
          can_dig = function() return false end,
          diggable = false,
          drop = "",
