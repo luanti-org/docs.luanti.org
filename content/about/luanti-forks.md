@@ -20,23 +20,28 @@ The following projects are known Luanti forks, which may or may not be active at
 
 ### Voxelands
 
-**Voxelands** was started under the name “Minetest Classic” on the 15th of April 2013 by darkrose as a fork of the latest stable release of the 0.3 series of Minetest-c55 (“Minetest-c55” was the earlier name of Luanti).
+**Voxelands** was started under the name “Minetest Classic” on the 15th of April 2013 by darkrose as a fork of the latest stable release of the 0.3 series of Minetest-c55 (“Minetest-c55” was the earlier name of Luanti). There was a later short-lived revival effort started in October 2022 by rudzik8, but neither project is currently maintained[^vl-1].
 
-The fork was motivated by a dissatisfaction of Luanti becoming more and more a game engine rather than a game. Voxelands developers also claim that with the start of 0.4 series (and the introduction of the [Lua modding API](/for-players/mods) Luanti has decreased in performance, which is another key motivation for Voxelands. Voxelands is incompatible with Luanti and now quite different.
+The fork was motivated by a dissatisfaction of Luanti becoming more and more a game engine rather than a game. Voxelands developers also claim that with the start of 0.4 series and the introduction of the [Lua modding API](/for-players/mods), performance was initially hurt, which was another key motivation for Voxelands. Voxelands is incompatible with Luanti and is quite different.
 
-Key goals of Voxelands are keeping the game at least as performant as the Minetest-c55 0.3 series, adding new content, maintaining balanced gameplay with a focus of in-world functionality, backporting bugfixes and some features from the 0.4 series and maintaining backwards compatibility to the 0.3 series at the network protocol level.
+Key goals of Voxelands were keeping the game at least as performant as the Minetest-c55 0.3 series, adding new content, maintaining balanced gameplay with a focus of in-world functionality, backporting bugfixes and some features from the 0.4 series and maintaining backwards compatibility to the 0.3 series at the network protocol level.
+
+[^vl-1]: The last commit on [rudzik8's fork](https://git.minetest.land/oerkki/voxelands) is dated April 6th, 2024; the last commit for [the original project](https://gitlab.com/voxelands/voxelands) is dated March 17th, 2018.
+
 
 ### Blocklife
 
-[Blocklife](https://forum.luanti.org/viewtopic.php?f=14&t=12021) was first announced on the Luanti forum on Thu Apr 30, 2015 by gibucsoft. It started with only few noticeable changes to version 0.4.7 and came with a game that included some more mods than Minetest Game. The most interesting feature was the use of two hands that could each be used separately. On 23th May 2018 gibucsoft announced to once more start developing. This time the block size might get reduced to a tenth in side length. The goal would be to have a more realistic shaped “round” world.
+[Blocklife](https://forum.luanti.org/viewtopic.php?f=14&t=12021) was first announced on the Luanti forum on Thu Apr 30, 2015 by gibucsoft. It started with only few noticeable changes to version 0.4.7 and came with a game that included some more mods than Minetest Game. The most interesting feature was the use of two hands that could each be used separately. On 23th May 2018 gibucsoft announced to once more start developing. This time the block size might get reduced to a tenth in side length. The goal would be to have a more realistic shaped “round” world. This fork is not currently maintained.
 
 ### Freeminer
 
-**[Freeminer](http://freeminer.org/)** is a fork of version 0.4.8. It's no longer maintained.
+**[Freeminer](http://freeminer.org/)** is a fork of Luanti maintained by proller, which was started by a group of developers in November 2013 as a result of a dissatisfaction with the direction Luanti and Minetest Game were taking at the time[^fm-1]. The project currently serves as proller's personal testing ground for experimental features, being semi-regularly rebased to stable upstream versions.
 
-The project goals have been vaguely described as something along the lines of “To create a fun and playable game” and it is unclear what has motivated the fork. A list of changes compared to Luanti was published: [\[1\]](http://forum.freeminer.org/threads/full-list-of-changes-from-minetest.110/)
+The project goals have been vaguely described as something along the lines of “To create a fun and playable game”. It is packaged with [a mod soup based on Minetest Game](https://github.com/freeminer/default) that includes mobs, armor and other minor additions.
 
-[Freeminer is also available for Android](https://f-droid.org/packages/org.freeminer.freeminer/), but it's no longer maintained either.
+[Freeminer is also available for Android](https://f-droid.org/packages/org.freeminer.freeminer/).
+
+[^fm-1]: https://forum.luanti.org/viewtopic.php?p=120032#p120032
 
 ### Minetest-delta
 
