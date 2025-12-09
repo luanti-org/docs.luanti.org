@@ -17,11 +17,11 @@ First you need to start the downloaded `luanti-5.XX.0-win64.exe` file at least o
 Navigate directly to the "About" tab and click on the "Open user data directory"
 button:
 
-[![Screenshot showing the "Open user data directory" button](/images/migrate-portable-win32/1.png)](/images/migrate-portable-win32/1.png)
+[![Screenshot showing the "Open user data directory" button](/images/migrate-portable-data/1.png)](/images/migrate-portable-data/1.png)
 
 You will arrive at the following folder:
 
-[![Screenshot showing contents of user data folder](/images/migrate-portable-win32/2.png)](/images/migrate-portable-win32/2.png)
+[![Screenshot showing contents of user data folder](/images/migrate-portable-data/2.png)](/images/migrate-portable-data/2.png)
 
 Keep the file browser open and close all Luanti windows.
 
@@ -34,7 +34,7 @@ Use the file browser to navigate to the portable installation you have used prev
 Select the "cache", "games", "mod_data", "mods", "worlds" folders and the
 "minetest.conf" file and press **Ctrl+C** to copy them.
 
-[![Screenshot showing folders to copy from portable installation](/images/migrate-portable-win32/3.png)](/images/migrate-portable-win32/3.png)
+[![Screenshot showing folders to copy from portable installation](/images/migrate-portable-data/3.png)](/images/migrate-portable-data/3.png)
 
 Switch back to the new, empty user data folder (opened previously) and press **Ctrl+V**
 to insert the files.
@@ -45,3 +45,5 @@ You will also find a shortcut for Luanti on the desktop and in the start menu.
 
 As soon as you launch Luanti again you should see that your games and worlds have
 been transferred over successfully.
+
+*Note*: You will have to re-install any previous texture packs or set favorite servers by hand.
