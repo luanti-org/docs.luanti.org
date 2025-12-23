@@ -8,7 +8,7 @@ aliases:
 
 *This file was written based on engine version 5.14.0-dev.*
 
-When implementing features or extending the behaviour of existing API, we generally want the following:
+When implementing features or extending the behavior of existing API, we generally want the following:
 
 1. Keep existing features compatible with previous engine versions (according to [versioning](/for-engine-devs/version-number.md)).
 2. Make it easy as possible to extend the feature in the future.
@@ -26,7 +26,7 @@ In many cases it is not possible to implement a feature such that it works perfe
 well on older clients. A compromise has to be defined.
 
 **Example**: Objects shall have a fade-in and fade-out animation, which is specified
-by `float fade_time`, sent from the server to the client. Jpwever. older clients are
+by `float fade_time`, sent from the server to the client. However. older clients are
 not aware of this parameter, thus would not play any fade-out animation.
 Possible approaches:
 
