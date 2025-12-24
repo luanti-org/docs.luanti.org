@@ -205,10 +205,10 @@ Mod code **after**:
 Meanwhile, the C++ code needs the following adjustment:
 
 ```C++
-	// before
+	// Previous code line:
 	if (!precheckElement("mylabel", element, 3, 3, parts))
 		return;
-	// after
+	// Adjusted line to allow one additional argument on new clients:
 	if (!precheckElement("mylabel", element, 3, 4, parts))
 		return;
 ```
