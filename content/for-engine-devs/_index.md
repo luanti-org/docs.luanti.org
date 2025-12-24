@@ -11,6 +11,8 @@ bookCollapseSection: true
 
 This section contains all rules and guidelines that developers, contributors, and others working on the engine should follow.
 
+[Compatibility guideline](/for-engine-devs/compatibility-guideline)
+
 ## Core developers
 
 [Organization](/for-engine-devs/organization)
