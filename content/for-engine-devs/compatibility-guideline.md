@@ -188,7 +188,7 @@ Mod code **before**:
 
 ```Lua
 	local formspec =
-		"formspec_version[3]"
+		"formspec_version[15]"
 		"size[10,9]" ..
 		"mylabel[2,5;1,1;Hello World]"
 ```
@@ -197,7 +197,7 @@ Mod code **after**:
 
 ```Lua
 	local formspec =
-		"formspec_version[4]"
+		"formspec_version[16]"
 		"size[10,9]" ..
 		"mylabel[2,5;1,1;Hello World;#FF0000]"
 ```
@@ -209,7 +209,7 @@ Meanwhile, the C++ code needs the following adjustment:
 	if (!precheckElement("mylabel", element, 3, 3, parts))
 		return;
 	// after
-	if (!precheckElement("mylabel", element, 4, 4, parts))
+	if (!precheckElement("mylabel", element, 3, 4, parts))
 		return;
 ```
 
