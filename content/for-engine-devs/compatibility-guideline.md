@@ -8,10 +8,10 @@ aliases:
 
 *This file was written based on engine version 5.14.0-dev.*
 
-When implementing features or extending the behavior of existing API, we generally want the following:
+When implementing features or extending the behavior of existing APIs, we generally want the following:
 
-1. Keep existing features compatible with previous engine versions (according to [versioning](/for-engine-devs/version-number.md)).
-2. Make it easy as possible to extend the feature in the future.
+1. Backwards compatibility: Keep existing features working (according to [versioning](/for-engine-devs/version-number.md)).
+2. Forwards compatibility and future-proofing: Make it as easy as possible to extend the feature in the future.
 
 This document gives a few insights on how to achieve backwards and forwards
 compatibility among:
@@ -26,12 +26,12 @@ In many cases it is not possible to implement a feature such that it works perfe
 well on older clients. A compromise has to be defined.
 
 **Example**: Objects shall have a fade-in and fade-out animation, which is specified
-by `float fade_time`, sent from the server to the client. However. older clients are
+by `float fade_time`, sent from the server to the client. However, older clients are
 not aware of this parameter, thus would not play any fade-out animation.
 Possible approaches:
 
-* After `fade_time` seconds, the server sends a new packet to change the entity texture
-  to `empty.png` for older clients.
+* After `fade_time` seconds, the server sends a new packet to set `is_visible = false`
+  for older clients
 * The caller mod shall consider the protocol version and include a workaround if
   backwards compatibility is wanted by the author.
 
@@ -89,7 +89,7 @@ void ObjectProperties::deSerialize(std::istream &is)
 ```
 
 Note 3: The `read*(std::istream &)` deserialize functions do **not** throw an exception
-when the stream ends too early for the first time. Use `tryRead<T, std::istream &>` to
+when the stream ends too early for the first time. Use `tryRead<T, reader_fn>` to
 correctly detect End Of File.
 
 #### For `NetworkPacket`
