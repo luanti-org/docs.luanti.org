@@ -51,8 +51,8 @@ For larger changes, consider using a [Protocol version check](#protocol-version-
 For the sender (client or server) it is often simple to *append* new data to the
 previous end of the stream. A few known good examples:
 
- * `ParticleParameters::serialize` (write) and `ParticleParameters::deSerialize` (read)
- * `ContentFeatures::serialize` (write) and `ContentFeatures::deSerialize` (read)
+* `ParticleParameters::serialize` (write) and `ParticleParameters::deSerialize` (read)
+* `ContentFeatures::serialize` (write) and `ContentFeatures::deSerialize` (read)
 
 Code example. Let us assume that `shaded` (a `bool`) shall be added:
 
@@ -110,8 +110,8 @@ Same as with `std::iostream`, new bytes can be *appended* to the previous packet
 Use `NetworkPacket::getRemainingBytes()` to detect data ends ahead of time.
 A few known good examples:
 
-   * `Client::sendPlayerPos` (write) and `Server::process_PlayerPos` (read)
-   * `Server::SendCloudParams` (write) and `Client::handleCommand_CloudParams` (read)
+* `Client::sendPlayerPos` (write) and `Server::process_PlayerPos` (read)
+* `Server::SendCloudParams` (write) and `Client::handleCommand_CloudParams` (read)
 
 Note 1: Catching the exception `PacketError` in a command handler is generally
 *not recommended* because incorrect network packets cannot be detected in that
@@ -178,8 +178,13 @@ desired to allow extending the element down the road. For this purpose, so use
 `GUIFormSpecMenu::precheckElement` as demonstrated below.
 
 ```C++
+void GUIFormSpecMenu::parseBackgroundColor(parserData *data, const std::string &element)
+{
+	std::vector<std::string> parts;
 	if (!precheckElement("bgcolor", element, 1, 3, parts))
 		return;
+	// ....
+}
 ```
 
 ### Appending parameters
@@ -194,30 +199,30 @@ hypothetical element called `mylabel` can be extended by using a more recent
 Mod code **before**:
 
 ```Lua
-	local formspec =
-		"formspec_version[15]"
-		"size[10,9]" ..
-		"mylabel[2,5;1,1;Hello World]"
+local formspec =
+	"formspec_version[15]"
+	"size[10,9]" ..
+	"mylabel[2,5;1,1;Hello World]"
 ```
 
 Mod code **after**:
 
 ```Lua
-	local formspec =
-		"formspec_version[16]"
-		"size[10,9]" ..
-		"mylabel[2,5;1,1;Hello World;#FF0000]"
+local formspec =
+	"formspec_version[16]"
+	"size[10,9]" ..
+	"mylabel[2,5;1,1;Hello World;#FF0000]"
 ```
 
 Meanwhile, the C++ code needs the following adjustment:
 
 ```C++
-	// Previous code line:
-	if (!precheckElement("mylabel", element, 3, 3, parts))
-		return;
-	// Adjusted line to allow one additional argument on new clients:
-	if (!precheckElement("mylabel", element, 3, 4, parts))
-		return;
+// Previous code line:
+if (!precheckElement("mylabel", element, 3, 3, parts))
+	return;
+// Adjusted line to allow one additional argument on new clients:
+if (!precheckElement("mylabel", element, 3, 4, parts))
+	return;
 ```
 
 As well as incrementing *and documenting* the new `FORMSPEC_API_VERSION`.
