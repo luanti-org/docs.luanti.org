@@ -114,8 +114,8 @@ A few known good examples:
    * `Server::SendCloudParams` (write) and `Client::handleCommand_CloudParams` (read)
 
 Note 1: Catching the exception `PacketError` in a command handler is generally
-*not recommended* because malformatted network packets cannot be detected in that
-case. Example: invalid string length due to incorrect read offset.
+*not recommended* because incorrect network packets cannot be detected in that
+case. Example: invalid string length due to incorrect read offset (a logic error).
 
 
 ### Protocol version check
