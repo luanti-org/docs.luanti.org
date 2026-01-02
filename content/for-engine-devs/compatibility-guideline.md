@@ -6,7 +6,7 @@ aliases:
 
 # Compatibility Guideline
 
-*This file was written based on engine version 5.14.0-dev.*
+*This file was written based on engine version 5.14.0-dev after PR 16796.*
 
 When implementing features or extending the behavior of existing APIs, we generally want the following:
 
@@ -49,7 +49,12 @@ For larger changes, consider using a [Protocol version check](#protocol-version-
 #### For `std::iostream`
 
 For the sender (client or server) it is often simple to *append* new data to the
-previous end of the stream. Let us assume that `shaded` shall be added:
+previous end of the stream. A few known good examples:
+
+ * `ParticleParameters::serialize` (write) and `ParticleParameters::deSerialize` (read)
+ * `ContentFeatures::serialize` (write) and `ContentFeatures::deSerialize` (read)
+
+Code example. Let us assume that `shaded` (a `bool`) shall be added:
 
 ```C++
 void ObjectProperties::serialize(std::ostream &os) const
@@ -69,45 +74,48 @@ Meanwhile the counterpart must detect and deal with differing stream lengths:
 ```C++
 void ObjectProperties::deSerialize(std::istream &is)
 {
-	// ... other data reads
-	try {
-		// Note 1: String deserialize throws an exception if `is` ends too early.
-		damage_texture_modifier = deSerializeString16(is);
-	} catch (SerializationError &e) {
-		return;
-	}
-	// << previous end >>
+	// Note 1: Use 'do { } while (0);' to ...
+	//  A) 'break' from reading early
+	//  B) allow post-processing steps after reading
+	do {
+		// ... other data reads
+		if (!canRead(is)) // See 'Note 1' below
+			break;
+		// Engine version >= 5.25.0-dev
 
-	// New data byte(s):
-	if (!tryRead<bool, readBool>(shaded, is)) { // see 'Note 3' below
+		damage_texture_modifier = deSerializeString16(is);
+		// << previous end >>
+
+		// New data byte(s):
+		if (!canRead(is))
+			break;
+		// Engine version >= 5.28.0-dev
+
+		shaded = readU8(is);
 		// Note 2: `shaded` must be assigned to a fallback value. But not here.
 		// Use a code path that is guaranteed to be executed, such as a constructor.
-		return;
-	}
-	// << new end >>
+
+		// << new end >>
+	} while (0);
 }
 ```
 
-Note 3: The `read*(std::istream &)` deserialize functions do **not** throw an exception
-when the stream ends too early for the first time. Use `tryRead<T, reader_fn>` to
-correctly detect End Of File.
+Note 1: `std::istream` read functions such as `read*(std::istream &)` do *only*
+set `eofbit` when trying to read *after* the end of the stream! See C++ documentation.
+Hence, do use `canRead` to detect the stream end at the correct time.
 
 #### For `NetworkPacket`
 
 Same as with `std::iostream`, new bytes can be *appended* to the previous packet data.
+Use `NetworkPacket::getRemainingBytes()` to detect data ends ahead of time.
 A few known good examples:
 
- * `Server::SendPlayerFov` (write) and `Client::handleCommand_Fov` (read)
- * `Client::sendUpdateClientInfo` (write) and `Server::handleCommand_UpdateClientInfo` (read)
+   * `Client::sendPlayerPos` (write) and `Server::process_PlayerPos` (read)
+   * `Server::SendCloudParams` (write) and `Client::handleCommand_CloudParams` (read)
 
-**Recommendations for reader functions**
-
-* The `PacketError` exception. It is thrown reliably when attempting to read beyond
-  the available data bytes.
-   * This is demonstrated in the examples listed above.
-* `NetworkPacket::getRemainingBytes` as an alternative to `PacketError` as seen in:
-   * `Server::process_PlayerPos`
-   * `Client::handleCommand_CloudParams`
+Note 1: Catching the exception `PacketError` in a command handler is generally
+*not recommended* because malformatted network packets cannot be detected in that
+case. Example: invalid string length due to incorrect read offset.
 
 
 ### Protocol version check
@@ -152,7 +160,6 @@ Whereas the version is [bumped regularly](/for-engine-devs/releasing-luanti), it
 
 * Your change can only be tested by bumping the protocol version locally ahead of time ...
 * ... or you have to increment `LATEST_PROTOCOL_VERSION` yourself.
-
 
 A few known good examples:
 
