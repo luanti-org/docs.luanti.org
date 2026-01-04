@@ -32,7 +32,7 @@ In addition to this list, you can also see the [Development Tools](https://conte
 
 ## Syntax highlighting/autocompletion
 
-- Minetest Tools ([VSCode marketplace](https://marketplace.visualstudio.com/items?itemName=GreenXenith.minetest-tools), [OpenVSX](https://open-vsx.org/extension/GreenXenith/minetest-tools/)): Extension for VSCode and other Code - OSS based code editors that provides Lua API autocompletion and more
+- Luanti Tools ([VS Code marketplace](https://marketplace.visualstudio.com/items?itemName=GreenXenith.minetest-tools), [OpenVSX](https://open-vsx.org/extension/GreenXenith/minetest-tools/)): Extension for VS Code and other Code - OSS based code editors that provides Lua API autocompletion and more
 
 ## Schematics
 
@@ -59,7 +59,7 @@ In addition to this list, you can also see the [Development Tools](https://conte
 
 - [optipng](https://optipng.sourceforge.net/): Lossless PNG compressor
 - [pngcrush](https://pmt.sourceforge.io/pngcrush/): Lossless PNG compressor
-- [pngquant](https://pngquant.org/): *Lossy* PNG compressor
+- [pngquant](https://pngquant.org/): _Lossy_ PNG compressor
 - [guetzli](https://github.com/google/guetzli): JPG compressor
 
 ## Formspecs
