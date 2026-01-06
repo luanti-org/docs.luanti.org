@@ -10,6 +10,71 @@ aliases:
 
 Note that not all changes made to the code between releases are listed here. Fixes to bugs that were introduced after the previous release, small internal changes, code style fixes, and changes of the like are not listed. If you want a list of _every_ change made between releases see the [commit log](https://github.com/luanti-org/luanti/commits/master).
 
+## 5.14.0 → 5.15.0
+
+*To be released in January 2026. new changes are added on top.*
+*Up-to-date as of a3cc982ecf.*
+
+### Deprecations and compatibility notes
+
+### Client / Audiovisuals
+- Rendering cleanups and improvements (_sfan5_)
+- Nodes with alpha are now correctly rendered in the inventory (_sfan5_)
+- Fix metadata-provided tool capabilities (regression) (_cx384_)
+- Text fields now support the following inputs: double-click, triple-click, (Shift+)Page Up/Down, Ctrl+Shift+Left/Right (_SmallJoker_)
+- Allow FXAA to be used together with FSAA or SSAA (_lhofhansl_)
+- Fix `ObjectRef:get_player_control` sometimes getting stuck (_sfan5_)
+- Settings menu: Add tooltips to noiseparams (_birdlover32767_)
+- Shadow shaders now work on the `opengl3` driver (_PtiLuky_)
+- glTF: Models exported by Goxel are no longer falsely rejected (_appgurueu_)
+- Significant rendering performance improvement (`opengl3` driver only, array textures) (_sfan5_)
+- Most shaders are now supported on OpenGL ES 3.0 (_sfan5_)
+  - Dynamic shadows too, for OpenGL ES >= 3.2 (_grorp_)
+- Fix improper texture 2D rendering on the `opengl3` driver (_ExeVirus_)
+- Settings menu: Show unavailable settings (_sfan5_)
+- Forward the setting `vsync` to SDL2/3 (_sfan5_)
+- The `opengl3` driver is now the default on non-Android (_sfan5_)
+- Main menu: Fixes related to nested modpacks (_SmallJoker_, _j-r_)
+- Main menu: Add ESC exit confirmation dialog (_siliconsniffer_
+- Fix missing textures due to fog (`opengl3` only) (_sfan5_)
+- Fonts: update bundled fonts, add mono font shadow (_sfan5_)
+- Fix incorrect minimap radar access (_OffTheBeatenByte_)
+- Windows: Replaced the WiX installer with a self-extracting launcher (_sfan5_)
+- Settings menu improvements (_CrazyladMT_, _Bedwizen_)
+- Main menu: The world configuration now shows world mods (_cx384_)
+- Actions can now be bound to multiple keys (_y5nw_)
+- PS5 (DualSense) controller support (_thierry-f-78_)
+
+### World / Server / Environment
+- Require 'give' priv for `/pulverize` and `/clearinv` (_Wuzzy_)
+  - Note: Minetest Game overrides this behavior.
+- Logging: Make timestamps configurable (_sfan5_)
+- Mapgen chunks may now be non-cubic (_sfan5_)
+- Priority tuning for mapblock sending (_sfan5_) and liquid queue (_lhofhansl_)
+- Multiple fixes in the rollback code (_sfan5_)
+- The `singlenode` mapgen is now run in multiple threads (performance) (_sfan5_)
+
+### Script API / Modding
+- Lua API documentation improvements (_Thomas--S_, _corpserot_, _sfan5_)
+- Small API fixes (_sfan5_, _appgurueu_)
+- New `game.conf` setting: `default_mapgen` (_Xeno333_)
+- Add inventory image animation API (_cx384_)
+- `.jpg`/`.jpeg` game backgrounds are now supported (_TheEt1234_)
+- New function `core.path_exists` (_RisingLeaf_)
+- Backport PUC Lua 5.4's `string.{pack,unpack,packsize}` (_appgurueu_)
+- `PlayerHPChangeReason` now provides more information (_Wuzzy2_)
+- HUD text elements now support colors with alpha (_Zughy_)
+
+### Misc / Maintenance
+- Code cleanups and improvements (_sfan5_, _SmallJoker_, _cx384_)
+- Roadmap update (_Zughy_)
+- Fix segfault with null video driver (_Tygyh_)
+- Build maintenance (_sfan5_, _marcin-serwin_, _sfence_)
+- Fixes related to object rendering (_appgurueu_)
+- Remove Irrlicht devices except SDL2 (_sfan5_)
+- Initial SDL3 support added (_SmallJoker_)
+
+
 ## 5.13.0 → 5.14.0
 
 Released on 5 October 2025.
