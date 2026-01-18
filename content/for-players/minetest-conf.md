@@ -28,7 +28,7 @@ A custom path to a configuration file can be specified in command line using the
 
 ## Controls
 
-In `minetest.conf`, you can configure most (but not all) keys, but a few more keys can be configured which are not configurable in the in-game settings menu; most notably, camera mode and minimap.
+In `minetest.conf`, you can configure most (but not all) keys.
 
 A few things to note:
 
