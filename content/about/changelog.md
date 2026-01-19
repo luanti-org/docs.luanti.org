@@ -12,8 +12,7 @@ Note that not all changes made to the code between releases are listed here. Fix
 
 ## 5.14.0 → 5.15.0
 
-*To be released in January 2026. new changes are added on top.*
-*Up-to-date as of a3cc982ecf.*
+Released on 19 January 2026.
 
 ### Deprecations and compatibility notes
 
@@ -44,6 +43,9 @@ Note that not all changes made to the code between releases are listed here. Fix
 - Main menu: The world configuration now shows world mods (_cx384_)
 - Actions can now be bound to multiple keys (_y5nw_)
 - PS5 (DualSense) controller support (_thierry-f-78_)
+- Fixed `vertlabel[]` discarding colors (_CrazyladMT_)
+- Formspec: The focused element (Tab key) is now highlighted (_siliconsniffer_)
+- Main menu: Added dark theme, configurable by the setting `menu_theme` (_sfan5_)
 
 ### World / Server / Environment
 - Require 'give' priv for `/pulverize` and `/clearinv` (_Wuzzy_)
