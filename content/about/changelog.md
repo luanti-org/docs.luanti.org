@@ -12,7 +12,7 @@ Note that not all changes made to the code between releases are listed here. Fix
 
 ## 5.14.0 → 5.15.0
 
-Released on 19 January 2026.
+Released on 20 January 2026.
 
 ### Deprecations and compatibility notes
 
