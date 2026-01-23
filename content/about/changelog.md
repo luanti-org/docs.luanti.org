@@ -12,6 +12,8 @@ Note that not all changes made to the code between releases are listed here. Fix
 
 ## 5.14.0 → 5.15.0
 
+**[Blog post (TBA)](#)** - **[Release](https://github.com/luanti-org/luanti/releases/tag/5.15.0)**
+
 Released on 20 January 2026.
 
 ### Deprecations and compatibility notes
@@ -79,6 +81,8 @@ Released on 20 January 2026.
 
 ## 5.13.0 → 5.14.0
 
+**[Blog post](https://blog.luanti.org/2025/10/05/5.14.0-released/)** - **[Release](https://github.com/luanti-org/luanti/releases/tag/5.14.0)**
+
 Released on 5 October 2025.
 
 ### Deprecations and compatibility notes
@@ -123,6 +127,8 @@ Released on 5 October 2025.
 
 ## 5.12.0 → 5.13.0
 
+**[Blog post](https://blog.luanti.org/2025/08/10/5.13.0-released/)** - **[Release](https://github.com/luanti-org/luanti/releases/tag/5.13.0)**
+
 Released on 1 August 2025.
 
 ### Deprecations and compatibility notes
@@ -163,6 +169,8 @@ Released on 1 August 2025.
 
 
 ## 5.11.0 → 5.12.0
+
+**[Blog post](https://blog.luanti.org/2025/05/24/5.12.0-released/)** - **[Release](https://github.com/luanti-org/luanti/releases/tag/5.12.0)**
 
 Released on 23 May 2025.
 
@@ -241,6 +249,8 @@ Released on 23 May 2025.
 
 ## 5.10.0 → 5.11.0
 
+**[Blog post](https://blog.luanti.org/2025/02/14/5.11.0-released/)** - **[Release](https://github.com/luanti-org/luanti/releases/tag/5.11.0)**
+
 Released on 14th February 2025.
 
 ### Deprecations and compatibility notes
@@ -311,6 +321,8 @@ Released on 14th February 2025.
 - Code cleanups and minor fixes (_grorp_, _sfan5_, _appgurueu_)
 
 ## 5.9.1 → 5.10.0
+
+**[Blog post](https://blog.luanti.org/2024/11/10/5.10.0-released/)** - **[Release](https://github.com/luanti-org/luanti/releases/tag/5.10.0)**
 
 Released on 10 November 2024.
 
@@ -396,6 +408,8 @@ Released on 10 November 2024.
 
 ## 5.9.0 → 5.9.1
 
+**[Release](https://github.com/luanti-org/luanti/releases/tag/5.9.1)**
+
 Released on 15 September 2024.
 
 ### Highlights
@@ -433,6 +447,8 @@ Released on 15 September 2024.
 - Windows: removed symlink that caused issues while extracting the game archive (_sfan5_)
 
 ## 5.8.0 → 5.9.0
+
+**[Blog post](https://blog.luanti.org/2024/08/12/5.9.0-released/)** - **[Release](https://github.com/luanti-org/luanti/releases/tag/5.9.0)**
 
 Released 2024-08-11
 
@@ -560,6 +576,8 @@ As part of Minetest's efforts to modernise and improve graphics code, we've been
 
 ## 5.7.0 → 5.8.0
 
+**[Blog post](https://blog.luanti.org/2023/12/04/5.8.0-released/)** - **[Release](https://github.com/luanti-org/luanti/releases/tag/5.8.0)**
+
 Released on 4 December 2023.
 
 ### Deprecations and compatibility notes
@@ -661,6 +679,8 @@ Released on 4 December 2023.
 - Update translations: German (_Wuzzy_), Spanish (_David Leal_), Ukrainian (_Andriy_), French (_xin_)
 
 ## 5.6.0 → 5.7.0
+
+**[Blog post](https://blog.luanti.org/2023/04/08/5.7.0-released/)** - **[Release](https://github.com/luanti-org/luanti/releases/tag/5.7.0)**
 
 Released on 8 April 2023
 
@@ -789,6 +809,8 @@ Released on 8 April 2023
 
 ## 5.6.0 → 5.6.1
 
+**[Release](https://github.com/luanti-org/luanti/releases/tag/5.6.1)**
+
 Released on 19 September 2022.
 
 ### Client / Audiovisuals
@@ -821,6 +843,8 @@ Released on 19 September 2022.
 - x86 Android build fixes (_savilli_)
 
 ## 5.5.0 → 5.6.0
+
+**[Blog post](https://blog.luanti.org/2022/08/04/5.6.0-released/)** - **[Release](https://github.com/luanti-org/luanti/releases/tag/5.6.0)**
 
 Released on 4 August 2022
 
@@ -953,6 +977,8 @@ Code details are intentionally omitted due to the changelog target audience's in
 
 ## 5.5.0 → 5.5.1
 
+**[Release](https://github.com/luanti-org/luanti/releases/tag/5.5.1)**
+
 Released on 15 May 2022.
 
 ### World / Server / Environment
@@ -991,6 +1017,8 @@ Released on 15 May 2022.
 - Fix some translations in uk and ru locales (_baytuch_)
 
 ## 5.4.0 → 5.5.0
+
+**[Release](https://github.com/luanti-org/luanti/releases/tag/5.5.0)**
 
 Released on 30 Jan 2022.
 
@@ -1163,6 +1191,8 @@ Released on 30 Jan 2022.
 - Translations: Esperanto (_Jason Cartwright_), Russian (_ptah-alexs_), Japanese (_nogajun_), German (_Wuzzy_), Slovak (_Daretmavi_), French (_Olivier Dragon_), Swedish (_ROllerozxa_), Chinese (_雷哲翰_), Ukrainian (_baytuch_)
 
 ## 5.3.0 → 5.4.0
+
+**[Release](https://github.com/luanti-org/luanti/releases/tag/5.4.0)**
 
 Released on 23 Feb 2021.
 
