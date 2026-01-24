@@ -20,28 +20,7 @@ Welcome to Luanti! This page explains what Luanti is all about, how to get it, a
 
 ## Getting Luanti
 
-### Windows
-
-- [Download Luanti](https://www.luanti.org/downloads/).
-  - The 64-bit build is extremely recommended. Always use this unless you are absolutely sure you're on an old machine that doesn't have a 64-bit processor.
-- Luanti on Windows is distributed in a portable archive. Extract it as a whole where you want, whether it be on your desktop or in your documents folder.
-  - Keep in mind you need write permissions to the folder. **Do NOT save to `C:\Program Files\` or similar, as it will cause problems (no write access).**
-- To run Luanti, open the extracted directory and look for the `bin` (binary) directory. Inside the `bin` directory is the Luanti executable, `luanti.exe`.
-  - If you want a desktop shortcut or the like, just make create a shortcut to this executable.
-
-If you prefer to use a package manager, you can install [Luanti as an MSYS2 package](https://packages.msys2.org/base/mingw-w64-luanti) (both `luanti.exe` and `luantiserver.exe` are available).
-
-### macOS
-
-- [Download Luanti for macOS](http://www.luanti.org/downloads/). You can pick the official .app, Homebrew or the MacPorts version.
-
-### Linux
-
-If you are on a distribution with up to date enough repositories (e.g. Arch), you can install Luanti from your package manager.
-
-Otherwise it is recommended to obtain Luanti through other means, such as the [Flatpak package](https://flathub.org/apps/details/net.minetest.Minetest). For Ubuntu and similar, there is the [Luanti PPA](https://launchpad.net/~minetestdevs/+archive/ubuntu/stable).
-
-If all else fails, you can build from source by [cloning the engine repository](https://github.com/luanti-org/luanti) and [following the build instructions](https://github.com/luanti-org/luanti/blob/master/doc/compiling/linux.md).
+You can find links and instructions for downloading Luanti for your platform on the [downloads page](https://luanti.org/downloads/).
 
 ## Playing
 
