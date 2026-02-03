@@ -1,18 +1,21 @@
 ---
-title: Compiling on Windows
+title: Windows (MSYS2)
 aliases:
   - /compiling-on-windows-using-msys2/
   - /compiling/windows-msys2/
   - /compiling/windows
 ---
 
-# Compiling on Windows
+# Compiling on Windows using MSYS2
 
 There are two ways to compile Luanti on a Windows machine: MSYS2 or a combination of vcpkg, cmake, and Visual Studio.
 
 The simplest way to compile on Windows is with MSYS2. MSYS2 is a collection of tools and libraries providing you with an easy-to-use environment for building, installing and running native Windows software. This page lists how to compile Luanti on Windows using MSYS2.
 
-Other documentation may recommend some combination of vcpkg, cmake, and Visual Studio. This is how the builds in the continuous integration pipeline are created, so they're more supported by the engine. However, they can be more difficult to setup. See [the engine docs on compiling for Windows](https://github.com/luanti-org/luanti/blob/master/doc/compiling/windows.md).
+Other documentation may recommend some combination of vcpkg, cmake, and Visual
+Studio. This is how the builds in the continuous integration pipeline are
+created, so they're more supported by the engine.
+See [Compiling on Windows using MSVC](../windows_msvc/).
 
 This page focuses on MSYS2.
 
