@@ -358,7 +358,7 @@ core.register_entity("mymod:bloblet", {
 			self.object:set_velocity(velocity)
 
 			-- rotate object appropriately. `dir:dir_to_rotation()` produces a rotation
-			-- that rotates a +Z-facing object such that it points in the given `dir`ection afterwards.
+			-- that rotates a +Z-facing object such that it points in the given direction `dir` afterwards.
 			self.object:set_rotation(vector.new(diff.x, 0, diff.z):dir_to_rotation())
 
 			-- attack if charged (needs 2 seconds) and close enough (max 1 meter)
