@@ -202,7 +202,7 @@ core.register_entity("mymod:bloblet", {
 		if target then -- if we have a player in range
 			...
 			-- rotate object appropriately. `dir:dir_to_rotation()` produces a rotation
-			-- that rotates a +Z-facing object such that it points in the given `dir`ection afterwards.
+			-- that rotates a +Z-facing object such that it points in the given direction `dir` afterwards.
 			self.object:set_rotation(vector.new(diff.x, 0, diff.z):dir_to_rotation())
 		end
 	end,
