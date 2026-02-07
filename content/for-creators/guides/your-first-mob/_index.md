@@ -30,7 +30,7 @@ But this is not very helpful: You will be greeted by a "no texture" sprite.
 
 ## Visuals
 
-We need to define some *object properties* first.
+We need to define some _object properties_ first.
 These go in a field called `initial_properties` in the entity definition.
 
 We opt for a `cube` visual. You could also use a model here.
@@ -86,7 +86,7 @@ core.register_entity("mymod:bloblet", {
 		collisionbox = {-0.25, -0.25, -0.25, 0.25, 0.25, 0.25},
 	},
 	on_activate = function(self)
-		-- self is the Lua entity, self.object is the ObjectRef 
+		-- self is the Lua entity, self.object is the ObjectRef
 		self.object:set_acceleration(vector.new(0, -10, 0)) -- apply gravity
 	end,
 })
@@ -211,9 +211,10 @@ core.register_entity("mymod:bloblet", {
 
 We use `vector.dir_to_rotation` here to figure out the appropriate rotation. [^atan2]
 
-[^atan2]: Because this is just in the X-Z-plane, setting a yaw of `-math.atan2(diff.x, diff.z)` would work equally well.
-But `vector.dir_to_rotation` is easier to understand and more flexible;
-it will come in handy if you need more than just rotation around a single axis.
+[^atan2]:
+    Because this is just in the X-Z-plane, setting a yaw of `-math.atan2(diff.x, diff.z)` would work equally well.
+    But `vector.dir_to_rotation` is easier to understand and more flexible;
+    it will come in handy if you need more than just rotation around a single axis.
 
 ### Attacking
 
@@ -324,7 +325,7 @@ core.register_entity("mymod:bloblet", {
 		stepheight = 1,
 	},
 	on_activate = function(self)
-		-- self is the Lua entity, self.object is the ObjectRef 
+		-- self is the Lua entity, self.object is the ObjectRef
 		self.object:set_acceleration(vector.new(0, -10, 0)) -- apply gravity
 		self._attack_timer = 0 -- time since last attack in seconds
 	end,
@@ -399,16 +400,16 @@ end)
 
 A lot more is needed for a serious mob mod. Here are some things you could do:
 
-* Draw proper textures for the front, back, sides, top and bottom faces, and use them.
-* Extend the targeting logic to include other non-player entities.
-	* Add "good" bloblets that fight bad bloblets.
-* Don't want to reinvent the wheel? Look for mob library mods on [ContentDB](https://content.luanti.org/)
+- Draw proper textures for the front, back, sides, top and bottom faces, and use them.
+- Extend the targeting logic to include other non-player entities.
+  - Add "good" bloblets that fight bad bloblets.
+- Don't want to reinvent the wheel? Look for mob library mods on [ContentDB](https://content.luanti.org/)
   and try to use them to implement a mob.
-* Contemplate and tweak the spawning logic.
-* Use a particle spawner for an attack animation.
-* Look into how to use a proper model, perhaps even with animations.
-* The current spawning logic lets objects spawn right in front of a player.
-  It would be a better idea to spawn objects *behind* players so they don't notice the spawning happening.
+- Contemplate and tweak the spawning logic.
+- Use a particle spawner for an attack animation.
+- Look into how to use a proper model, perhaps even with animations.
+- The current spawning logic lets objects spawn right in front of a player.
+  It would be a better idea to spawn objects _behind_ players so they don't notice the spawning happening.
   This can be done using `player:get_look_dir()` and a (2d) dot project, or another angle computation.
-* Implement more sophisticated behavior. For example, let bloblets roam the world,
+- Implement more sophisticated behavior. For example, let bloblets roam the world,
   moving in random directions, when they don't have a target.
