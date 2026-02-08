@@ -10,6 +10,28 @@ aliases:
 
 Note that not all changes made to the code between releases are listed here. Fixes to bugs that were introduced after the previous release, small internal changes, code style fixes, and changes of the like are not listed. If you want a list of _every_ change made between releases see the [commit log](https://github.com/luanti-org/luanti/commits/master).
 
+## 5.15.0 → 5.15.1
+
+**[Release](https://github.com/luanti-org/luanti/releases/tag/5.15.1)**
+
+Released on 8 February 2026.
+
+### Client / Audiovisuals
+- Fix crash when closing the game while the settings menu was open (_SmallJoker_)
+- Formspec styling: positive `borderwidths` values do work now (_Wuzzy2_)
+- Formspec: Fix highlighting elements that cannot be focused (_siliconsniffer_)
+- Improved render-related error handling (_sfan5_)
+- Improve OpenGL compatibility check to enable shadow shaders on macOS (_sfan5_)
+- Attempt to work around rendering issues related to array textures (_sfan5_)
+  - Due to lack of input from affected people, the root cause is yet unknown.
+    If you were (or still are) affected by this bug, please submit a full report on [GitHub, Issue 16896](https://github.com/luanti-org/luanti/issues/16896).
+    Please include your hardware details and known working `array_texture_max` setting values.
+
+### Misc / Maintenance
+- Skip (failing) unittest when the `devtest` game is missing (_y5nw_)
+- Improve `Phosh` integration (_okias_)
+
+
 ## 5.14.0 → 5.15.0
 
 **[Blog post](https://blog.luanti.org/2026/01/24/5.15.0-released/)** - **[Release](https://github.com/luanti-org/luanti/releases/tag/5.15.0)**
@@ -36,7 +58,7 @@ Released on 20 January 2026.
 - Forward the setting `vsync` to SDL2/3 (_sfan5_)
 - The `opengl3` driver is now the default on non-Android (_sfan5_)
 - Main menu: Fixes related to nested modpacks (_SmallJoker_, _j-r_)
-- Main menu: Add ESC exit confirmation dialog (_siliconsniffer_
+- Main menu: Add ESC exit confirmation dialog (_siliconsniffer_)
 - Fix missing textures due to fog (`opengl3` only) (_sfan5_)
 - Fonts: update bundled fonts, add mono font shadow (_sfan5_)
 - Fix incorrect minimap radar access (_OffTheBeatenByte_)
