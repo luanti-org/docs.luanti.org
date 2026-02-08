@@ -21,7 +21,7 @@ Released on 8 February 2026.
 - Formspec styling: positive `borderwidths` values do work now (_Wuzzy2_)
 - Formspec: Fix highlighting elements that cannot be focused (_siliconsniffer_)
 - Improved render-related error handling (_sfan5_)
-- Improve OpenGL compatibility check to enable shadow shaders on macOS (_sfan5_)
+- Fix OpenGL compatibility check to re-enable dynamic shadows on macOS (_sfan5_)
 - Attempt to work around rendering issues related to array textures (_sfan5_)
   - Due to lack of input from affected people, the root cause is yet unknown.
     If you were (or still are) affected by this bug, please submit a full report on [GitHub, Issue 16896](https://github.com/luanti-org/luanti/issues/16896).
