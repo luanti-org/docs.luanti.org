@@ -25,11 +25,11 @@ Released on 8 February 2026.
 - Attempt to work around rendering issues related to array textures (_sfan5_)
   - Due to lack of input from affected people, the root cause is yet unknown.
     If you were (or still are) affected by this bug, please submit a full report on [GitHub, Issue 16896](https://github.com/luanti-org/luanti/issues/16896).
-    Please include your hardware details and known working `array_texture_max` setting values.
+    Also include your hardware details and known working `array_texture_max` setting values.
 
 ### Misc / Maintenance
 - Skip (failing) unittest when the `devtest` game is missing (_y5nw_)
-- Improve `Phosh` integration (_okias_)
+- Improve Phosh integration (_okias_)
 
 
 ## 5.14.0 → 5.15.0
