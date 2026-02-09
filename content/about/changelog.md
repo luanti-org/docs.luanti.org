@@ -444,7 +444,7 @@ Released on 15 September 2024.
 - Main menu: Mapgen flags starting with "no\*" are no longer shown (duplicate) (_appgurueu_)
 - Android: Fixed input issues (_grorp_)
 - Android: The minimap can again be proportional to the screen size (requires an up-to-date server) (_grorp_)
-- Sneak-sumping onto a stack of 2 nodes is again possible (_SmallJoker_)
+- Sneak-jumping onto a stack of 2 nodes is again possible (_SmallJoker_)
 - Clouds no longer disappear when approaching them (_sfan5_)
 - The CSM help dialogue now uses "." instead of "/" (_zmv7_)
 - Windows: disabled touchscreen auto-detection due to lack of support of the non-SDL build (default for 5.9.x) (_rubenwardy_)
