@@ -30,6 +30,10 @@ Add your points here. Most important comes first.
 - [Node param2 bitfield](https://github.com/luanti-org/luanti/pull/16839) -> Does it look well to be done in this way?
 - [Static world lighting configurable via API](https://github.com/luanti-org/luanti/pull/16697) -> yes/no?
 
+**Issues**
+- [Add 2d, maybe 4d vectors to Lua API](https://github.com/luanti-org/luanti/issues/16921)
+  - Question of direction/scope
+
 Also consider:
 - ["One Approval" PRs](https://github.com/luanti-org/luanti/pulls?q=is%3Apr+is%3Aopen+label%3A%22One+approval+%E2%9C%85+%E2%97%BB%EF%B8%8F%22) and decide on whether to merge, request changes or close.
 
