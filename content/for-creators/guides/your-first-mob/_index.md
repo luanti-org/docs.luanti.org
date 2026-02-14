@@ -15,6 +15,8 @@ It will look something like this:
 
 ![A pair of bloblets chasing Dev Test](bloblets.png)
 
+The code in this guide requires Luanti version 5.5.0 (released in 2022) or newer to work correctly.
+
 ## Entity definition
 
 Entities are defined using `core.register_entity`. The absolute minimum is:
@@ -263,39 +265,50 @@ In a game, you want them to just appear. We can roll some simple spawning logic.
 
 The crucial Luanti API functions to use here are `core.raycast` to find a suitable spawn position,
 and `core.add_entity` to actually spawn the entity.
+We encapsulate this in the following function:
+
+```lua
+local function try_spawn()
+	local players = core.get_connected_players()
+	-- pick a random player
+	local player = players[math.random(1, #players)]
+	for _ = 1, 100 do -- cap the number of tries
+		-- random point up to 25 nodes away in each direction, and 10 nodes higher.
+		-- we want to raycast down from here to find a suitable spawn position.
+		local start = player:get_pos() + vector.new(math.random(-25, 25), 10, math.random(-25, 25))
+		if start:distance(player:get_pos()) >= 10 then -- don't spawn too close
+			-- raycast down to find a node to spawn on, if any
+			local thing = core.raycast(start, start + vector.new(0, -10, 0), false):next()
+			if thing then
+				core.add_entity(thing.above, "mymod:bloblet") -- spawn bloblet on node
+				break
+			end
+		end
+	end
+end
+```
+
+Similarly to what we did in `on_step`, we use a standard `core.register_globalstep`
+pattern that uses a timer to run an action periodically:
 
 ```lua
 local spawn_timer = 0
 core.register_globalstep(function(dtime) -- as in on_step, dtime is time that has passed in seconds
 	spawn_timer = spawn_timer + dtime
-	if spawn_timer >= 10 then -- every 10 seconds, try to spawn a new bloblet
+	if spawn_timer >= 10 then -- every 10 seconds...
 		spawn_timer = 0
-		local players = core.get_connected_players()
-		-- pick a random player
-		local player = players[math.random(1, #players)]
-		for _ = 1, 100 do -- cap the number of tries
-			-- random point up to 25 nodes away in each direction, and 10 nodes higher.
-			-- we want to raycast down from here to find a suitable spawn position.
-			local start = player:get_pos() + vector.new(math.random(-25, 25), 10, math.random(-25, 25))
-			if start:distance(player:get_pos()) >= 10 then -- don't spawn too close
-				-- raycast down to find a node to spawn on, if any
-				local thing = core.raycast(start, start + vector.new(0, -10, 0), false):next()
-				if thing then
-					core.add_entity(thing.above, "mymod:bloblet") -- spawn bloblet on node
-					break
-				end
-			end
-		end
+		try_spawn() -- ...try to spawn a new bloblet
 	end
 end)
 ```
 
-## The complete code
+## Putting it all together
 
-It's okay if you don't understand everything in full detail at this point.
-Just mess with the code a bit, dig into the [docs](https://docs.luanti.org/for-creators/) and the [API reference](https://api.luanti.org/).
-
-Here's the full working code for `mymod/init.lua`:
+Below is the full working code for `mymod/init.lua`.
+You don't need to understand everything in full detail at this point.
+Just mess with the code a bit, try to extend it, maybe rewrite portions so they make sense to you.
+To understand it in greater detail, dig into the [Luanti docs](https://docs.luanti.org/for-creators/)
+and the [Luanti API reference](https://api.luanti.org/).
 
 ```lua
 core.register_entity("mymod:bloblet", {
@@ -371,27 +384,32 @@ core.register_entity("mymod:bloblet", {
 })
 
 -- Spawning logic
+
+local function try_spawn()
+	local players = core.get_connected_players()
+	-- pick a random player
+	local player = players[math.random(1, #players)]
+	for _ = 1, 100 do -- cap the number of tries
+		-- random point up to 25 nodes away in each direction, and 10 nodes higher.
+		-- we want to raycast down from here to find a suitable spawn position.
+		local start = player:get_pos() + vector.new(math.random(-25, 25), 10, math.random(-25, 25))
+		if start:distance(player:get_pos()) >= 10 then -- don't spawn too close
+			-- raycast down to find a node to spawn on, if any
+			local thing = core.raycast(start, start + vector.new(0, -10, 0), false):next()
+			if thing then
+				core.add_entity(thing.above, "mymod:bloblet") -- spawn bloblet on node
+				break
+			end
+		end
+	end
+end
+
 local spawn_timer = 0
 core.register_globalstep(function(dtime) -- as in on_step, dtime is time that has passed in seconds
 	spawn_timer = spawn_timer + dtime
-	if spawn_timer >= 10 then -- every 10 seconds, try to spawn a new bloblet
+	if spawn_timer >= 10 then -- every 10 seconds...
 		spawn_timer = 0
-		local players = core.get_connected_players()
-		-- pick a random player
-		local player = players[math.random(1, #players)]
-		for _ = 1, 100 do -- cap the number of tries
-			-- random point up to 25 nodes away in each direction, and 10 nodes higher.
-			-- we want to raycast down from here to find a suitable spawn position.
-			local start = player:get_pos() + vector.new(math.random(-25, 25), 10, math.random(-25, 25))
-			if start:distance(player:get_pos()) >= 10 then -- don't spawn too close
-				-- raycast down to find a node to spawn on, if any
-				local thing = core.raycast(start, start + vector.new(0, -10, 0), false):next()
-				if thing then
-					core.add_entity(thing.above, "mymod:bloblet") -- spawn bloblet on node
-					break
-				end
-			end
-		end
+		try_spawn() -- ...try to spawn a new bloblet
 	end
 end)
 ```
