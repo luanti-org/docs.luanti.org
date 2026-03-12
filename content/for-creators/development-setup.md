@@ -39,7 +39,7 @@ If your editor does not bundle the language server, you need to
 The type documentation allows autocompletion
 including type hints to be shown in your editor.
 
-We will use [Luanti API](https://git.minetest.land/archie/luanti-api/)
+We will use [Luanti API](https://git.minetest.land/andro/luanti-api)
 as a source of type documentation. Please note
 that this is not an official project and that
 it is experimental! For more context, you can
