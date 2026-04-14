@@ -8,7 +8,32 @@ aliases:
 
 # Changelog
 
-Note that not all changes made to the code between releases are listed here. Fixes to bugs that were introduced after the previous release, small internal changes, code style fixes, and changes of the like are not listed. If you want a list of _every_ change made between releases see the [commit log](https://github.com/luanti-org/luanti/commits/master).
+Note that not all changes made to the code between releases are listed here. Fixes to bugs that were introduced after the previous release, small internal changes, code style fixes, and changes of the like are not listed.
+If you want a list of _every_ change made between releases see the [commit log](https://github.com/luanti-org/luanti/commits/master).
+
+## 5.15.1 → 5.15.2
+
+**[Release](https://github.com/luanti-org/luanti/releases/tag/5.15.2)**
+
+Released on 14 April 2026.
+
+⚠️ This release fixes **critical** security vulnerabilities affecting both the client and server. We advise everyone to upgrade **immediately**. ⚠️
+
+### World / Server / Environment
+- Add bounds check for source index in IDropAction (_sofar_)
+- Fix crash when receiving `TOSERVER_INIT2` in wrong state (_sofar_)
+
+### Script API / Modding
+- Block writes to `.git` folders in sandbox (_sfan5_)
+- Fix coroutine confusion when determining currently running mod (_sfan5_)
+- Sanitize the environment of safe Lua functions (_SmallJoker_)
+- Fix LuaVoxelManip use-after-free if it outlives VoxelManip (_Desour_)
+
+### Misc / Maintenance
+- Fix overflow in `getMemorySizeMB()` on 32-bit arches (_sertonix_)
+- Client: Fix incorrect ItemVisuals caching (_SmallJoker_)
+- Fix `setAsyncFatalError()` on shutdown causing UaF  (_Desour_)
+
 
 ## 5.15.0 → 5.15.1
 
