@@ -282,6 +282,7 @@
     "getinfo",
     "getmetatable",
     "getv3intfield",
+    "GHSA",
     "gibucsoft",
     "githash",
     "gituser",
