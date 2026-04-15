@@ -17,7 +17,8 @@ If you want a list of _every_ change made between releases see the [commit log](
 
 Released on 14 April 2026.
 
-⚠️ This release fixes **critical** security vulnerabilities affecting both the client and server. We advise everyone to upgrade **immediately**. ⚠️
+⚠️ **This release fixes critical security vulnerabilities affecting both the client and server. We advise everyone to upgrade immediately**.
+Note that the attack vector for the critical vulnerabilities is installing malicious mods locally. They are not exploitable remotely (by clients joining malicious servers, or by malicious clients joining a server). ⚠️
 
 ### World / Server / Environment
 - Add bounds check for source index in IDropAction (_sofar_)
