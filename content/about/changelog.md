@@ -26,7 +26,9 @@ Released on 14 April 2026.
 ### Script API / Modding
 - Block writes to `.git` folders in sandbox (_sfan5_)
 - Fix coroutine confusion when determining currently running mod (_sfan5_)
+  - advisory: [GHSA-22c4-238c-m5j4](https://github.com/luanti-org/luanti/security/advisories/GHSA-22c4-238c-m5j4)
 - Sanitize the environment of safe Lua functions (_SmallJoker_)
+  - advisory: [GHSA-g596-mf82-w8c3](https://github.com/luanti-org/luanti/security/advisories/GHSA-g596-mf82-w8c3)
 - Fix LuaVoxelManip use-after-free if it outlives VoxelManip (_Desour_)
 
 ### Misc / Maintenance
