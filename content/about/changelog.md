@@ -29,7 +29,7 @@ Note that the attack vector for the critical vulnerabilities is installing malic
 - Fix coroutine confusion when determining currently running mod (_sfan5_)
   - advisory: [GHSA-22c4-238c-m5j4](https://github.com/luanti-org/luanti/security/advisories/GHSA-22c4-238c-m5j4)
 - Sanitize the environment of safe Lua functions (_SmallJoker_)
-  - advisory: [GHSA-g596-mf82-w8c3](https://github.com/luanti-org/luanti/security/advisories/GHSA-g596-mf82-w8c3)
+  - advisory: [GHSA-g596-mf82-w8c3](https://github.com/luanti-org/luanti/security/advisories/GHSA-g596-mf82-w8c3) (CVE-2026-41196)
 - Fix LuaVoxelManip use-after-free if it outlives VoxelManip (_Desour_)
 
 ### Misc / Maintenance
