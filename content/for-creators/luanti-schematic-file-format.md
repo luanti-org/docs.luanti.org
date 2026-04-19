@@ -24,7 +24,6 @@ An MTS file has 3 sections, in this order:
 
 All values are stored in _big endian_ format.
 
-```
 | Offset  | Length | Description                              |
 |---------|--------|------------------------------------------|
 |       0 |      4 | magic number, ASCII letters "MTSM"       |
@@ -35,8 +34,6 @@ All values are stored in _big endian_ format.
 |      12 |      Y | layer probability values                 |
 |    12+Y |      2 | number of strings in Name ID Table       |
 
-```
-
 Layer probability values: This is a sequence of unsigned 8-bit numbers (0-255) for each Y layer. Each Y layer has a chance of appearing with the given probability. The probability ranges from 0 to 127, with 0 meaning 0% probability and 127 meaning 100% probability. Bit 7 is reserved and must be 0, meaning that values greater than 127 should be avoided.
 
 The header is followed by the Name ID Table, which is followed by the Node Definitions section.
@@ -45,13 +42,10 @@ The header is followed by the Name ID Table, which is followed by the Node Defin
 
 For each string, the following record format repeats:
 
-```
 | Offset | Length | Description              |
 |--------|--------|--------------------------|
 |      0 |      2 | length of the string (N) |
 |      2 |      N | string, node itemstring  |
-
-```
 
 The node IDs in the next section reference these.
 
@@ -59,14 +53,11 @@ The node IDs in the next section reference these.
 
 This part of the file is zlib compressed, with the deflate algorithm using gz header bytes [RFC 1950](http://tools.ietf.org/html/rfc1950), but not with the gzip header which has magic bytes too. After uncompressing, the format is as follows:
 
-```
 | Offset  | Length     | Description                              |
 |---------|------------|------------------------------------------|
 |       0 | 2*X*Y*Z    | node IDs (param0)                        |
 | 2*X*Y*Z | X*Y*Z      | probability values (param1)              |
 | 3*X*Y*Z | X*Y*Z      | param2                                   |
-
-```
 
 To get the node ID from `param0` for a given coordinate (x,y,z), you should calculate the index `param0[(Z-z)*Z*Y + y*X + x]`. That's right, the Z axis is mirrored.
 
@@ -104,7 +95,6 @@ For each node in schematic:
 For each node in schematic:
 	[u8] param2
 }
-
 ```
 
 - Source code 5.1.0: [/src/mapgen/mg_schematic.h](https://github.com/luanti-org/luanti/blob/5.1.0/src/mapgen/mg_schematic.h)
@@ -114,7 +104,7 @@ For each node in schematic:
 
 As of version 5.1.0, the current version of the MTS file format is 4.
 
-- 1—Initial version
-- 2—Fixed messy never/always place; the probability of `0` is now never, and `0xFF` is always
-- 3—Added y-slice probabilities; this allows for variable height structures
-- 4—Compressed range of node occurrence probability, added per-node force placement bit (used since 0.4.16 or earlier)
+- `1`: Initial version
+- `2`: Fixed messy never/always place; the probability of `0` is now never, and `0xFF` is always
+- `3`: Added y-slice probabilities; this allows for variable height structures
+- `4`: Compressed range of node occurrence probability, added per-node force placement bit (used since 0.4.16 or earlier)
