@@ -32,7 +32,7 @@ Add your points here. Most important comes first.
   - [Fix players and entities jolting upwards on the edge of nodes](https://github.com/luanti-org/luanti/pull/16971)
 
 **Issues**
-- ...
+- what do we do about [Severe rendering regression when array textures are used](https://github.com/luanti-org/luanti/issues/16896)? apply the hotfix for another release?
 
 Also consider:
 - ["One Approval" PRs](https://github.com/luanti-org/luanti/pulls?q=is%3Apr+is%3Aopen+label%3A%22One+approval+%E2%9C%85+%E2%97%BB%EF%B8%8F%22) and decide on whether to merge, request changes or close.
