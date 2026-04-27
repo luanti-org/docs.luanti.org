@@ -24,9 +24,12 @@ Add your points here. Most important comes first.
 
 **Organization Discussion**
 - Feature freeze and plan release date
+- release RC build
 
 **PR discussion/reviews**
-- Decide which PRs to include in 5.16.0
+- Decide which PRs to include in 5.16.0, in particular:
+  - [Implement core.get_active_blocks, core.get_loaded_blocks and core.get_loadable_blocks APIs](https://github.com/luanti-org/luanti/pull/17095)
+  - [Fix players and entities jolting upwards on the edge of nodes](https://github.com/luanti-org/luanti/pull/16971)
 
 **Issues**
 - ...
