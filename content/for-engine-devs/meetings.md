@@ -18,6 +18,24 @@ This Wiki page contains the meeting plans for upcoming meetings, and meeting not
 
 **Remember to post meetings in the [GitHub discussions](https://github.com/orgs/luanti-org/discussions) in advance**
 
+## 2026-04-28
+
+Add your points here. Most important comes first.
+
+**Organization Discussion**
+- Feature freeze and plan release date
+
+**PR discussion/reviews**
+- Decide which PRs to include in 5.16.0
+
+**Issues**
+- ...
+
+Also consider:
+- ["One Approval" PRs](https://github.com/luanti-org/luanti/pulls?q=is%3Apr+is%3Aopen+label%3A%22One+approval+%E2%9C%85+%E2%97%BB%EF%B8%8F%22) and decide on whether to merge, request changes or close.
+
+## Past Meetings
+
 ## 2026-02-15
 
 Add your points here. Most important comes first.
@@ -36,8 +54,6 @@ Add your points here. Most important comes first.
 
 Also consider:
 - ["One Approval" PRs](https://github.com/luanti-org/luanti/pulls?q=is%3Apr+is%3Aopen+label%3A%22One+approval+%E2%9C%85+%E2%97%BB%EF%B8%8F%22) and decide on whether to merge, request changes or close.
-
-## Past Meetings
 
 ## 2026-01-31 (FOSDEM)
 
