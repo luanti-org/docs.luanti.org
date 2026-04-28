@@ -58,7 +58,7 @@ To fix problems with unknown objects, check the troubleshooting section below. U
 
 ## Troubleshooting
 
-A common reason for an unknown object to appear is when you have previously activated a [mod](/for-players/mods) which added some new objects, then later deactivated said mod. Now all objects from this mod will appear as an unknown objects. In this case, you can solve this simply by enabling the missing mod again. If you forgot from which mod this object originated from, point it to learn its entity ID. The part before the column is the mod name.
+A common reason for an unknown object to appear is when you have previously activated a [mod](/for-players/mods) which added some new objects, then later deactivated said mod. Now all objects from this mod will appear as unknown objects. In this case, you can solve this simply by enabling the missing mod again. If you forgot which mod this object originated from, point it to learn its entity ID. The part before the column is the mod name.
 
 Another possible cause is a bug in mods or games. Developers of a game may have made a mistake or they removed object types intentionally without any replacement. Complain to the game authors if this happens, as this is generally considered poor development practice. If unknown objects occur without you using any mods, this is almost certainly a bug.
 
