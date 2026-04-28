@@ -52,7 +52,7 @@ An **unknown object** is pseudo-object in Luanti to represent an object (such as
 
 An unknown object appears as a flat texture with “unknown object” written on it. The velocity of the original object is usually preserved so unknown objects often tend to fly through the world.
 
-Internally, an unknown object still knows the “real” object it represents and the associated data. You can see its entity/object ID by [pointing](/for-players/pointing) it. If an unknown object is found by Luanti, there will also be an error message complaining about that a LuaEntity could not be found (this “LuaEntity” refers to the unknown object), along with its entity ID.
+Internally, an unknown object still knows the “real” object it represents and the associated data. You can see its entity/object ID by [pointing](/for-players/pointing) it. If an unknown object is found by Luanti, there will also be an error message complaining that a LuaEntity could not be found (this “LuaEntity” refers to the unknown object), along with its entity ID.
 
 To fix problems with unknown objects, check the troubleshooting section below. Unknown objects are destroyed when punching or if they receive any amount of damage.
 
