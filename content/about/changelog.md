@@ -11,6 +11,76 @@ aliases:
 Note that not all changes made to the code between releases are listed here. Fixes to bugs that were introduced after the previous release, small internal changes, code style fixes, and changes of the like are not listed.
 If you want a list of _every_ change made between releases see the [commit log](https://github.com/luanti-org/luanti/commits/master).
 
+## 5.15.2 → 5.16.0
+
+To be released in May.
+
+### Deprecations and compatibility notes
+- Writing to mod directories is now disallowed (deprecated in 5.9.0) (_sfan5_)
+  - Consider using the directory `core.get_mod_data_path()` (>= 5.9.0) instead.
+
+### Client / Audiovisuals
+- Texture pack' `override.txt` now supports overriding overlay tiles (_DiogoAlves06_)
+- Restore inventory cube (item mesh) shading (_appgurueu_)
+- Fixed incorrect animation state when placing nodes quickly (_jordan4ibanez_)
+- Fixed a graphical issue where the fog incorrectly changed the color of semi-transparent particles (_appgurueu_)
+- Support more mouse buttons (beyond X2) (_y5nw_)
+- Add keybinds for camera movement (_siliconsniffer_)
+- Formspec: Bug fixes related to inventory list interactions (_SmallJoker_, _sofar_)
+- Formspec: Focus behavior improvements (_siliconsniffer_, _grorp_)
+- Show status text for screenshots in the main menu (_siliconsniffer_)
+- Text fields now Ctrl+Del/Backspace text manipulation shortcuts (_SmallJoker_)
+- Improved `nametag_scale_z` scaling code (_Giov4_)
+- Fix formspec-related crash/issue discovered on MacOS (_sfence_)
+- Fix incorrect rendering of visually nested node boxes with `use_texture_alpha = "blend"` (_Desour_)
+- Optimization in rotation manipulation functions (_appgurueu_)
+- Optimization: Hardware skinning support for animated meshes (_appgurueu_)
+- Formspec: Make scrollbars scroll while holding down arrow buttons (_CrazyladMT_)
+- Add setting to disable damage flash (_FreshAlacrity_)
+- Main menu: Add server list sort filter (_cx384_)
+- Improved GPU feature detection for the shadow shader (_sfan5_)
+  - If a device lacks the mandatory feature(s), the shader is disabled automatically to avoid graphical issues.
+- Add support for JPEG mod screenshots (_Emojigit_)
+- Add `curl_proxy` setting (_j-r_)
+
+### World / Server / Environment
+- Network improvements and fixes (_sfan5_, _nerzhul_)
+- Re-show death screen when a formspec is closed while player is dead (_sofar_)
+- Add gameid aliases (_nauta-turbidus_)
+  - This makes name changes of games possible.
+- Add support for `LUANTI_GAME_PATH` and `LUANTI_WORLD_PATH` (_apteryks_)
+  - The `MINETEST_*` environment variables remain working but are now deprecated.
+- Improved mapblock loading priorities (_lhofhansl_)
+
+### Script API / Modding
+- New physics override `step_up_mode` to control the stair walking behavior (_jordan4ibanez_)
+- New functions to retrieve mapblocks: `core.get_[active|loaded|loadable]_blocks` (_kromka-chleba_)
+- Option to disable wielded item animation in `ObjectRef:set_wielded_item` (_Zughy_)
+- Client Mods: Fixed incomplete `string` metatable (bug added in 5.15.2) (_cx384_)
+- Many Lua API documentation improvements
+  - _sfan5_: MapBlock status, `core.write_json` limitations, `on_drop` callback
+  - _Wuzzy_: value ranges (in general), `core.EMERGE_*` symbols
+  - _CrazyladMT_: clickable links
+  - _SmallJoker_: game files, texture load priorities
+- `ObjectRef:set_camera(nil)` can now be used to reset the parameters (_sfan5_)
+- Add per-player shadow direction override via `ObjectRef:set_lighting` (_sofar_)
+- New `vector2` API to manipulate 2D vectors (_kromka-chleba_)
+- HUD: support float values for text `size` property (_Zughy_)
+- Improved `core.write_json` output size (_ryvnf_)
+- New sky parameter `auto_dim_skybox` to disable skybox dimming e.g. in caves (_appgurueu_)
+- `core.write_json` now distinguishes between integers and floats (_markopetrovi_)
+- SSCSM (Server Sent Client Side Modding) skeleton code (_Desour_)
+  - This is an initial preparation and cannot yet be used.
+- New `math.isfinite()` function (_whosit_)
+- Extend `core.get_modnames` to return the mod load order (_SmallJoker_)
+
+### Misc / Maintenance
+- Several bugfixes, including memory leak fixes (_SmallJoker_, _cx384_, _sfan5_)
+- Code maintenance, improvements, cleanups (_sfan5_, _SmallJoker_, _y5nw_)
+- Build system maintenance (_AFCMS_, _sfan5_)
+- Improved hints for translators (_Wuzzy_)
+
+
 ## 5.15.1 → 5.15.2
 
 **[Release](https://github.com/luanti-org/luanti/releases/tag/5.15.2)**
