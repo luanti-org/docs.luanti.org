@@ -19,10 +19,10 @@ Released on 8 May 2026.
 
 ### Deprecations and compatibility notes
 - Writing to mod directories is now disallowed (deprecated in 5.9.0) (_sfan5_)
-  - Consider using the directory `core.get_mod_data_path()` (>= 5.9.0) instead.
+  - Global data can be stored in in `core.get_mod_data_path()` instead
 
 ### Client / Audiovisuals
-- Texture pack' `override.txt` now supports overriding overlay tiles (_DiogoAlves06_)
+- Texture pack `override.txt` now supports overriding overlay tiles (_DiogoAlves06_)
 - Restore inventory cube (item mesh) shading (_appgurueu_)
 - Fixed incorrect animation state when placing nodes quickly (_jordan4ibanez_)
 - Fixed a graphical issue where the fog incorrectly changed the color of semi-transparent particles (_appgurueu_)
