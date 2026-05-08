@@ -13,7 +13,9 @@ If you want a list of _every_ change made between releases see the [commit log](
 
 ## 5.15.2 → 5.16.0
 
-To be released in May.
+**[Release](https://github.com/luanti-org/luanti/releases/tag/5.16.0)**
+
+Released on 8 May 2026.
 
 ### Deprecations and compatibility notes
 - Writing to mod directories is now disallowed (deprecated in 5.9.0) (_sfan5_)
@@ -53,7 +55,7 @@ To be released in May.
 - Improved mapblock loading priorities (_lhofhansl_)
 
 ### Script API / Modding
-- New physics override `step_up_mode` to control the stair walking behavior (_jordan4ibanez_)
+- New object property `step_up_mode` to control the stair walking behavior (_jordan4ibanez_)
 - New functions to retrieve mapblocks: `core.get_[active|loaded|loadable]_blocks` (_kromka-chleba_)
 - Option to disable wielded item animation in `ObjectRef:set_wielded_item` (_Zughy_)
 - Client Mods: Fixed incomplete `string` metatable (bug added in 5.15.2) (_cx384_)
@@ -76,7 +78,7 @@ To be released in May.
 
 ### Misc / Maintenance
 - Several bugfixes, including memory leak fixes (_SmallJoker_, _cx384_, _sfan5_)
-- Code maintenance, improvements, cleanups (_sfan5_, _SmallJoker_, _y5nw_)
+- Code maintenance, improvements, cleanups (_sfan5_, _SmallJoker_, _y5nw_, _appgurueu_)
 - Build system maintenance (_AFCMS_, _sfan5_)
 - Improved hints for translators (_Wuzzy_)
 
