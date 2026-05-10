@@ -14,8 +14,8 @@ The [feature freeze](#feature-freeze) and release date is set by core developers
 
 In the past, the team aimed to release every 6 months. Whilst this was sometimes met, releases were usually delayed by months. To deliver bugfixes and features quicker, the goal is to consistently release every 3 months without delaying for non-critical features.
 
- * Goal: January, April, July, October
- * A release before November should be prioritized because the Game Jam ([2024 forum post](https://forum.luanti.org/viewtopic.php?t=31059)) would like to make use of new features.
+- Goal: January, April, July, October
+- A release before November should be prioritized because the Game Jam ([2024 forum post](https://forum.luanti.org/viewtopic.php?t=31059)) would like to make use of new features.
 
 Patch releases are exempt from this schedule.
 
@@ -42,6 +42,7 @@ Patch releases are exempt from this schedule.
   - [ ] Build and upload Windows version
   - [ ] Build and upload Android version
   - [ ] Update Launchpad stable build (Ubuntu version)
+  - [ ] Update Flathub stable build
   - [ ] (Minor/Major) Publish blog post
   - [ ] Create forum topic
   - [ ] Notify rubenwardy to announce on Twitter, etc.
@@ -54,13 +55,15 @@ Patch releases are exempt from this schedule.
 
 (_Skip for patch releases_)
 
-New features aren't accepted during this time while people focus on finding and fixing bugs.
+Only bug fixes are accepted during this time while people focus on finding and fixing bugs.
+Features and refactors are postponed to the next release.
+Bug fixes may be postponed as well if the risk of introducing a last-minute regression is deemed too high.
 
 1. Move all open feature PRs of the current [milestone](https://github.com/luanti-org/luanti/milestones) to the next one.
 2. Announce the **feature freeze in /topic of [#luanti-dev](/about/irc)**.
 3. Post the release candidate builds on the forums ([News section](https://forum.luanti.org/viewforum.php?f=18)) and (optional) as pre-release on GitHub ([Releases page](https://github.com/luanti-org/luanti/releases)).
-   * This helps to find high-priority issues faster.
-   * You may use the buildbot/CI artifacts from `master`. If needed: do provide manual signing instructions for the MacOS and Android builds.
+   - This helps to find high-priority issues faster.
+   - You may use the buildbot/CI artifacts from `master`. If needed: Provide manual signing instructions for the MacOS and Android builds.
 
 ### Autogenerate files
 
@@ -98,6 +101,7 @@ _Note_: This is usually skipped for patch releases and in fact only possible if 
 **How to do this** -> [How to merge translations from Hosted Weblate](/for-creators/translation/#how-to-merge-translations-from-hosted-weblate)
 
 If doing a backported release, you can use the following command to cherry-pick all translation commits from weblate:
+
 ```sh
 git log --reverse --pretty=format:"%h" $BASE..weblate/master -- po | xargs -L1 git cherry-pick
 ```
@@ -161,6 +165,7 @@ The process with patch releases is slightly different but the script will take c
 Since 2023, we use the **mingw** artifacts of the "windows" CI workflow.
 
 Extract the outer ZIP file so that users only have:
+
 - one ZIP file to extract (if portable), should be named `luanti-5.x.x-win64.zip`
 - the bare executable (if installer), should be named `luanti-5.x.x.exe`
 
@@ -172,12 +177,12 @@ Note that the correct build only shows up after the release commit has been push
 
 _Note_: Don't cheat on this by testing in Wine. It has happened that things crash/break in Wine while they are fine on real Windows.
 
-- check that the build identifies itself as 5.x.x, not 5.x.x-dev or 5.x.x-abc4de7
-- click some menu buttons
-- create world with MTG, enter it, exit back to menu
-- open multiplayer tab, attempt to join a server
-- install a package from CDB, uninstall it again
-- enable dynamic shadows, join in-game and look
+- Check that the build identifies itself as 5.x.x not 5.x.x-dev or 5.x.x-abc4de7
+- Click some menu buttons
+- Create world with MTG, enter it, exit back to menu
+- Open multiplayer tab, attempt to join a server
+- Install a package from CDB, uninstall it again
+- Enable dynamic shadows, join in-game and look
 
 ### Upload packages to somewhere
 
@@ -193,7 +198,7 @@ _Note_: Don't cheat on this by testing in Wine. It has happened that things cras
 
 Tagging is handled by the script for the engine.
 
-The new release should be merged to the stable-5 branch. **Its important to merge, and not just rebase**, so that git describe works.
+The new release should be merged to the stable-5 branch. **It's important to merge, and not just rebase**, so that `git describe` works.
 
 #### The problem on the stable-5 branch
 
@@ -211,26 +216,41 @@ git diff ${version}...HEAD
 git diff HEAD...${version}
 ```
 
-### Tag Android deps
+### Update Launchpad stable build
 
-Create a new tag [on this repo](https://github.com/luanti-org/luanti_android_deps/tags) with the version number of the release.
-This is to make it easier to figure out which state an APK was built from.
-
-### Update Launchpad stable build to get Ubuntu builds for the new version
+This is to get Ubuntu builds for the new version.
 
 celeron55, rubenwardy, ShadowNinja, and luatic have access.
 
 Process:
 
 - Go to [minetest-c55/upstream](https://code.launchpad.net/~minetestdevs/minetest-c55/+git/upstream) and click _start import_.
-- Now visit the [recipe](https://code.launchpad.net/~minetestdevs/+recipe/minetest-stable).
+  (The import usually takes about 5 minutes.)
+- After the import has completed, visit the [recipe](https://code.launchpad.net/~minetestdevs/+recipe/minetest-stable).
 - At the bottom of the page there is a section called "Recipe contents". In this section you need to edit the recipe. Make sure you update:
-  - The version number at the end of the first line. Doing this is a must otherwise there would be duplicate packages which would lead to a fail. The version number has a format like `5.11.0-ppa0`. You should keep the ppa postfix so that it's easy to differentiate the package by origin, ppa or upstream Debian.
+  - The version number at the end of the first line, formatted like `5.11.0-ppa0`.
+    Keep the ppa postfix so that it's easy to differentiate the package by origin, ppa or upstream Debian.
   - The Git tag corresponding to the Luanti version (for example `5.11.0`) in the second line.
 - Check whether everything has been updated correctly.
 - Click the green "Request builds" link, enable the newer distro versions, and click confirm.
 
-The build has two steps: first it assembles the source code and uploads it, then it builds the code. If the first step completed successfully but the second one failed, you need to update the version number in the recipe (e.g. 1.2.3-ppa1) before rebuilding.
+The build has two steps: First it assembles the source code and uploads it, then it builds the code.
+If the first step completed successfully but the second one failed, you need to update the version number in the recipe (e.g. 1.2.3-ppa1) before rebuilding.
+
+### Update Flathub stable build
+
+sfan5 and luatic have access.
+
+Once the release has been tagged, FlatHubBot opens a pull request
+on the [Luanti Flathub repo](https://github.com/flathub/org.luanti.luanti),
+including instructions on how to install a test build before publishing it.
+
+Follow them, smoke test the fresh build, then merge the PR if it passes.
+
+### Tag Android deps
+
+Create a new tag [on this repo](https://github.com/luanti-org/luanti_android_deps/tags) with the version number of the release.
+This is to make it easier to figure out which state an APK was built from.
 
 ### Build and publish Android APK
 
@@ -280,10 +300,9 @@ Check that the util/bump_version.sh script did the following steps:
 - **Fedora** and others: should automatically show up [here](https://release-monitoring.org/project/1978/), but can be flagged manually
 - **F-Droid**: has volunteer maintainers, if nobody notices consider opening an issue [here](https://gitlab.com/fdroid/fdroiddata/-/issues)
 - **Snap**: open an issue (or contribute) [here](https://github.com/snapcrafters/minetest)
-- **Flatpak**: open an issue (or contribute) [here](https://github.com/flathub/net.minetest.Minetest)
 - **Gentoo**: has [own version tracking](https://packages.gentoo.org/packages/games-engines/minetest), no need to contact
 
-You can find out how quick various distro are to adopt new versions by visiting [Repology](https://repology.org/project/luanti/history)
+You can find out how quick various distros are to adopt new versions by visiting [Repology](https://repology.org/project/luanti/history)
 (older history under the [`minetest` name](https://repology.org/project/minetest/history)).
 
 ### ContentDB
@@ -292,7 +311,7 @@ You can find out how quick various distro are to adopt new versions by visiting 
 
 (_Skip for patch releases_)
 
-Add the new version to the drop-down list of compatible Luanti versions that authors can select for their things.
+Add the new version to the drop-down list of compatible Luanti versions that authors can select for their content.
 
 Note that CDB tells Luanti versions apart by their protocol version so this is obviously not applicable to patch releases.
 
@@ -304,4 +323,6 @@ People who have access: rubenwardy + ???
 
 Minetest Game is no longer connected to our release cycle, so we can ignore it.
 
-The [Development Test](https://content.luanti.org/packages/Luanti/devtest/) package needs to be released **manually**. Make a new release, upload a ZIP file with Development Test as it looks like the Luanti source tree in the stable branch, and set the minimum and maximum Luanti versions to the exact Luanti version it is intended for.
+The [Development Test](https://content.luanti.org/packages/Luanti/devtest/) package needs to be released **manually**.
+Make a new release, upload a ZIP file with Development Test as it looks like the Luanti source tree in the stable branch,
+and set the minimum and maximum Luanti versions to the exact Luanti version it is intended for.
