@@ -29,11 +29,15 @@ services:
     image: ghcr.io/luanti-org/luanti:latest
     restart: unless-stopped
     volumes:
-      - ./data/:/var/lib/minetest/
-      - ./conf/:/etc/minetest/
+      - ./data:/var/lib/minetest
+      - ./config:/etc/minetest
     ports:
       - "30000:30000/udp"
 ```
+
+`./data/.minetest/` will have worlds, games and mods. After running the container for the first time, you can follow [this guide](https://content.luanti.org/help/installing/) to add games and mods.
+
+`./config` will have [minetest.conf](https://github.com/luanti-org/luanti/blob/master/minetest.conf.example); settings of the server.
 
 ### Podman
 
