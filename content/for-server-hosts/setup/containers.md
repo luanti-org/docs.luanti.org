@@ -21,6 +21,20 @@ aliases:
 
 It is recommended that you use [docker compose](https://docs.docker.com/compose) to set up, configure, and run your server
 
+A simple `docker-compose.yml` example:
+
+```yml
+services:
+  luanti_server:
+    image: ghcr.io/luanti-org/luanti:latest
+    restart: unless-stopped
+    volumes:
+      - ./data/:/var/lib/minetest/
+      - ./conf/:/etc/minetest/
+    ports:
+      - "30000:30000/udp"
+```
+
 ### Podman
 
 It is recommend that you use [podman quadlets](https://www.redhat.com/en/blog/quadlet-podman) to set up, configure, and run your server
