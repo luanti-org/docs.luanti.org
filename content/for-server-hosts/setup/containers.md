@@ -29,8 +29,10 @@ services:
     image: ghcr.io/luanti-org/luanti:latest
     restart: unless-stopped
     volumes:
-      - ./data:/var/lib/minetest
-      - ./config:/etc/minetest
+      - ./config:/etc/minetest:ro                    
+      - ./data:/var/lib/minetest           
+      - ./games:/var/lib/minetest/.minetest/games:ro 
+      - ./mods:/var/lib/minetest/.minetest/mods:ro   
     ports:
       - "30000:30000/udp"
 ```
@@ -38,17 +40,21 @@ services:
 Before starting the container, and in the directory where you want to have the data, e.g. `~/luanti/`: 
 - create the necessary directories:
 
-  `mkdir data config`
+  `mkdir -p data/.minetest config games mods`
   
 - copy content of the [minetest.conf.example](https://github.com/luanti-org/luanti/blob/master/minetest.conf.example) file to `config/minetest.conf`
 - give needed permission to `data/`
 
   `sudo chown -R 30000:30000 data/ `
 
+- install the game you want to play in `./games/`. Follow [this guide](https://content.luanti.org/help/installing/#installing-using-the-command-line). For example, to install `voxelibre` using  `git`
+
+  `git clone https://git.minetest.land/VoxeLibre/VoxeLibre ./games/voxelibre/`
+
 - start container
   `docker compose up -d`
 
-After first run, luanti creates `./data/.minetest/` containing `worlds/`, `games/`, and `mods/`. You can follow [this guide](https://content.luanti.org/help/installing/) to add games and mods.
+`./data/.minetest/` has the directory `worlds/`, where the world will be saved.
 
 `./config/minetest.conf` has settings of the server.
 
