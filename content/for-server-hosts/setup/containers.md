@@ -35,9 +35,22 @@ services:
       - "30000:30000/udp"
 ```
 
-`./data/.minetest/` will have worlds, games and mods. After running the container for the first time, you can follow [this guide](https://content.luanti.org/help/installing/) to add games and mods.
+Before starting the container, and in the directory where you want to have the data, e.g. `~/luanti/`: 
+- create the necessary directories:
 
-`./config` will have [minetest.conf](https://github.com/luanti-org/luanti/blob/master/minetest.conf.example); settings of the server.
+  `mkdir data config`
+  
+- copy content of the [minetest.conf.example](https://github.com/luanti-org/luanti/blob/master/minetest.conf.example) file to `config/minetest.conf`
+- give needed permission to `data/`
+
+  `sudo chown -R 30000:30000 data/ `
+
+- start container
+  `docker compose up -d`
+
+After first run, luanti creates `./data/.minetest/` containing `worlds/`, `games/`, and `mods/`. You can follow [this guide](https://content.luanti.org/help/installing/) to add games and mods.
+
+`./config/minetest.conf` has settings of the server.
 
 ### Podman
 
