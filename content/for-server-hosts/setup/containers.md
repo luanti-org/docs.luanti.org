@@ -21,7 +21,7 @@ aliases:
 
 It is recommended that you use [docker compose](https://docs.docker.com/compose) to set up, configure, and run your server
 
-A simple `docker-compose.yml` example:
+A simple `compose.yml` example:
 
 ```yml
 services:
@@ -37,23 +37,31 @@ services:
       - "30000:30000/udp"
 ```
 
-Before starting the container, and in the directory where you want to have the data, e.g. `~/luanti/`: 
+Before starting the container: 
 - create the necessary directories:
 
-  `mkdir -p data/.minetest config games mods`
+  ```bash
+  mkdir -p data/.minetest config games mods
+  ```
 
 - give needed permission to `data/`
 
-  `sudo chown -R 30000:30000 data/ `
+  ```bash
+  sudo chown -R 30000:30000 data/
+  ```
   
 - copy content of the [minetest.conf.example](https://github.com/luanti-org/luanti/blob/master/minetest.conf.example) file to `config/minetest.conf`
 
 - install the game you want to play in `./games/`. Follow [this guide](https://content.luanti.org/help/installing/#installing-using-the-command-line). For example, to install `voxelibre` using  `git`
 
-  `git clone https://git.minetest.land/VoxeLibre/VoxeLibre ./games/voxelibre/`
+  ```bash
+  git clone https://git.minetest.land/VoxeLibre/VoxeLibre ./games/voxelibre/
+  ```
 
-- start container
-  `docker compose up -d`
+- start the container
+  ```bash
+  docker compose up -d
+  ```
 
 `./data/.minetest/` has the directory `worlds/`, where the world will be saved.
 
