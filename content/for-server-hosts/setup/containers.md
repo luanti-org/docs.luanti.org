@@ -67,6 +67,30 @@ Before starting the container:
 
 `./config/minetest.conf` has settings of the server.
 
+If you have multiple games or worlds, you can specify which one to run in `compose.yml`. For example: 
+```yml
+services:
+  luanti_server:
+    image: ghcr.io/luanti-org/luanti:latest
+    restart: unless-stopped
+    volumes:
+      - ./config:/etc/minetest:ro                    
+      - ./data:/var/lib/minetest           
+      - ./games:/var/lib/minetest/.minetest/games:ro 
+      - ./mods:/var/lib/minetest/.minetest/mods:ro   
+    ports:
+      - "30000:30000/udp"
+    command: --config /etc/minetest/minetest.conf --gameid voxelibre --worldname world
+```
+`--config /etc/minetest/minetest.conf` tells the server where to find the config file inside the container. Keep this flag as-is when using the volume mount from this guide.
+
+To see available flags run:
+```bash
+docker exec -it luanti_server luantiserver --help
+```
+
+
+
 ### Podman
 
 It is recommend that you use [podman quadlets](https://www.redhat.com/en/blog/quadlet-podman) to set up, configure, and run your server
