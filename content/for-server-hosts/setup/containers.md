@@ -45,7 +45,7 @@ Before starting the container:
   mkdir -p data/.minetest config games mods
   ```
 
-- give needed permission to `data/`
+- change ownership of `data` to `minetest` user (UID 30000)
 
   ```bash
   sudo chown -R 30000:30000 data/
