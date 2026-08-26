@@ -14,7 +14,7 @@ Your external IP address is the Internet facing address you have. It is what web
 
 ## Internal IP
 
-Your internal IP address is the address that your computer has on the local network. It is the address the computer uses when communicating to other computers on the local network as well as the router. See the following instructions for each platform:
+Your internal IP address is the address that your computer has on the local network. It is the address the computer uses when communicating to other computers on the local network as well as the router. It will always be within the three blocks of IP address space as defined in [RFC1918](https://datatracker.ietf.org/doc/html/rfc1918#section-3) (192.168.X.X, 10.X.X.X, 172.16.X.X). See the following instructions for each platform:
 
 **Windows:**
 
@@ -22,7 +22,7 @@ Your internal IP address is the address that your computer has on the local netw
 2. Type `ipconfig`
 3. Depending on your setup, you may have multiple network connections that show up. What you should focus on is an Ethernet or Wi-Fi connection, depending on how you have your computer connected to the router.
 
-Your internal IP will be the address listed as "IPv4 Address", and should (but may not necessarily) begin with 192.168.X.X.
+Your internal IP will be the address listed as "IPv4 Address".
 
 ![](/images/Windows_internal_ip.webp)
 
@@ -30,7 +30,9 @@ Your internal IP will be the address listed as "IPv4 Address", and should (but m
 
 1. Open a terminal.
 2. Type `ip addr`
-3. Look for "inet" near "wlan0", "eth0" or something similar in the resulting output. It's usually somewhere within 192.168.0.0/16 but may be in another block.
+3. Look for "inet" near "wlan0", "eth0" or something similar in the resulting output.
+
+![](/images/Linux_internal_ip.png)
 
 **macOS:**
 
