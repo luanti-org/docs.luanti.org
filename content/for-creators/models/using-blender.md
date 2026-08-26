@@ -245,9 +245,8 @@ The following export settings should be set:
 * *Animation* &rarr; *Animation Mode*: Scene
 * *Optimize Animations* &rarr; *Force keeping channels for bones*: **Not** ticked
   * This is important so that no unnecessary channels are exported for bones which are not animated.
-  * Luanti 5.10 would reject models with such constant (`STEP`) interpolation channels;
-    Luanti 5.11 implements support, but unnecessarily channels
-    are nevertheless just a (typically very minor) waste of resources.
+    **If you forget to uncheck this, combining multi-track animations will not work correctly.**
+    The animation track with the highest priority will then override the others.
   * After the fact, you can check if your `.gltf` models have this problem by looking for animation samplers
     with `"interpolation": "STEP"`; if these samplers are unnecessary,
     you can simply remove them along with the associated channels to fix up the model.
