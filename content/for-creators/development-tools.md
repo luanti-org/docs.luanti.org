@@ -32,7 +32,35 @@ In addition to this list, you can also see the [Development Tools](https://conte
 
 ## Syntax highlighting/autocompletion
 
-- Luanti Tools ([VS Code marketplace](https://marketplace.visualstudio.com/items?itemName=GreenXenith.minetest-tools), [OpenVSX](https://open-vsx.org/extension/GreenXenith/minetest-tools/)): Extension for VS Code and other Code - OSS based code editors that provides Lua API autocompletion and more
+Note: the extensions below are community projects, not maintained by the Luanti team.
+
+- **"Luanti API"** extension:
+  - Features:
+    - Typed Luanti API: classes (ObjectRef, InvRef, ItemStack, Settings, ...), `core.*` functions, and definition tables are described with exact types
+    - Context-aware autocompletion: after `player:` only player methods are suggested, after `inv:` only inventory methods, inside a node definition only its fields and callbacks
+    - API documentation shown in a popup as you type and on hover
+    - Diagnostics: warns about typos, wrong arguments and wrong types before you run the game
+    - Built on top of [EmmyLua](https://marketplace.visualstudio.com/items?itemName=tangzx.emmylua) Language Server (installed automatically), which also provides:
+      - Autocompletion for your own functions, methods and tables, across all mods in the workspace
+      - Type annotations for your own code (`---@param`, `---@return`, `---@class`, ...) using [LuaCATS](https://luals.github.io/wiki/annotations/) annotations
+    - Screencast with examples: see the extension page (links below)
+    - Not included: mod and game folder templates, `.luacheckrc` generator, formspec syntax highlighting
+  - Get it at:
+    - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Voxrame.luanti-ide-helper) (VS Code)
+    - [Open VSX Registry](https://open-vsx.org/extension/Voxrame/luanti-ide-helper) (VSCodium, Cursor, Windsurf, Theia and other VS Code forks)
+  - Other editors: [installation instructions](https://github.com/Voxrame/luanti-ide-helper#supported-ides--plugins)
+- **"Luanti Tools"** extension:
+  - Features:
+    - Lightweight snippet-based autocompletion for `core.*` functions and object methods, with a few simplifications:
+      - method suggestions after `:` are not tied to the object type, so methods of all classes are listed
+      - fields and callbacks of definition tables are not suggested
+    - Short description for each suggestion with a link to the relevant section of `lua_api.md`
+    - Formspec syntax highlighting and texture modifier suggestions
+    - Commands to create mod and game folder templates
+    - `.luacheckrc` generator
+  - Get it at:
+    - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=GreenXenith.minetest-tools) (VS Code)
+    - [Open VSX Registry](https://open-vsx.org/extension/GreenXenith/minetest-tools/) (VSCodium, Cursor, Windsurf, Theia and other VS Code forks)
 
 ## Schematics
 
