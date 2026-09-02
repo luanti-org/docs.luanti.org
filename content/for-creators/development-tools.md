@@ -32,7 +32,19 @@ In addition to this list, you can also see the [Development Tools](https://conte
 
 ## Syntax highlighting/autocompletion
 
-- Luanti Tools ([VS Code marketplace](https://marketplace.visualstudio.com/items?itemName=GreenXenith.minetest-tools), [OpenVSX](https://open-vsx.org/extension/GreenXenith/minetest-tools/)): Extension for VS Code and other Code - OSS based code editors that provides Lua API autocompletion and more
+- "Luanti API" extension:
+  - Features:
+    - Precise autocompletion for all Luanti API (classes, `core.` namespace, definitions, etc.)
+    - Type hinting and checking
+    - Documentation hints (in popups) right while you typing (also for all: classes, `core.` namespace, definitions, params, etc.)
+    - Static analyzing for prevent errors
+    - *... see preview screencast at extension page (links bellow)*
+  - Get extension at:
+    - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Voxrame.luanti-ide-helper) (for VS Code only)
+    - [Open VSX Registry](https://open-vsx.org/extension/Voxrame/luanti-ide-helper) (for forks & alternative builds, such as: VSCodium, Cursor, Devin(Windsurf), Kiro IDE, Eclipse Theia, Kodik, ....)
+  - Same functionality for other IDEs via LSP server:
+    - [Install for other IDEs](https://github.com/Voxrame/luanti-ide-helper#supported-ides--plugins)
+- [legacy] Luanti Tools ([VS Code marketplace](https://marketplace.visualstudio.com/items?itemName=GreenXenith.minetest-tools), [OpenVSX](https://open-vsx.org/extension/GreenXenith/minetest-tools/)): Extension for VS Code and other Code - OSS based code editors that provides Lua API autocompletion and more
 
 ## Schematics
 
