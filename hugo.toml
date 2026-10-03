@@ -17,3 +17,6 @@ enableGitInfo = true
     [[module.mounts]]
         source = 'external/flint/docs'
         target = 'content/for-creators/flint'
+    [[module.mounts]]
+        source = 'external/luma/docs'
+        target = 'content/for-server-hosts/luma'

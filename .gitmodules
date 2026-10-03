@@ -7,3 +7,6 @@
 [submodule "external/flint"]
 	path = external/flint
 	url = https://github.com/luanti-org/flint.git
+[submodule "external/luma"]
+	path = external/luma
+	url = https://github.com/luanti-org/luma.git
