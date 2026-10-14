@@ -20,29 +20,29 @@ That being said, hosting from home will work fine if you have some hardware you 
 
 Luanti does have a _Host Server_ option in the main menu, which is fine for temporary servers for a couple of friends, but if you want to run a public server you would want to run it dedicated as it can be kept online independent of the client being active.
 
-A chart is shown below with some links to various platforms, these should be used as an example of what you might want, and is not an endorsement of any particular platform or solution. it is assumed that you will be using some level of pc/server hardware and mobile is excluded as it is quite a not recommended exotic solution.
+A chart is shown below with links to various platforms. These should be used as examples of what you might want and are not an endorsement of any particular platform or solution. It is assumed that you will be using some form of PC/server hardware; mobile is excluded as it is a highly exotic and not recommended solution.
 
-Solution | Pros | Cons | Examples
--------- | ---- | ---- | --------
-Self Hosting | cheap* | expose your ip, not reliable | whatever you have lying around / ex office hardware
-vps | full control, reliable hardware and connection | cost | https://www.netcup.com/en/server https://contabo.com/en-us/vps/ https://www.hetzner.com/
-Saas | minimal setting up, maintance, gui provided | less control and configuration, potential lock-in | https://luanti.ch/pages/hosting/ https://pinehosting.com/minetest
+Solution     | Pros                          | Cons                                      | Examples
+-------------|-------------------------------|-------------------------------------------|--------------------------------------------------------------
+Self-hosting | Cheap*                        | Exposes your IP, less reliable            | Whatever hardware you have lying around / former office hardware
+VPS          | Full control, reliable hardware and connection | Cost                             | https://www.netcup.com/en/server https://contabo.com/en-us/vps/ https://www.hetzner.com/
+SaaS         | Minimal setup and maintenance, GUI provided | Less control and configuration, potential lock-in | https://luanti.ch/pages/hosting/ https://pinehosting.com/minetest
 
-\* Assumes you already own hardware/can aquire for cheap, already pay for internet that you can reuse, and dont mind the minimal add to your power bill.
+\* Assumes you already own the hardware (or can acquire it cheaply), already pay for internet that you can reuse, and don't mind the minimal addition to your power bill.
 
 ## Choosing Hardware
 
-You can of course run luanti on rather terrible hardware, however these specs aim to be for around 10 players at once, on a reasonable and not demanding game+mods.
+You can of course run Luanti on rather modest hardware. However, the following specs aim to support around 10 players at once on a reasonable, non-demanding game + mods combination.
 
-cpu: at least 2 cores (preferable 4)[^1], luanti is heavily single core threaded (while this has improved somewhat in more recent versions, still is the case for most things), to the higher the cpu core clock speed, the better.
+**CPU:** At least 2 cores (preferably 4)[^1]. Luanti is heavily single-threaded (while this has improved somewhat in more recent versions, it is still the case for most things), so higher CPU core clock speed is better.
 
-[^1]: If turning on multiple threads for faster mapgen, you should have preferable 4-8, do note that multithread mapgen may not work with certain setups [#9357](https://github.com/luanti-org/luanti/issues/9357)
+[^1]: If enabling multiple threads for faster mapgen, you should preferably have 4–8 cores. Note that multithreaded mapgen may not work with certain setups ([#9357](https://github.com/luanti-org/luanti/issues/9357)).
 
-ram: 4gb, should be enough, although note this number needs to scale if using a heavier game+mods (see mineclonia/voxelibre). also note if using luajit that it is compiled with [gc64](https://blog.openresty.com/en/luajit-gc64-mode/) so you can use all the memory, this should be enabled on most modern linux distros.
+**RAM:** 4 GB should be enough, although this number needs to scale if you are using a heavier game + mods (see Mineclonia / VoxeLibre). Also note that if using LuaJIT it should be compiled with [GC64](https://blog.openresty.com/en/luajit-gc64-mode/) so you can use all available memory; this should be enabled on most modern Linux distros.
 
-storage: 30gb, use a ssd, preferably nvme drive. this will grow with time as your players explore and expand more of the map. to cut down on this being an issue you may want to [limit your map size](/for-players/world-boundaries/#changing-the-world-boundary) 
+**Storage:** 30 GB. Use an SSD, preferably an NVMe drive. This will grow over time as your players explore and expand more of the map. To reduce this issue you may want to [limit your map size](/for-players/world-boundaries/#changing-the-world-boundary).
 
-network: 20mpbs, note you may need to raise this number if you adjust settings sending more map chunks, etc per player
+**Network:** 20 Mbps. Note that you may need to increase this if you adjust settings that send more map chunks (etc.) per player.
 
 ## Your IP Address
 
