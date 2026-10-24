@@ -12,6 +12,70 @@ Note that not all changes made to the code between releases are listed here. Fix
 If you want a list of _every_ change made between releases see the [commit log](https://github.com/luanti-org/luanti/commits/master).
 
 
+## 5.17.0 → 5.18.0
+
+*To be released late October/early November 2026.*
+
+### Deprecations and compatibility notes
+- Lua API: Missing `x`, `y` or `z` values in vectors now cause an error.
+  Deprecation warnings were issued since version 5.13.0. (_sfan5_)
+- The setting `secure.enable_security` has been removed. A command-line argument has been added
+  to cover cases where it is - for whatever reason - necessary to disable it. (_sfan5_)
+
+### Client / Audiovisuals
+- Performance improvements (_ubuntuyou_, _sfan5_)
+- Improve zoom level status text (_Wuzzy_)
+- Autoforward is again forwarded to `get_player_control().up` (5.17.0 regression) (_y5nw_)
+- Better text placement for the media loading step (_cx384_)
+- The Enter key event no longer leaks into formspecs opened from the chat (_SmallJoker_)
+- Re-added a client setting to disable digging particles (_monk_)
+- Moved the primary actions (buttons) in main menu dialogs to the right (_siliconsniffer_)
+- Pause menu and death screen updated to use real coordinates for proper text centering (_CrazyladMT_)
+. Automatic selection of the view culler (avoids performance penalty caused by changing settings) (_sfan5_)
+- Fix occasional black screenshots (_sfan5_, _paradust7_)
+- Main menu: Fix unlisted duplicate mod names (5.17.0 regression) (_SmallJoker_)
+- Increased the default values for graphics and map-related settings slightly (_sfan5_)
+- The main menu settings dialog now shows warning messages for potentially dangerous settings (_sfan5_)
+- Load from multiple texture packs at the same time (check the main menu) (_ZenonSeth_)
+- Fix hotbar scrolling with high resolution mice (_cx384_)
+
+### World / Server / Environment
+- Improved progress logging for `--recompress` and `--migrate` (_sfan5_)
+- Avoid "Failed to bind socket." errors when restarting singleplayer quickly (_red-001_)
+- Node formspec submissions are now checked by privilege and interaction range (_Acts1631_)
+- Improve collision detection at lag spikes (_SmallJoker_)
+- Fix entity duplication when `on_activate` errors (_cx384_)
+- Fix error when re-joining too quickly (_ZenonSeth_)
+
+### Script API / Modding
+- Fixed the rotation calculation (e.g. for selection boxes) in the raycast API (regression) (_appgurueu_)
+- Formspec element `vertlabel[]` now applies color correctly (_appgurueu_)
+- New formspec element `listimages[]` (_CrazyladMT_)
+- More strict `ItemStack(...)` handling (_SmallJoker_)
+- Lua API documentation improvements (_coyaSONG_, _Wuzzy_, _sfan5_)
+- Fix `core.request_shutdown` compatibility (optional arguments) (_sfan5_)
+- Add interpolation toggle to `ObjectRef:set_rotation` (_An0n3m0us_)
+- `inventory` HUD element: allow custom background per element (_CodingMantisUA_)
+- New `style[]`/`style_type[]` property to make textfields read-only (_sfan5_)
+- Security improvements for `core.load_schematic` (_user333dev_)
+- The texture modifier `[colorizehsl:` no longer discards the alpha channel (_j-r_)
+- Fix `set_animation({x = 0, y = 0}, ...)` not working if local player animations are disabled (5.17.0 regression) (_appgurueu_)
+- The moon tonemap is now used independently from the sun tonemap (_sfan5_)
+- New `set_lighting({light_curve = ...})` API to change the light curve (_sfan5_)
+- Translating to English is now possible using `X-Source-Language` (requires client and server to be >= 5.18.0-rc1) (_Van_)
+
+### Misc / Maintenance
+- Code maintenance and fixes (_sfan5_, _DeltachangeOG_, _cx384_, _HybridDog_, _paradust7_, _Desour_, _bjorn_)
+- Build system maintenance (_sfan5_, _red-001_, _DeltachangeOG_, _ZenonSeth_)
+- Add screenshots for F-Droid (_siliconsniffer_)
+- Compiler warning fixes (_paradust7_)
+- Mapblock mesh generator improvements (_cx384_, _Desour_)
+- Replace the Irrlicht ZIP extraction code with `libzip` (new dependency) (_DeltachangeOG_)
+- Fixes and improvements related to Emscripten (web) (_paradust7_)
+- The `builtin` integrity check now works on Windows too (_sfan5_)
+- Many additional error, bounds checks and new tests (_sfan5_)
+- Fix rotation issues at angles near 180° (_bjorn_)
+
 
 ## 5.16.0 → 5.17.0
 
