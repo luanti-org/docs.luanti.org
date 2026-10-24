@@ -21,6 +21,11 @@ See [About](content/about/_index.md) for more information
   - `test:a11y:tests`: Not meant for independent use, only as part of `test:a11y`
   - `test:links`: Tests validity of all links in the site. WIP, ref [#177](https://github.com/luanti-org/docs.luanti.org/issues/177)
   - `test:spelling`: Reports all apparent spelling errors. WIP, ref [#83](https://github.com/luanti-org/docs.luanti.org/issues/83) for details.
+  - `test:spelling-only`: Same as `test:spelling`, but only for the given files, e.g. `npm run test:spelling-only -- content/about/faq.md`. Used in our CI pipeline for pull requests.
+  - `test:spelling-only-uncommitted`: Same as `test:spelling`, but only for files changed or added, but not committed yet.
+    May not work on Windows, since npm runs scripts in `cmd.exe` there. Workaround: `npm config set script-shell "C:\\Program Files\\Git\\bin\\bash.exe"` (requires [Git for Windows](https://gitforwindows.org/)), or use WSL.
+  - `test:spelling-only-staged`: Same as `test:spelling`, but only for files staged with `git add`
+  - `test:spelling-only-last-commit`: Same as `test:spelling`, but only for files changed in the last commit
 - dependencies
   - `hugo-extended`: Static site generator that turns Markdown and shortcodes into HTML
 - devDependencies

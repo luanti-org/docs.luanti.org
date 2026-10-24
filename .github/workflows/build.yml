@@ -22,7 +22,17 @@ jobs:
       - name: Build site to check for errors
         run: npm run build:ci
       - name: Spell check (advisory)
-        run: npm run test:spelling
+        run: |
+          if [ "${{ github.event_name }}" != pull_request ]; then
+            npm run test:spelling
+            exit
+          fi
+          files=$(git diff --name-only --diff-filter=d "origin/${{ github.base_ref }}...HEAD" -- content README.md)
+          if [ -z "$files" ]; then
+            echo "No changed files to spell check"
+            exit
+          fi
+          npm run test:spelling-only -- $files
         continue-on-error: true
       - name: check that links are all valid
         uses: JustinBeckwith/linkinator-action@v1

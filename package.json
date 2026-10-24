@@ -10,7 +10,11 @@
     "test:a11y:tests": "playwright test",
     "test:format": "prettier --check .",
     "test:links": "linkinator ./public -r",
-    "test:spelling": "cspell content README.md"
+    "test:spelling": "cspell content README.md",
+    "test:spelling-only": "cspell --no-progress",
+    "test:spelling-only-last-commit": "git diff --name-only --diff-filter=d HEAD~1 HEAD -- content README.md | cspell --no-progress --no-must-find-files --file-list stdin",
+    "test:spelling-only-staged": "git diff --cached --name-only --diff-filter=d -- content README.md | cspell --no-progress --no-must-find-files --file-list stdin",
+    "test:spelling-only-uncommitted": "{ git diff --name-only --diff-filter=d HEAD -- content README.md; git ls-files -o --exclude-standard -- content README.md; } | cspell --no-progress --no-must-find-files --file-list stdin"
   },
   "dependencies": {
     "hugo-extended": "^0.168.0"
