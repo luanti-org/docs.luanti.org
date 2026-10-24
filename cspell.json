@@ -15,6 +15,11 @@
     {
       "name": "markdown-inline-code",
       "pattern": "/`[^`\\n]+`/g"
+    },
+    // contributor credits in the changelog: (_nickname_) or (_nick1_, _nick2_)
+    {
+      "name": "changelog-credits",
+      "pattern": "/\\(_[^)\\n]*_\\)/g"
     }
   ],
   // don't spell check code in Markdown: identifiers there aren't words
@@ -22,6 +27,13 @@
     {
       "languageId": "markdown",
       "ignoreRegExpList": ["markdown-code-block", "markdown-inline-code"]
+    }
+  ],
+  // per-file settings
+  "overrides": [
+    {
+      "filename": "content/about/changelog.md",
+      "ignoreRegExpList": ["changelog-credits"]
     }
   ],
   // words - list of words to be always considered correct
