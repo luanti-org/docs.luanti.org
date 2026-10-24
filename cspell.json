@@ -4,6 +4,26 @@
   "version": "0.2",
   // language - current active spelling language
   "language": "en",
+  // patterns - regular expressions that can be referenced in ignoreRegExpList
+  "patterns": [
+    // fenced code blocks: ``` or ~~~
+    {
+      "name": "markdown-code-block",
+      "pattern": "/^\\s*(`{3,}|~{3,})[\\s\\S]*?^\\s*\\1/gm"
+    },
+    // inline code: `code`
+    {
+      "name": "markdown-inline-code",
+      "pattern": "/`[^`\\n]+`/g"
+    }
+  ],
+  // don't spell check code in Markdown: identifiers there aren't words
+  "languageSettings": [
+    {
+      "languageId": "markdown",
+      "ignoreRegExpList": ["markdown-code-block", "markdown-inline-code"]
+    }
+  ],
   // words - list of words to be always considered correct
   "words": [
     "_rightclick",
