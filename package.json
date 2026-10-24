@@ -16,13 +16,13 @@
     "hugo-extended": "^0.168.0"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.10.1",
+    "@axe-core/playwright": "^4.14.0",
     "@playwright/test": "^1.49.1",
-    "cspell": "^8.17.1",
-    "linkinator": "^6.1.2",
-    "prettier": "^3.5.2",
-    "sort-package-json": "^2.14.0",
-    "start-server-and-test": "^2.0.10"
+    "cspell": "^10.4.0",
+    "linkinator": "^8.1.0",
+    "prettier": "^3.9.10",
+    "sort-package-json": "^4.1.0",
+    "start-server-and-test": "^3.0.13"
   },
   "//": "See readme.md for explanations of each dependency and script"
 }
