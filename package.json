@@ -13,7 +13,7 @@
     "test:spelling": "cspell content README.md"
   },
   "dependencies": {
-    "hugo-extended": "^0.147.5"
+    "hugo-extended": "^0.168.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
