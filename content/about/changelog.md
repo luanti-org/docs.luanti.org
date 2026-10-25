@@ -56,7 +56,7 @@ If you want a list of _every_ change made between releases see the [commit log](
 - Fix `core.request_shutdown` compatibility (optional arguments) (_sfan5_)
 - Add interpolation toggle to `ObjectRef:set_rotation` (_An0n3m0us_)
 - `inventory` HUD element: allow custom background per element (_CodingMantisUA_)
-- New `style[]`/`style_type[]` property to make textfields read-only (_sfan5_)
+- New `style[]`/`style_type[]` property to make text fields read-only (_sfan5_)
 - Security improvements for `core.load_schematic` (_user333dev_)
 - The texture modifier `[colorizehsl:` no longer discards the alpha channel (_j-r_)
 - Fix `set_animation({x = 0, y = 0}, ...)` not working if local player animations are disabled (5.17.0 regression) (_appgurueu_)

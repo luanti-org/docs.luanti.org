@@ -24,6 +24,7 @@ distro
 distros
 dofile
 dopesheet
+Emscripten
 errfunc
 faceselect
 Flathub
@@ -106,6 +107,7 @@ SSIM
 syncthing
 Ternadim
 Theia
+tonemap
 Toughbook
 traceroute
 tutorialspoint
