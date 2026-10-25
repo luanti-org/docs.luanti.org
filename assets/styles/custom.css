@@ -1,3 +1,13 @@
 .markdown img {
   max-width: min(100%, 32rem);
 }
+
+/* Hide the ToC button (narrow screens) and panel if the page has no ToC entries,
+   see #206 and https://github.com/alex-shpak/hugo-book/issues/693 */
+.book-header:not(:has(#TableOfContents li)) label[for="toc-control"] {
+  visibility: hidden; /* keeps the page title centered */
+}
+
+.book-toc:not(:has(#TableOfContents li)) {
+  display: none;
+}
