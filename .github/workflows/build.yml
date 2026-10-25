@@ -23,6 +23,8 @@ jobs:
         run: npm run build:ci
       - name: Spell check
         run: |
+          # show reported issues as annotations on the changed lines
+          echo "::add-matcher::.github/matchers/cspell.json"
           # full check on push, or if the spell check config or cspell itself changed
           if [ "${{ github.event_name }}" != pull_request ] \
             || ! git diff --quiet "origin/${{ github.base_ref }}...HEAD" -- cspell.json .cspell package-lock.json; then
