@@ -23,6 +23,7 @@
   font-size: 1.25rem;
   font-weight: bolder;
   text-decoration: none;
+  white-space: nowrap;
 
   img {
     height: 1.75rem;
@@ -51,6 +52,7 @@
   background: var(--gray-100);
   color: inherit;
   font: inherit;
+  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -65,9 +67,39 @@
   display: none;
 }
 
-/* Keep only the brand and the theme switch on narrow screens */
+/* Header links are also in the side menu ([[menu.after]] in hugo.toml),
+   shown there only on narrow screens */
+.book-menu li:has(> a.site-header-link) {
+  display: none;
+}
+
+/* Narrow screens: links move to the side menu */
 @media screen and (max-width: 56rem) {
-  .site-header-nav a {
+  .site-header-content {
+    gap: var(--space-16);
+  }
+
+  .site-header-brand {
+    margin-inline-end: auto;
+    font-size: 1rem;
+  }
+
+  .site-header-nav a.site-header-link {
+    display: none;
+  }
+
+  .book-menu li:has(> a.site-header-link) {
+    display: list-item;
+  }
+}
+
+/* Very narrow screens: smaller gaps, only the icon in the theme switch */
+@media screen and (max-width: 24rem) {
+  .site-header-content {
+    gap: var(--space-8);
+  }
+
+  .site-header-theme-label {
     display: none;
   }
 }

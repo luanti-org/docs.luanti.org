@@ -10,6 +10,29 @@ enableGitInfo = true
     BookRepo = 'https://github.com/luanti-org/docs.luanti.org'
     BookEditPath = 'edit/master'
 
+# Links shown in the site header, and at the bottom of the side menu on narrow screens
+[menu]
+    [[menu.after]]
+        name = 'Luanti'
+        url = 'https://www.luanti.org/'
+        weight = 10
+        params = { class = 'site-header-link' }
+    [[menu.after]]
+        name = 'ContentDB'
+        url = 'https://content.luanti.org/'
+        weight = 20
+        params = { class = 'site-header-link' }
+    [[menu.after]]
+        name = 'Forums'
+        url = 'https://forum.luanti.org/'
+        weight = 30
+        params = { class = 'site-header-link' }
+    [[menu.after]]
+        name = 'GitHub'
+        url = 'https://github.com/luanti-org/docs.luanti.org'
+        weight = 40
+        params = { class = 'site-header-link' }
+
 [module]
     [[module.mounts]]
         source = 'content'

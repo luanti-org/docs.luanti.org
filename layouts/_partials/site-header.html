@@ -1,23 +1,15 @@
 <header class="site-header">
   <div class="site-header-content container flex align-center justify-between">
-    <a
-      class="site-header-brand flex align-center"
-      href="{{ partial `docs/links/home` . }}"
-    >
+    <a class="site-header-brand flex align-center" href="{{ partial `docs/links/home` . }}">
       <img src="{{ `favicon.png` | relURL }}" alt="" />
       <span>{{ .Site.Title }}</span>
     </a>
 
     <nav class="site-header-nav flex align-center" aria-label="Luanti">
-      <a href="https://www.luanti.org/">Luanti</a>
-      <a href="https://content.luanti.org/">ContentDB</a>
-      <a href="https://forum.luanti.org/">Forums</a>
-      <a href="https://github.com/luanti-org/docs.luanti.org">GitHub</a>
-      <button
-        type="button"
-        class="site-header-theme"
-        id="site-theme-toggle"
-      ></button>
+      {{ range .Site.Menus.after }}
+      <a class="site-header-link" href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+      <button type="button" class="site-header-theme" id="site-theme-toggle"></button>
     </nav>
   </div>
 </header>
@@ -30,7 +22,8 @@
     const button = document.getElementById("site-theme-toggle");
     const show = () => {
       const mode = modes[root.dataset.theme] ? root.dataset.theme : "auto";
-      button.textContent = modes[mode];
+      const [icon, label] = modes[mode];
+      button.innerHTML = `${icon} <span class="site-header-theme-label">${label}</span>`;
       button.title = "Color theme: " + mode;
     };
     button.addEventListener("click", () => {
@@ -38,7 +31,7 @@
       root.dataset.theme = order[(current + 1) % order.length];
       try {
         localStorage.setItem("theme", root.dataset.theme);
-      } catch (e) {}
+      } catch (e) { }
       show();
     });
     show();
