@@ -62,7 +62,14 @@ To check only the files you changed, use one of:
 
 In pull requests, CI checks only the files changed by the PR (or all files, if the spell-checker configuration changed). The check doesn't fail the build, but please fix the reported issues before requesting a review.
 
-If you find a word that's spelled correctly but not recognized by the spell-checker, use the context menu's "Spelling > Add Words to CSpell Configuration" command or manually update `cspell.json` to include the word.
+If you find a word that's spelled correctly but not recognized by the spell-checker, add it to the matching dictionary in the `.cspell` folder (one word per line):
+
+- `people.txt`: names and nicknames of people
+- `luanti.txt`: Luanti terms: API, engine internals, mods, games, forks, commands, settings
+- `software.txt`: other software, file formats and general computing terms
+- `english.txt`: regular English words not in the default dictionary, including British spelling
+
+In VS Code, you can also use the context menu's "Spelling > Add Words to Dictionary" command and choose the dictionary.
 
 You can disable the spell-checker with Hugo comments:
 

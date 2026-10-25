@@ -25,7 +25,7 @@ jobs:
         run: |
           # full check on push, or if the spell check config or cspell itself changed
           if [ "${{ github.event_name }}" != pull_request ] \
-            || ! git diff --quiet "origin/${{ github.base_ref }}...HEAD" -- cspell.json package-lock.json; then
+            || ! git diff --quiet "origin/${{ github.base_ref }}...HEAD" -- cspell.json .cspell package-lock.json; then
             npm run test:spelling
             exit
           fi
