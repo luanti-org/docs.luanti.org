@@ -60,7 +60,7 @@ To check only the files you changed, use one of:
 - `npm run test:spelling-only-last-commit`: files changed in the last commit
 - `npm run test:spelling-only -- <files>`: the given files
 
-In pull requests, CI checks only the files changed by the PR (or all files, if the spell-checker configuration changed). The check doesn't fail the build, but please fix the reported issues before requesting a review.
+In pull requests, CI checks only the files changed by the PR (or all files, if the spell-checker configuration changed). If it reports any issues, the build fails.
 
 If you find a word that's spelled correctly but not recognized by the spell-checker, add it to the matching dictionary in the `.cspell` folder (one word per line):
 

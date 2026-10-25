@@ -21,7 +21,7 @@ jobs:
         run: git diff
       - name: Build site to check for errors
         run: npm run build:ci
-      - name: Spell check (advisory)
+      - name: Spell check
         run: |
           # full check on push, or if the spell check config or cspell itself changed
           if [ "${{ github.event_name }}" != pull_request ] \
@@ -35,7 +35,6 @@ jobs:
             exit
           fi
           npm run test:spelling-only -- $files
-        continue-on-error: true
       - name: check that links are all valid
         uses: JustinBeckwith/linkinator-action@v1
         with:
