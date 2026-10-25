@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           submodules: true
           fetch-depth: 0
@@ -38,7 +38,7 @@ jobs:
           fi
           npm run test:spelling-only -- $files
       - name: check that links are all valid
-        uses: JustinBeckwith/linkinator-action@v1
+        uses: JustinBeckwith/linkinator-action@v2
         with:
           paths: "*.html"
           serverRoot: "./public/"
