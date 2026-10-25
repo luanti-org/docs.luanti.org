@@ -1,0 +1,73 @@
+/* Site header: layouts/_partials/site-header.html */
+:root {
+  --site-header-height: 3.5rem;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: var(--site-header-height);
+  background: var(--body-background);
+  border-bottom: var(--space-1) solid var(--gray-200);
+}
+
+.site-header-content {
+  height: 100%;
+  padding: 0 var(--space-16);
+}
+
+.site-header-brand {
+  gap: var(--space-8);
+  color: inherit;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  text-decoration: none;
+
+  img {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+}
+
+.site-header-nav {
+  gap: var(--space-16);
+  font-size: var(--font-size-smaller);
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-link);
+    }
+  }
+}
+
+.site-header-theme {
+  padding: var(--space-4) var(--space-8);
+  border: var(--space-1) solid var(--gray-200);
+  border-radius: var(--border-radius);
+  background: var(--gray-100);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Side panels start below the header */
+.book-menu .book-menu-content,
+.book-toc .book-toc-content {
+  top: var(--site-header-height);
+}
+
+/* The brand is in the header now */
+.book-menu .book-brand {
+  display: none;
+}
+
+/* Keep only the brand and the theme switch on narrow screens */
+@media screen and (max-width: 56rem) {
+  .site-header-nav a {
+    display: none;
+  }
+}

@@ -1,0 +1,12 @@
+# Declares the order of CSS files
+# Copy of themes/hugo-book/assets/styles/index.yaml with header.css added
+- normalize.css
+- variables.css
+- utils.css
+- book.css
+- markdown.css
+- shortcodes.css
+- print.css
+- themes.css
+- header.css
+- custom.css

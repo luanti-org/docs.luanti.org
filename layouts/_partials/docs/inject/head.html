@@ -1,0 +1,7 @@
+<!-- Apply the color theme chosen in the site header before the page is rendered -->
+<script>
+  try {
+    const theme = localStorage.getItem("theme");
+    if (theme) document.documentElement.dataset.theme = theme;
+  } catch (e) {}
+</script>
