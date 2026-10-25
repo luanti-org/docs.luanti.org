@@ -8,6 +8,13 @@ See [/content](/content/) for content.
 
 See [About](content/about/_index.md) for more information
 
+## Contributing
+
+See [Contributing to Docs](content/about/contributing-to-docs.md) before opening a pull request.
+
+- [Local installation](content/about/contributing-to-docs.md#local-development)
+- [Spell checking](content/about/contributing-to-docs.md#spell-checker)
+
 ## package.json
 
 `package.json` dependencies and scripts are described here for readability:

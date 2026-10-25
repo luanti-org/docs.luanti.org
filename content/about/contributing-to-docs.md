@@ -53,6 +53,15 @@ hugo server # This is the command internal to `npm start`
 
 You can run the spell-checker using `npm run test:spelling`. You can also install the recommended "Code Spell Checker" VS Code extension to get inline annotations of apparent spelling mistakes. The extension might fail to call out all spelling mistakes: consider `npm run test:spelling` the correct response.
 
+To check only the files you changed, use one of:
+
+- `npm run test:spelling-only-uncommitted`: files changed or added, but not committed yet
+- `npm run test:spelling-only-staged`: files staged with `git add`
+- `npm run test:spelling-only-last-commit`: files changed in the last commit
+- `npm run test:spelling-only -- <files>`: the given files
+
+In pull requests, CI checks only the files changed by the PR (or all files, if the spell-checker configuration changed). The check doesn't fail the build, but please fix the reported issues before requesting a review.
+
 If you find a word that's spelled correctly but not recognized by the spell-checker, use the context menu's "Spelling > Add Words to CSpell Configuration" command or manually update `cspell.json` to include the word.
 
 You can disable the spell-checker with Hugo comments:
