@@ -64,7 +64,7 @@ Released on 29 October 2026.
 - Fix `set_animation({x = 0, y = 0}, ...)` not working if local player animations are disabled (5.17.0 regression) (_appgurueu_)
 - The moon tonemap is now used independently from the sun tonemap (_sfan5_)
 - New `set_lighting({light_curve = ...})` API to change the light curve (_sfan5_)
-- Translating to English is now possible using `X-Source-Language` (requires client and server to be >= 5.18.0-rc1) (_Van_)
+- Translating to English is now possible using `X-Source-Language` (requires client and server to be >= 5.18.0) (_Van_)
 
 ### Misc / Maintenance
 - Code maintenance and fixes (_sfan5_, _DeltachangeOG_, _cx384_, _HybridDog_, _paradust7_, _Desour_, _bjorn_)
