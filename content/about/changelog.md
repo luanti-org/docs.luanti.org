@@ -40,6 +40,7 @@ Released on 29 October 2026.
 - The main menu settings dialog now shows warning messages for potentially dangerous settings (_sfan5_)
 - Load from multiple texture packs at the same time (check the main menu) (_ZenonSeth_)
 - Fix hotbar scrolling with high resolution mice (_cx384_)
+- Improve ContentDB request handling in case of errors (_sfan5_)
 
 ### World / Server / Environment
 - Improved progress logging for `--recompress` and `--migrate` (_sfan5_)
