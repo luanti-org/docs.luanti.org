@@ -14,7 +14,9 @@ If you want a list of _every_ change made between releases see the [commit log](
 
 ## 5.17.0 → 5.18.0
 
-*To be released late October/early November 2026.*
+**[Release](https://github.com/luanti-org/luanti/releases/tag/5.18.0)**
+
+Released on 29 October 2026.
 
 ### Deprecations and compatibility notes
 - Lua API: Missing `x`, `y` or `z` values in vectors now cause an error.
