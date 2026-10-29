@@ -3,6 +3,16 @@
   --site-header-height: 3.5rem;
 }
 
+/* Anchor targets (`#heading`) are not covered by the header */
+html {
+  scroll-padding-top: var(--site-header-height);
+}
+
+/* Keep the heading's own top margin visible too */
+.markdown :is(h1, h2, h3, h4, h5, h6) {
+  scroll-margin-top: 1.5em;
+}
+
 .site-header {
   position: sticky;
   top: 0;
