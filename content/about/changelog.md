@@ -33,7 +33,7 @@ Released on 29 October 2026.
 - Re-added a client setting to disable digging particles (_monk_)
 - Moved the primary actions (buttons) in main menu dialogs to the right (_siliconsniffer_)
 - Pause menu and death screen updated to use real coordinates for proper text centering (_CrazyladMT_)
-. Automatic selection of the view culler (avoids performance penalty caused by changing settings) (_sfan5_)
+- Automatic selection of the view culler (avoids performance penalty caused by changing settings) (_sfan5_)
 - Fix occasional black screenshots (_sfan5_, _paradust7_)
 - Main menu: Fix unlisted duplicate mod names (5.17.0 regression) (_SmallJoker_)
 - Increased the default values for graphics and map-related settings slightly (_sfan5_)
