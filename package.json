@@ -17,7 +17,7 @@
     "test:spelling-only-uncommitted": "{ git diff --name-only --diff-filter=d HEAD -- content README.md; git ls-files -o --exclude-standard -- content README.md; } | cspell --no-progress --no-must-find-files --file-list stdin"
   },
   "dependencies": {
-    "hugo-extended": "^0.168.0"
+    "hugo-extended": "^0.169.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",
