@@ -61,7 +61,8 @@ Bug fixes may be postponed as well if the risk of introducing a last-minute regr
 
 1. Move all open feature PRs of the current [milestone](https://github.com/luanti-org/luanti/milestones) to the next one.
 2. Announce the **feature freeze in /topic of [#luanti-dev](/about/irc)**.
-3. Post the release candidate builds on the forums ([News section](https://forum.luanti.org/viewforum.php?f=18)) and (optional) as pre-release on GitHub ([Releases page](https://github.com/luanti-org/luanti/releases)).
+3. Reopen the ["Feature freeze time" issue](https://github.com/luanti-org/luanti/issues/13285)
+4. Post the release candidate builds on the forums ([News section](https://forum.luanti.org/viewforum.php?f=18)) and (optional) as pre-release on GitHub ([Releases page](https://github.com/luanti-org/luanti/releases)).
    - This helps to find high-priority issues faster.
    - You may use the buildbot/CI artifacts from `master`. If needed: Provide manual signing instructions for the MacOS and Android builds.
 
@@ -287,6 +288,7 @@ Check that the util/bump_version.sh script did the following steps:
 ### Write a release notice
 
 - Don't forget to edit the luanti.org page ([Repo](https://github.com/luanti-org/luanti-org.github.io)).
+  - If yet not all builds are available: reopen the ["Update Website to include the newest Luanti release" issue](https://github.com/luanti-org/luanti-org.github.io/issues/442) as a reminder.
   - currently you will need to update machine readable metadata in \_data/release.yml and downloads.html itself.
 - Post a new topic in the [News section](https://forum.luanti.org/viewforum.php?f=18) of the forum. **See [Changelog](/about/changelog).**
   - It is customary to sticky the newest release topic and lock older ones.
