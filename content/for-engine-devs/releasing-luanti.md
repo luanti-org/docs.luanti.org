@@ -165,12 +165,12 @@ The process with patch releases is slightly different but the script will take c
 
 Since 2023, we use the **mingw** artifacts of the "windows" CI workflow.
 
-Extract the outer ZIP file so that users only have:
+Users should get:
 
 - one ZIP file to extract (if portable), should be named `luanti-5.x.x-win64.zip`
 - the bare executable (if installer), should be named `luanti-5.x.x.exe`
 
-Note that the correct build only shows up after the release commit has been pushed to Github (use a temporary branch for this).
+Note that the correct build only shows up after the release commit has been pushed to Github (you can use a temporary branch for this).
 
 → → → _**Make sure that the Windows builds work before continuing to do anything**_ ← ← ←
 
@@ -179,10 +179,10 @@ Note that the correct build only shows up after the release commit has been push
 _Note_: Don't cheat on this by testing in Wine. It has happened that things crash/break in Wine while they are fine on real Windows.
 
 - Check that the build identifies itself as 5.x.x not 5.x.x-dev or 5.x.x-abc4de7
-- Click some menu buttons
+- Visit all menu tabs, click some buttons
+- Install a package from CDB
 - Create world with MTG, enter it, exit back to menu
 - Open multiplayer tab, attempt to join a server
-- Install a package from CDB, uninstall it again
 - Enable dynamic shadows, join in-game and look
 
 ### Upload packages to somewhere
@@ -240,7 +240,7 @@ If the first step completed successfully but the second one failed, you need to 
 
 ### Update Flathub stable build
 
-sfan5 and luatic have access.
+**sfan5** and **luatic** have access.
 
 Once the release has been tagged, FlatHubBot opens a pull request
 on the [Luanti Flathub repo](https://github.com/flathub/org.luanti.luanti),
@@ -264,14 +264,7 @@ This is to make it easier to figure out which state an APK was built from.
 - Sign: `Android/Sdk/build-tools/34.0.0/apksigner sign --ks ~/Documents/keystore-minetest.jks --min-sdk-version 21 ~/Downloads/app-release.aab`
 - Upload to Google Play
 
-#### Creating Native Debug Symbols
-
-**FIXME**: nobody does this anymore. what now?
-
-- Copy native/build/intermediates/ndkBuild/release/obj/local/ to new folder
-- Remove all but .so files from new folder
-- Check the .so contain debug info using the file command
-- `zip -r symbols.zip .`
+*Note*: debug symbols are automatically included bundle and don't need to uploaded separately
 
 ## After releasing
 
@@ -289,11 +282,11 @@ Check that the util/bump_version.sh script did the following steps:
 
 - Don't forget to edit the luanti.org page ([Repo](https://github.com/luanti-org/luanti-org.github.io)).
   - If yet not all builds are available: reopen the ["Update Website to include the newest Luanti release" issue](https://github.com/luanti-org/luanti-org.github.io/issues/442) as a reminder.
-  - currently you will need to update machine readable metadata in \_data/release.yml and downloads.html itself.
+  - currently you will need to update machine readable metadata in `_data/release.yml` and `downloads.html` itself.
 - Post a new topic in the [News section](https://forum.luanti.org/viewforum.php?f=18) of the forum. **See [Changelog](/about/changelog).**
   - It is customary to sticky the newest release topic and lock older ones.
 - Add a new post to the [blog](https://github.com/luanti-org/blog/)
-- Announce the release on [Twitter](https://twitter.com/MinetestProject) and [Mastodon](https://mastodon.online/@Luanti@fosstodon.org). rubenwardy has access.
+- Announce the release on [Mastodon](https://floss.social/@Luanti). rubenwardy has access.
 
 ### Notify known package maintainers
 
@@ -302,7 +295,6 @@ Check that the util/bump_version.sh script did the following steps:
 - **Fedora** and others: should automatically show up [here](https://release-monitoring.org/project/1978/), but can be flagged manually
 - **F-Droid**: has volunteer maintainers, if nobody notices consider opening an issue [here](https://gitlab.com/fdroid/fdroiddata/-/issues)
 - **Snap**: open an issue (or contribute) [here](https://github.com/snapcrafters/minetest)
-- **Gentoo**: has [own version tracking](https://packages.gentoo.org/packages/games-engines/minetest), no need to contact
 
 You can find out how quick various distros are to adopt new versions by visiting [Repology](https://repology.org/project/luanti/history)
 (older history under the [`minetest` name](https://repology.org/project/minetest/history)).
