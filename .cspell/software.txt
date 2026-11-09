@@ -17,6 +17,7 @@ cerr
 CGNAT
 checkstring
 Codeberg
+Coddy
 createtable
 dcdrive
 desync
