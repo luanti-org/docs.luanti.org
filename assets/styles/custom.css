@@ -5,9 +5,17 @@
 /* Hide the ToC button (narrow screens) and panel if the page has no ToC entries,
    see #206 and https://github.com/alex-shpak/hugo-book/issues/693 */
 .book-header:not(:has(#TableOfContents li)) label[for="toc-control"] {
-  visibility: hidden; /* keeps the page title centered */
+  visibility: hidden;
+  /* keeps the page title centered */
 }
 
 .book-toc:not(:has(#TableOfContents li)) {
   display: none;
+}
+
+/* Center the page when the ToC is hidden above; the ToC is still in the DOM,
+   so hugo-book's `.book-page:last-child` centering rule doesn't apply.
+   (`:has()` can't be nested, so match from the parent instead.) */
+main:not(:has(.book-toc #TableOfContents li)) .book-page {
+  margin-inline-end: auto;
 }
