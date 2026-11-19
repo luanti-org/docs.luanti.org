@@ -23,6 +23,8 @@ html {
 }
 
 .site-header-content {
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
   height: 100%;
   padding: 0 var(--space-16);
 }
