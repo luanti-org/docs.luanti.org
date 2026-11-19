@@ -6,7 +6,7 @@
 </head>
 <body dir="{{ default "ltr" .Site.Language.Direction }}" class="book-kind-{{ .Kind }} book-type-{{ .Type }}{{ with .Layout }} book-layout-{{ . }}{{ end }}">
   {{ partial "site-header" . }} <!-- Site header (not part of hugo-book) -->
-  <main class="container flex">
+  <main class="book-container flex">
     {{ template "menu-container" . }} <!-- Left menu -->
 
     <div class="book-page">
