@@ -286,6 +286,7 @@ Luanti uses the [Lua language](https://www.lua.org/) for games and mods. It is s
 - [Programming in Lua Book](http://www.lua.org/pil/contents.html), learn the Lua language (for Lua 5.0)
 - [Lua 5.1 reference](http://www.lua.org/manual/5.1/) (note that Luanti uses Lua 5.1)
 - [Lua guide by tutorialspoint](https://www.tutorialspoint.com/lua/lua_overview.htm)
+- [Interactive Lua course by Coddy](https://coddy.tech/landing/lua), write and run Lua in the browser
 - [Lua in 100 Seconds (Video)](https://www.youtube.com/watch?v=jUuqBZwwkQw)
 - [Lua in 15 Minutes for Programmers (Video)](https://www.youtube.com/watch?v=kgiEF1frHQ8)
 
