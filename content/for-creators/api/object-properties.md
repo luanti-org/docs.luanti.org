@@ -4,8 +4,6 @@ aliases:
   - /api/object-properties
 ---
 
-# Object Properties
-
 This page lists the properties an object may have.
 
 ## Properties Applying Only to Players

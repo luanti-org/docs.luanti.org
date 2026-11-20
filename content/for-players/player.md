@@ -5,8 +5,6 @@ aliases:
   - /player
 ---
 
-# Player
-
 The **player** or **“player character”** is the character that a user controls.
 
 ## Health

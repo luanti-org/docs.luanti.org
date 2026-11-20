@@ -6,8 +6,6 @@ aliases:
   - /chat
 ---
 
-# Chat
-
 _This page is all about the in-game chat of Luanti. If you are interested in general Luanti chatter, refer to [IRC](/about/irc/)._
 
 The **in-game chat functionality** allows players to communicate with each other with short text messages inside a [server](/for-players/servers/). This article also covers the chat log which is used for purposes other than showing chat messages as well.

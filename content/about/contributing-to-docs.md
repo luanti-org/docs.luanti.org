@@ -11,8 +11,6 @@ aliases:
   - /about/rules
 ---
 
-# Contributing to Docs
-
 Luanti Documentation is written in Markdown and transformed into HTML by [Hugo](https://gohugo.io), a free and open-source static site generator. The source code is currently hosted on GitHub and deployed with GitHub Actions.
 
 ## Local Development

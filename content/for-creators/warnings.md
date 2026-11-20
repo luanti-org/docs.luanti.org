@@ -2,8 +2,6 @@
 title: Warnings
 ---
 
-# Warnings
-
 When you run Luanti, it often produces helpful warnings
 that indicate issues with mods and games that need to be addressed.
 Most commonly, these are *deprecation warnings* for APIs that

@@ -6,8 +6,6 @@ aliases:
   - /content-dev/creating-texture-packs
 ---
 
-# Creating texture packs
-
 [Texture packs](/for-players/texture-packs) are a simple folder containing image files named after the default ones. Luanti has very few requirements for using a texture pack and texture packs are normally used by games.
 
 ## Image Structure

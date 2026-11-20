@@ -5,8 +5,6 @@ aliases:
   - /engine/nmpr
 ---
 
-# Luanti NMPR
-
 The Luanti engine is built on a small core, that was the original network multiplayer release of luanti (let's call it NMPR; the 2010-10-24 version). As the current code still largely bases on the NMPR, it is useful to look at how it works for getting a basic understanding of the engine.
 
 Being around 10000 lines of code, it contains:

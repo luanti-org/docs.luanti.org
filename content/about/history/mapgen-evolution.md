@@ -5,8 +5,6 @@ aliases:
   - /mapgen/evolution
 ---
 
-# Map Generator Evolution
-
 This page shows the development history of the [map generators](/for-creators/mapgen) in Luanti.
 
 ## Development of a single map generator

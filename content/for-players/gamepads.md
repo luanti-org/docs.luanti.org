@@ -5,8 +5,6 @@ aliases:
   - /gamepads
 ---
 
-# Gamepads
-
 Many players prefer using gamepads (aka controllers or joysticks) over a keyboard and mouse.
 
 ## Built-in support

@@ -5,8 +5,6 @@ aliases:
   - /tutorials
 ---
 
-# For Players
-
 The Luanti client connects to ContentDB, where many games and mods are hosted. You can start playing by:
 
 1. Downloading Luanti

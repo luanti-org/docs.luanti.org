@@ -6,8 +6,6 @@ aliases:
   - /content-dev/programs-and-editors
 ---
 
-# Programs and Editors
-
 This is a list of unofficial [Luanti](/about/luanti)-related software.
 
 This is not a comprehensive list, for more see [Luanti-related projects](https://forum.luanti.org/viewforum.php?f=14) in the forum.

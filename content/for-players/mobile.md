@@ -5,8 +5,6 @@ aliases:
   - /accessing-android-data-directory
 ---
 
-# Mobile
-
 Luanti supports mobile devices and can be played using a touchscreen.
 
 Please do not download unofficial Luanti builds from the Google Play and any other app store. The builds found there may contain excessive adverts or spyware. They may be distributed under proprietary terms, without the source code, which makes them illegal to develop. They may be old or unsupported.

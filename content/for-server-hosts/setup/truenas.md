@@ -1,8 +1,7 @@
 ---
-title: TrueNAS
+title: TrueNAS Configuration
+linkTitle: TrueNAS
 ---
-
-# TrueNAS configuration
 
 > [!IMPORTANT]
 > This guide is written by a community member helping another community member setting up the server without first hand knowledge or experience

@@ -6,8 +6,6 @@ aliases:
   - /content-dev/schematic
 ---
 
-# Schematic
-
 **Schematics** are pre-defined node patterns to be placed somewhere in the world. They allow to create some complex figures or structures and repeat them with little random alterations.
 
 A schematic tells in an area what nodes should be created, with a given probability for each node to appear.

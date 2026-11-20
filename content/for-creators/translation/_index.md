@@ -7,8 +7,6 @@ aliases:
 bookCollapseSection: true
 ---
 
-# Translation
-
 This page explains how to translate Luanti.
 
 ## Translating mods and games

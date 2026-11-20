@@ -5,8 +5,6 @@ aliases:
   - /engine/player-world-interaction
 ---
 
-# Player-World Interaction
-
 ## Digging a node
 
 Preconditions are:

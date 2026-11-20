@@ -6,8 +6,6 @@ aliases:
   - /content-dev/development-troubleshooting
 ---
 
-# Development troubleshooting
-
 ## Lua API
 
 Be sure to check out the [Lua 5.1 Reference Manual](http://www.lua.org/manual/5.1/manual.html) and actually understand the Lua functions you are using well, in order to minimize stupid mistakes.

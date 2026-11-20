@@ -9,8 +9,6 @@ aliases:
   - /for-engine-devs/luajit
 ---
 
-# LuaJIT
-
 LuaJIT is a just-in-time compiler for Lua, which implements the language as it was in the reference Lua 5.1 implementation (referred to as PUC Lua to distinguish it) albeit with some additions and differences. LuaJIT typically executes code much faster than PUC Lua, which is why its usage is strongly recommended.
 
 More often than not, unless you have compiled Luanti from source without LuaJIT, Luanti will use LuaJIT as its Lua runtime. The official Windows, Android and most packaged Linux builds should be compiled with LuaJIT enabled. To confirm what Lua runtime Luanti is built with you can open a terminal and run `./luanti --version`.

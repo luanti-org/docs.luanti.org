@@ -5,8 +5,6 @@ aliases:
   - /reporting-bugs
 ---
 
-# Reporting bugs
-
 ### Notes
 
 Luanti is never finished, it is constantly a work in progress. Thus all bug reports trivial, or not, help us making the engine better for everyone.

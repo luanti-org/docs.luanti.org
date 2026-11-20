@@ -5,8 +5,6 @@ aliases:
   - /player-physics
 ---
 
-# Player physics
-
 **Player physics** refers to special physical attributes of the player that can be changed in Lua with `player:set_physics_override`. With this function, you can set e.g. jump strength, walking speed and gravity for each player.
 
 ## Basic usage

@@ -5,8 +5,6 @@ aliases:
   - /privileges
 ---
 
-# Privileges
-
 Every player has a set of privileges, which differ from server to server. Roughly spoken, one’s privileges determine what one is able to do and what not. Each privilege has a name (the meaning is described below). Privileges can be granted and revoked from other players by any player who has the privilege called “privs”. On a multiplayer server with a default configuration, new players start with the privileges called “interact” and “shout”. To view one’s own privileges, one can issue the [server command](/for-players/server-commands) “/privs”.
 
 ## Built-in privileges

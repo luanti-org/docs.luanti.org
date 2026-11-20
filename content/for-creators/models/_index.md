@@ -5,8 +5,6 @@ aliases:
 bookCollapseSection: true
 ---
 
-# Models
-
 Luanti supports a few model file formats. Modern Luanti versions are moving towards glTF as the primary format.
 
 See ["Using Blender"](/for-creators/models/using-blender) and ["Using Blockbench"](/for-creators/models/using-blockbench) for information on how to create models for use in Luanti.

@@ -4,8 +4,6 @@ aliases:
   - /distributing-luanti-games
 ---
 
-# Distributing Games Outside ContentDB
-
 This page documents how to publish a Luanti game outside of [ContentDB](/about/contentdb). It assumes that you know how to compile Luanti from source.
 
 Luanti as an engine itself doesn't have any official means to export a game into a self-contained package with the engine, instead games are published on [ContentDB](https://content.luanti.org/packages/?type=game) which allows your game to be installed from the main menu content browser. However as Luanti is free software you can fork the engine to rebrand it and bundle it with your game for distribution outside of the Luanti ecosystem.

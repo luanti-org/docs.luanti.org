@@ -8,8 +8,6 @@ aliases:
   - /nodes
 ---
 
-# Nodes
-
 Nodes (also called blocks by players) are what make up the voxel terrain in Luanti. They are generally cubic in shape, with a full node being considered one cubic meter in volume, and make up the voxel world. Only one node can exist in a particular position in the voxel grid, but can extend into other cells and take wildly different shapes. In most games, the player is able to break and place nodes to shape the terrain into what they see fit, or can be interacted with to provide different gameplay functions.
 
 Usually games and mods register their own nodes, but the engine also registers some technical nodes.

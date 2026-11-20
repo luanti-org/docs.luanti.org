@@ -5,8 +5,6 @@ aliases:
   - /minetest-conf
 ---
 
-# Minetest.conf
-
 **Note:** Since version 0.4.14, Luanti has an “advanced settings” feature to change virtually all settings in Luanti, including a brief description of what each setting does. You will now rarely need to edit minetest.conf manually.
 
 **minetest.conf** is the configuration file used for numerous purposes. This file is read every time the game starts and is always created/modified when the menu quits.

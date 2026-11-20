@@ -2,8 +2,6 @@
 title: Development Setup
 ---
 
-# Development Setup
-
 ## Introduction
 
 You can use any text editor to write mods,

@@ -6,8 +6,6 @@ aliases:
   - /mapgen/memory-optimisations
 ---
 
-# Mapgen memory optimizations
-
 This page intends to list all possible optimization techniques that can be used when writing a mapgen in Lua.
 
 Lua map generators can use excessive memory if they are not using these 3 optimizations. Not using these optimizations can eventually lead to OOM (out-of-memory) errors because the Lua mapgen wasted way too much memory. Applying this advice is **strongly recommended**, and should make OOM errors much less likely. But there is no guarantee this will fix all OOM errors, your mapgen might still use excessive memory for other reasons, or the computer just has very limited memory.

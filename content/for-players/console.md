@@ -5,8 +5,6 @@ aliases:
   - /console
 ---
 
-# Console
-
 The **console** is part of Luanti’s GUI and makes it a bit easier to keep track of the [chat](/for-players/chat/) and system messages. You also can type in chat messages and commands and scroll through an extensive log of messages.
 
 ## Usage

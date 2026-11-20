@@ -2,8 +2,6 @@
 title: Migrating your data from portable builds on Windows
 ---
 
-# Migrating your data from portable builds on Windows
-
 Starting in December 2025 Luanti switched its distribution format
 from portable builds (`ZIP` archive) to a self-extracting installer.
 

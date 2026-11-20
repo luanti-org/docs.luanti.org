@@ -6,8 +6,6 @@ aliases:
   - /server/prometheus-metrics
 ---
 
-# Server Metrics using Prometheus
-
 Prometheus is an "open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach".
 
 Luanti has built-in support for Prometheus, allowing you to see metrics about your server - such as player count and performance information.

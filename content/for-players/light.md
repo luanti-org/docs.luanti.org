@@ -5,8 +5,6 @@ aliases:
   - /light
 ---
 
-# Light
-
 In Luanti, **light** is entirely block-based, just like the rest of the world.
 
 ## Light level

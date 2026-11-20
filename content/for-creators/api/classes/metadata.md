@@ -4,8 +4,6 @@ aliases:
   - /api/classes/metadata
 ---
 
-# MetaData
-
 MetaData is an interface implemented by various reference types implementing persistent string-based key-value stores. The methods documented below are available in all subclasses.
 
 ## Subclasses

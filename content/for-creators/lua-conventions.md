@@ -5,8 +5,6 @@ aliases:
   - /content-dev/lua-conventions
 ---
 
-# Lua Conventions
-
 Lua is a simple, minimalistic, elegant, efficient, embeddable, expressive scripting language.
 A good grasp of Lua is required to effectively develop Luanti mods and games.
 

@@ -5,8 +5,6 @@ aliases:
   - /coordinates
 ---
 
-# Coordinates
-
 A [Luanti](/about/luanti) world is a large cube. And because of this, a position in the world can be easily expressed with Cartesian **coordinates**. That is, for each position in the world, there are 3 values X, Y and Z.
 
 ## Notation

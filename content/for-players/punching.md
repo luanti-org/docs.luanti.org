@@ -6,8 +6,6 @@ aliases:
   - /punching
 ---
 
-# Punching
-
 **Punching** is your primary means of attacking in close range and performed with the left mouse button. Hitting a [player](/for-players/player) or [mob](/for-players/mobs) may cause direct damage. The damage dealt depends on these criteria:
 
 - The kind of [weapon](/for-players/tool#weapons) (including the [hand](/for-creators/hand)) you are currently using

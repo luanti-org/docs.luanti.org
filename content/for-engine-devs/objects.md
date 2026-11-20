@@ -7,8 +7,6 @@ aliases:
   - /objects
 ---
 
-# Engine/Objects
-
 In Luanti, an object is a moving thing in the world. The two types of objects are players and entities.
 
 A static object is one that is saved in a mapblock, and an active object is one that is currently loaded and updating in the environment.

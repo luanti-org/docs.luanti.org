@@ -5,8 +5,6 @@ aliases:
   - /texture-packs
 ---
 
-# Texture Packs
-
 A **texture pack** is a collection of files that are used to change the in-game textures of:
 
 - [blocks](/for-players/nodes)

@@ -5,8 +5,6 @@ aliases:
   - /tool
 ---
 
-# Tool
-
 A **tool** is an [item](/for-players/items) which has some practical use to interact with the environment. Although some tools are unique, all tools have certain properties in common.
 
 ## Usage

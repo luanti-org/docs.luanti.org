@@ -4,8 +4,6 @@ aliases:
   - /api/classes/raycast
 ---
 
-# Raycast
-
 Raycasts are used to simulate rays and determine which selection boxes they intersect with.
 
 With some limitations, they work almost exactly like the player pointing at things.

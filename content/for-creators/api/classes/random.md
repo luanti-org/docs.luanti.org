@@ -4,8 +4,6 @@ aliases:
   - /api/classes/random
 ---
 
-# Random
-
 Luanti provides four different random sources, each with its own merits. Modders must choose wisely unless they can let the engine do the random for them (e.g. randomly picking a sound or a texture for particles).
 
 ## Lua builtins

@@ -4,8 +4,6 @@ aliases:
   - /api/persistence
 ---
 
-# Persistence
-
 This page aims to give an overview of the serialization options Luanti provides.
 
 Your choice for persistence depends on the data you want to persist:

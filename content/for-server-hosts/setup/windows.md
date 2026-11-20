@@ -1,8 +1,7 @@
 ---
-title: Windows
+title: Windows Configuration
+linkTitle: Windows
 ---
-
-# Windows Configuration
 
 ## Obtaining a server binary
 

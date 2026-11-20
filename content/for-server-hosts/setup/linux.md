@@ -1,8 +1,7 @@
 ---
-title: Linux
+title: Linux Configuration
+linkTitle: Linux
 ---
-
-# Linux Configuration
 
 ## Obtaining a server binary
 

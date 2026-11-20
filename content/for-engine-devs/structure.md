@@ -5,8 +5,6 @@ aliases:
   - /engine/structure
 ---
 
-# Engine/Structure
-
 [![](/images/minetest-0.3-dfd-visio.webp)](/images/minetest-0.3-dfd-visio.webp)
 
 0.3 data flow diagram - still mostly accurate.

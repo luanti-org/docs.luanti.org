@@ -5,8 +5,6 @@ aliases:
   - /worlds
 ---
 
-# Worlds
-
 A **world** contains an environment and/or building(s) you can play in. A world also includes all saved data associated with a world, like player data, mob positions, health, breath, and the like.
 
 ## Finding worlds

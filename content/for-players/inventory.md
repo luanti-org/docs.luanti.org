@@ -6,8 +6,6 @@ aliases:
   - /inventory
 ---
 
-# Inventory
-
 An **inventory** is primarily used to store [item stacks](/for-players/items#item-stack). There are other uses, such as crafting. An inventory consists of a rectangular grid of item slots. Each item slot can be either empty or hold one item stack. Item stacks can be moved freely between slot and slot, given that the destination slot is either empty or of the same item type.
 
 ## Inventory menu

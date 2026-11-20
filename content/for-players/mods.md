@@ -5,8 +5,6 @@ aliases:
   - /mods
 ---
 
-# Mods
-
 **Mods** (short for **modifications** or **modules**) are user-created modifications to a game in such a way that adds to or alters the gameplay. Some larger mods may add a lot of content to the game, while other smaller mods may add more settings/customization options or tweak the gameplay in small ways. [Server](/for-players/servers) mods or plugins mainly give server admins more options and ease of use, and all mods for singleplayer can also be used in multiplayer.
 
 While Luanti mods are generally safe to install as they run by default in a sandboxed environment, one should exercise caution with mods as they may modify your world data in an undesired way. A good way to protect your game from such problems is to regularly [back up](/for-server-hosts/backup-solutions) your world folder(s) when installing new mods.

@@ -1,10 +1,9 @@
 ---
-title: Docker / Container
+title: "Docker / Container Configuration"
+linkTitle: "Docker / Container"
 aliases:
   - /for-server-hosts/setup/docker/
 ---
-
-# Docker / Container Configuration
 
 ## Obtaining a server binary
 

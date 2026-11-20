@@ -8,8 +8,6 @@ aliases:
   - /engine-dev-process/releasing-luanti
 ---
 
-# Releasing Luanti
-
 The [feature freeze](#feature-freeze) and release date is set by core developers.
 
 In the past, the team aimed to release every 6 months. Whilst this was sometimes met, releases were usually delayed by months. To deliver bugfixes and features quicker, the goal is to consistently release every 3 months without delaying for non-critical features.

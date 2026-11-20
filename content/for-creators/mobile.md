@@ -6,8 +6,6 @@ aliases:
   - /improving-games-and-mods-for-mobile
 ---
 
-# Mobile (for creators)
-
 Luanti supports mobile devices and can be played using a touchscreen.
 
 ## Platforms

@@ -6,8 +6,6 @@ aliases:
   - /engine-dev-process/meetings
 ---
 
-# Meetings
-
 Core developer meetings are held when needed. They take place in the #luanti-dev [IRC](/about/irc) channel.
 
 This Wiki page contains the meeting plans for upcoming meetings, and meeting notes for previous meetings.

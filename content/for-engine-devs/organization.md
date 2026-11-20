@@ -6,8 +6,6 @@ aliases:
   - /organization
 ---
 
-# Organization
-
 ## Contributors
 
 A contributor is anyone who has made a pull request that has been merged, or successfully sent a patch to be applied otherwise.

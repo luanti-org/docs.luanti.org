@@ -6,8 +6,6 @@ aliases:
   - /content-dev/lua-optimization-tips
 ---
 
-# Lua Optimization Tips
-
 Remember, every second you spend in Lua is a second that the Server thread, Connection thread, and possibly one or more Emerge threads stay at a complete standstill! For this reason, intensive mods should designed with speed in mind.
 
 **Note**: Many of these tips are specific to neither Lua nor Luanti.

@@ -1,11 +1,9 @@
 ---
-title: Main Page
+title: Luanti Documentation
 type: "docs"
 aliases:
   - "/Main_Page"
 ---
-
-# Luanti Documentation
 
 Welcome to **Luanti Documentation**. Luanti (formerly [Minetest](https://blog.luanti.org/2024/10/13/Introducing-Our-New-Name/)) is an open-source voxel game engine that includes a client for players and a distribution platform for convenient mod and game installation.
 

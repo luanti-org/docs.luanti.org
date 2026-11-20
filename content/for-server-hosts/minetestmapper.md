@@ -7,8 +7,6 @@ aliases:
   - /minetestmapper
 ---
 
-# Minetestmapper
-
 ![](/images/Screenshot_minetestmapper.png)
 
 Sample minetestmapper output

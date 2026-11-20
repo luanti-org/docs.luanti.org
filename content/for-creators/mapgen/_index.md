@@ -8,8 +8,6 @@ aliases:
 bookCollapseSection: true
 ---
 
-# Map generator
-
 The **map generator** (“mapgen” for short) is the Luanti component that procedurally generates the world around the player.
 
 The Luanti engine provides several built-in map generators implemented in C++. It is possible to choose between them when creating a world. Most of them are based on Perlin noises: functions which allow associating to each point a random yet consistent value.

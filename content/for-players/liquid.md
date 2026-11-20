@@ -5,8 +5,6 @@ aliases:
   - /liquid
 ---
 
-# Liquid
-
 **Liquids** are special dynamic [nodes](/for-players/nodes) in Luanti. They behave quite differently than in real life. Liquids like to spread and flow to their surrounding blocks and players can swim and drown in them.
 
 ## Liquid forms

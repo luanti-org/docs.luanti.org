@@ -6,8 +6,6 @@ aliases:
   - /translation/mods-and-games
 ---
 
-# Translating Mods and Games
-
 This page explains how to translate mods and games for Luanti. To learn how Luanti itself (the engine) is translated, see [Translation](/for-creators/translation).
 
 ## Before you begin

@@ -5,8 +5,6 @@ aliases:
   - /sneaking
 ---
 
-# Sneaking
-
 Sneaking is part of the basic [controls](/for-players/controls) in Luanti with many useful capabilities. Normally, sneaking slows you down and protects you from accidentally falling off ledges. In some games, sneaking allows you to use powerful “sneak ladders” which can be climbed super fast.
 
 Sneaking is a surprisingly diverse move; this article will explain all the details.

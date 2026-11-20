@@ -8,8 +8,6 @@ aliases:
   - /l-system-tree-examples
 ---
 
-# L-system trees
-
 Luanti has two types of trees built in: Small simple ones like the trees in the vanilla Minetest Game, and more complex ones generated using a L-system and a tree definition. L-system trees can be spawned with `core.spawn_tree` and are defined by a `treedef` table.
 
 The following chat log might be helpful in understanding how L-system trees work: [#minetest 2013-08-08](http://irc.minetest.ru/minetest/2013-08-08#i_3250058)

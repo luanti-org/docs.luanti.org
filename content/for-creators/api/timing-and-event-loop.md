@@ -4,8 +4,6 @@ aliases:
   - /api/timing-and-event-loop/
 ---
 
-# Timing and Event loop
-
 Luanti's Lua API can be used to get time and date or to schedule "events" to run once or every server step.
 
 ## Settings

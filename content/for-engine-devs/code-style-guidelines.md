@@ -6,8 +6,6 @@ aliases:
   - /engine-dev-process/code-style-guidelines
 ---
 
-# Code style guidelines
-
 This is the coding style used for C/C++ code. Also see the [Lua code style guidelines](/Lua_code_style_guidelines).
 
 The coding style is based on the [Linux kernel code style](https://www.kernel.org/doc/html/latest/process/coding-style.html). Much of the existing code doesn't follow the current code style guidelines, do not try to replicate that. Use your best judgment for C++-specific syntax.

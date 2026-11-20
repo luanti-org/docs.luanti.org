@@ -5,8 +5,6 @@ aliases:
   - /spawn-algorithm
 ---
 
-# Player Spawn Algorithm
-
 The **player spawn algorithm** (or **spawn algorithm** for short) tries to find a suitable spawn or respawn position for players. It is run whenever a player spawns or respawns.
 
 This page describes how Luanti's builtin spawn algorithm works, as of **version 5.7.0**.
