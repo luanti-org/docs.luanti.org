@@ -1,0 +1,45 @@
+/* Navbar icons: Hextra's are 24px, and GitHub's looks bigger than the rest */
+.hextra-nav-container nav svg[height="24"] {
+  height: 20px;
+}
+
+.hextra-nav-container nav a[title="GitHub"] svg {
+  height: 18px;
+}
+
+/* Theme switch in the navbar: same look as Hextra's footer one */
+.hextra-nav-container .hextra-theme-toggle {
+  height: 1.75rem;
+  /* fits the longest label ("System"), so the header doesn't shift when switching */
+  min-width: 5.25rem;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  color: var(--hx-color-gray-600);
+  transition:
+    color 0.15s,
+    background-color 0.15s;
+
+  &:hover {
+    background-color: var(--hx-color-gray-100);
+    color: var(--hx-color-gray-900);
+  }
+
+  & svg[height] {
+    height: 12px;
+  }
+}
+
+.dark .hextra-nav-container .hextra-theme-toggle {
+  color: var(--hx-color-gray-400);
+
+  &:hover {
+    background-color: color-mix(
+      in oklab,
+      var(--hx-color-primary-100) 5%,
+      transparent
+    );
+    color: var(--hx-color-gray-50);
+  }
+}

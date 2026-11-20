@@ -15,6 +15,9 @@ enableGitInfo = true
         base = 'https://github.com/luanti-org/docs.luanti.org/edit/master/content'
     [params.footer]
         displayPoweredBy = false
+    # The theme switch is in the site header (see [menu] below)
+    [params.theme]
+        displayToggle = false
 
 # Links in the site header
 [menu]
@@ -39,6 +42,10 @@ enableGitInfo = true
         url = 'https://github.com/luanti-org/docs.luanti.org'
         weight = 50
         params = { icon = 'github' }
+    [[menu.main]]
+        name = 'Theme'
+        weight = 45
+        params = { type = 'theme-toggle', label = true }
 
 # Docs layout (side menu, ToC) for all pages
 [[cascade]]
