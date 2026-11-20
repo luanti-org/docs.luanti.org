@@ -42,6 +42,18 @@ enableGitInfo = true
 [[cascade]]
     type = 'docs'
 
+# Pages mounted from other repos (see [module] below) are edited there
+[[cascade]]
+    [cascade.params]
+        editURL = 'https://github.com/luanti-org/flint/tree/master/docs'
+    [cascade.target]
+        path = '{/for-creators/flint,/for-creators/flint/**}'
+[[cascade]]
+    [cascade.params]
+        editURL = 'https://github.com/luanti-org/luma/tree/main/docs'
+    [cascade.target]
+        path = '{/for-server-hosts/luma,/for-server-hosts/luma/**}'
+
 [module]
     [[module.mounts]]
         source = 'content'
