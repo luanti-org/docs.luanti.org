@@ -61,17 +61,14 @@ You may use this to determine e.g. whether a target would be visible to a mob. R
 
 Creates a raycast object; OOP-constructor-style alias for `core.raycast`.
 
-{{< notice info >}}
-[Raycasts work on selection-, not collision boxes, making them coherent with player pointing but not physics (collisions) unless selection- and collision boxes are identical.](https://github.com/luanti-org/luanti/issues/12673)
-{{< /notice >}}
+> [!IMPORTANT]
+> [Raycasts work on selection-, not collision boxes, making them coherent with player pointing but not physics (collisions) unless selection- and collision boxes are identical.](https://github.com/luanti-org/luanti/issues/12673)
 
-{{< notice tip >}}
-Have selection boxes, collision boxes (and ideally even visuals) match for all nodes & entities if possible.
-{{< /notice >}}
+> [!TIP]
+> Have selection boxes, collision boxes (and ideally even visuals) match for all nodes & entities if possible.
 
-{{< notice info >}}
-[Server-side raycasts do not support attachments properly; the server is unaware of model specificities, doesn't keep track of automatic rotation etc.](https://github.com/luanti-org/luanti/issues/10304)
-{{< /notice >}}
+> [!IMPORTANT]
+> [Server-side raycasts do not support attachments properly; the server is unaware of model specificities, doesn't keep track of automatic rotation etc.](https://github.com/luanti-org/luanti/issues/10304)
 
 **Arguments:**
 
@@ -123,46 +120,44 @@ end
 
 There is absolutely no need to manually step through raycasts using the latter two more verbose loops.
 
-{{< notice info >}}
-Restartability is the ability of an iterator to start again. For example, `ipairs` is resumable:
-
-```lua
-local t = {1, 2, 3}
-for _ = 1, 3 do
-	for i, v in ipairs(t) do
-		print(i, v)
-	end
-end
-```
-
-will work just expected, printing the contents of `t` three times.
-
-_Raycasts are not restartable._ Iterating them _"consumes"_ the pointed things; they can't be iterated again. The following will not work as expected:
-
-```lua
-local ray = Raycast(...)
-for _ = 1, 3 do
-	for pt in ray do
-		print(pt)
-	end
-end
-```
-
-this will print the pointed things (table addresses) exactly once: after the first run of the inner `for` loop, all pointed things have been consumed; subsequent runs exit immediately, not entering the `for` loop at all.
-
-One advantage of this is that Raycasts remember their looping state. The following is thus possible:
-
-```lua
-local ray = Raycast(...)
-for pt in ray do
-	if ... then break end
-end
-for pt in ray do
-	-- will resume looping with the next pointed thing
-end
-```
-
-{{< /notice >}}
+> [!IMPORTANT]
+> Restartability is the ability of an iterator to start again. For example, `ipairs` is resumable:
+>
+> ```lua
+> local t = {1, 2, 3}
+> for _ = 1, 3 do
+> 	for i, v in ipairs(t) do
+> 		print(i, v)
+> 	end
+> end
+> ```
+>
+> will work just expected, printing the contents of `t` three times.
+>
+> _Raycasts are not restartable._ Iterating them _"consumes"_ the pointed things; they can't be iterated again. The following will not work as expected:
+>
+> ```lua
+> local ray = Raycast(...)
+> for _ = 1, 3 do
+> 	for pt in ray do
+> 		print(pt)
+> 	end
+> end
+> ```
+>
+> this will print the pointed things (table addresses) exactly once: after the first run of the inner `for` loop, all pointed things have been consumed; subsequent runs exit immediately, not entering the `for` loop at all.
+>
+> One advantage of this is that Raycasts remember their looping state. The following is thus possible:
+>
+> ```lua
+> local ray = Raycast(...)
+> for pt in ray do
+> 	if ... then break end
+> end
+> for pt in ray do
+> 	-- will resume looping with the next pointed thing
+> end
+> ```
 
 ## Examples
 

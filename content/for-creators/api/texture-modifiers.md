@@ -10,9 +10,8 @@ Texture modifiers - strings instructing Luanti to manipulate images - are, besid
 
 They can also be used to simplify mods by generating repetitive textures such as differently colored tool textures.
 
-{{< notice info >}}
-Texture modifiers are partially redundant with hardware colorization. Hardware colorization should be preferred as it is more flexible and presumably generates fewer garbage textures.
-{{< /notice >}}
+> [!IMPORTANT]
+> Texture modifiers are partially redundant with hardware colorization. Hardware colorization should be preferred as it is more flexible and presumably generates fewer garbage textures.
 
 ## Performance Issues
 
@@ -35,15 +34,13 @@ Use texture modifiers mostly statically. Keep dynamically generated textures to 
 
 Texture modifiers can be used in node & item texture overrides.
 
-{{< notice info >}}
-Texture-modifier-generated textures can not be replaced by a texture pack (except through texture overrides); only base textures can be properly replaced.
-{{< /notice >}}
+> [!IMPORTANT]
+> Texture-modifier-generated textures can not be replaced by a texture pack (except through texture overrides); only base textures can be properly replaced.
 
 Usage of certain texture modifiers might require certain texture resolutions to be used by texture packs, as texture modifiers operate on pixels instead of relative units. Lower-res TPs can usually scale up but higher-res TPs will have to scale down.
 
-{{< notice tip >}}
-Use `[resize` to forcibly resize textures to your required resolution (e.g. for `[combine`) in order to be as TP-agnostic as possible.
-{{< /notice >}}
+> [!TIP]
+> Use `[resize` to forcibly resize textures to your required resolution (e.g. for `[combine`) in order to be as TP-agnostic as possible.
 
 ## In Lua
 
@@ -75,19 +72,16 @@ Example: `[[[combine:1x1:0,0=a.png]]`.
 
 Using equals signs is never necessary since texture modifiers won't contain `[[` or `]]`.
 
-{{< notice tip >}}
-You can use metamethods in order to implement a neat, possibly OOP-ish Lua DSL that does the escaping and formatting for you.
-{{< /notice >}}
+> [!TIP]
+> You can use metamethods in order to implement a neat, possibly OOP-ish Lua DSL that does the escaping and formatting for you.
 
 ## Syntax
 
-{{< notice warning >}}
-Texture modifiers are only parsed client-side, where errors lead to poor behavior (error messages in the best case, sometimes the wrong texture, crashes in the worst case). They are not validated server-side. Take additional care to ensure no syntax errors or values which cause undefined behavior.
-{{< /notice >}}
+> [!WARNING]
+> Texture modifiers are only parsed client-side, where errors lead to poor behavior (error messages in the best case, sometimes the wrong texture, crashes in the worst case). They are not validated server-side. Take additional care to ensure no syntax errors or values which cause undefined behavior.
 
-{{< notice tip >}}
-Use a string builder which guarantees valid texture modifiers.
-{{< /notice >}}
+> [!TIP]
+> Use a string builder which guarantees valid texture modifiers.
 
 ### Base textures
 
@@ -143,17 +137,15 @@ Also wrong: `[combine:1x2:0,0=(a^b):0,1=(c^[multiply:red)` - the combine parsing
 
 Grouping can however be used to enclose combining texture modifiers, separating them from the containing texture modifier.
 
-{{< notice tip >}}
-Use grouping for evaluating parts of the right-hand side first, like this: `a^[multiply:green^(b^[multiply:red)`
-{{< /notice >}}
+> [!TIP]
+> Use grouping for evaluating parts of the right-hand side first, like this: `a^[multiply:green^(b^[multiply:red)`
 
 ### Modifiers
 
 All texture modifiers create new textures which can be modified further and do not modify the textures they operate on.
 
-{{< notice tip >}}
-Use `string.format("%d", number)` - `("%d"):format(number)` in shorthand - to guarantee that integers are parsable. In practice, `tostring(number)` or implicit conversion to string when concatenating will work as expected.
-{{< /notice >}}
+> [!TIP]
+> Use `string.format("%d", number)` - `("%d"):format(number)` in shorthand - to guarantee that integers are parsable. In practice, `tostring(number)` or implicit conversion to string when concatenating will work as expected.
 
 #### Combining Texture Modifiers
 
@@ -222,9 +214,8 @@ Transformation names are case insensitive.
 
 Result: Vertically crops the texture by dividing the base texture height through the frame count to determine the frame height. As the division is an integer division, a remaining fractional frame will be discarded.
 
-{{< notice warning >}}
-Specifying a `framecount` of `0` will trigger a floating point exception, crashing the client.
-{{< /notice >}}
+> [!WARNING]
+> Specifying a `framecount` of `0` will trigger a floating point exception, crashing the client.
 
 ##### `<base>^[crack[<opacity>]:[<framecount>:]<tilecount>:<frame>`
 
@@ -236,9 +227,8 @@ over a texture, with options for alpha and blitting on all frames.
 - `tilecount`: Vertical & horizontal tile count of the base texture. The crack will be blit on each tile of the base texture. Usually `1`.
 - `frame`: Current animation frame ("crack progression").
 
-{{< notice note >}}
-This always scales the crack to the size of the base texture (or the tiles of the base texture, if `tilesize` is provided).
-{{< /notice >}}
+> [!NOTE]
+> This always scales the crack to the size of the base texture (or the tiles of the base texture, if `tilesize` is provided).
 
 ##### `<base>^[sheet:<w>x<h>:<x>,<y>`
 
@@ -284,9 +274,8 @@ Masking is associative and commutative if all involved textures have the same di
 
 Overlays the lower `percent` part of `texture` on the base texture.
 
-{{< notice tip >}}
-Use `blank.png` as base texture if you do not want a background.
-{{< /notice >}}
+> [!TIP]
+> Use `blank.png` as base texture if you do not want a background.
 
 #### Base Texture Generators
 
@@ -306,17 +295,14 @@ local function embedded_png(width, height, data)
 end
 ```
 
-{{< notice warning >}}
-Not supported by Luanti 5.4 and older clients. May lead to client crashes if used in node tiles. Luanti 5.5 and newer servers will automatically prepend `blank.png^` to `[png` tiles to mitigate this.
-{{< /notice >}}
+> [!WARNING]
+> Not supported by Luanti 5.4 and older clients. May lead to client crashes if used in node tiles. Luanti 5.5 and newer servers will automatically prepend `blank.png^` to `[png` tiles to mitigate this.
 
-{{< notice warning >}}
-Do not use this for large textures. If used as an object texture, the texture modifier will get sent arbitrarily often, putting a strain on the network.
-{{< /notice >}}
+> [!WARNING]
+> Do not use this for large textures. If used as an object texture, the texture modifier will get sent arbitrarily often, putting a strain on the network.
 
-{{< notice tip >}}
-Consider using other texture modifiers cleverly or using dynamic media instead.
-{{< /notice >}}
+> [!TIP]
+> Consider using other texture modifiers cleverly or using dynamic media instead.
 
 ##### `[combine:<w>x<h>:<textures>`
 
@@ -330,13 +316,11 @@ Nesting `combine` is possible through escaping.
 
 Generates a texture of dimensions `w`, `h` on which all `textures` have been blit at the specified locations. The background is black and transparent (`#00000000`).
 
-{{< notice info >}}
-Node tiles starting with `[combine` are broken on Luanti 5.4 and older clients connecting to 5.5 servers due to the aforementioned `[png` workaround accidentally being applied to `[combine` as well.
-{{< /notice >}}
+> [!IMPORTANT]
+> Node tiles starting with `[combine` are broken on Luanti 5.4 and older clients connecting to 5.5 servers due to the aforementioned `[png` workaround accidentally being applied to `[combine` as well.
 
-{{< notice tip >}}
-To work around this, you can enclose your node tile texture modifiers using `[combine` in parentheses: `([combine:...)`. A generic patch which loops over node definitions and wraps matching texture modifiers [is available as well](https://gist.github.com/appgurueu/dea1d1d9d8494e9c00114d36d58c5932).
-{{< /notice >}}
+> [!TIP]
+> To work around this, you can enclose your node tile texture modifiers using `[combine` in parentheses: `([combine:...)`. A generic patch which loops over node definitions and wraps matching texture modifiers [is available as well](https://gist.github.com/appgurueu/dea1d1d9d8494e9c00114d36d58c5932).
 
 ##### `[inventorycube{<top>{<left>{<right>`
 
@@ -385,6 +369,5 @@ The below examples use `progress_bar.png` & `progress_bar_bg.png` from Luanti's 
   - Rotate everything by 270° to undo the vertical orientation
   - _Advantage over using `combine`_: Due to the usage of `lowpart`, this is resolution-agnostic (will work with texture packs of different resolutions)
 
-{{< notice note >}}
-For HUDs, `statbar`s should be preferred over `image`s using texture modifiers.
-{{< /notice >}}
+> [!NOTE]
+> For HUDs, `statbar`s should be preferred over `image`s using texture modifiers.

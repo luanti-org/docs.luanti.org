@@ -6,9 +6,8 @@ aliases:
 
 # HUD
 
-{{< notice warning >}}
-This article is incomplete. Please help expand this article to include more useful information.
-{{< /notice >}}
+> [!WARNING]
+> This article is incomplete. Please help expand this article to include more useful information.
 
 In the **Heads-Up Display**, you might see:
 

@@ -17,9 +17,8 @@ There are two ways to change the controls: Either by using the options menu acce
 
 ### PC
 
-{{< notice note >}}
-[Starting from 5.12.0](https://github.com/luanti-org/luanti/pull/14964), keybindings are defined based on the scancode (i.e. location on the keyboard) instead of the keycode ("marking on the keycap") of the keys. The default controls shown below are based on the US layout and may be different for other layouts. For example, the default key for zooming is "Y" on the German layout, and the default key for moving forward is "Z" on the French layout.
-{{< /notice >}}
+> [!NOTE]
+> [Starting from 5.12.0](https://github.com/luanti-org/luanti/pull/14964), keybindings are defined based on the scancode (i.e. location on the keyboard) instead of the keycode ("marking on the keycap") of the keys. The default controls shown below are based on the US layout and may be different for other layouts. For example, the default key for zooming is "Y" on the German layout, and the default key for moving forward is "Z" on the French layout.
 
 The PC version of Luanti uses mouse and keyboard. These are the controls of the PC version:
 
@@ -94,12 +93,11 @@ The [touchscreen](#touchscreen) is used for everything.
 
 ### Touchscreen
 
-{{< notice note >}}
-Touchscreen support was mobile (Android) only till version 5.5.0 when [desktop support](https://github.com/luanti-org/luanti/pull/10729) was added. Runtime
-toggling of touchscreen controls was [added](https://github.com/luanti-org/luanti/pull/14075) in 5.9.0. Rudimentary detection was
-[added](https://github.com/luanti-org/luanti/pull/14400) in 5.9.0, with [full support](https://github.com/luanti-org/luanti/pull/14542) being added
-in 5.10.0.
-{{< /notice >}}
+> [!NOTE]
+> Touchscreen support was mobile (Android) only till version 5.5.0 when [desktop support](https://github.com/luanti-org/luanti/pull/10729) was added. Runtime
+> toggling of touchscreen controls was [added](https://github.com/luanti-org/luanti/pull/14075) in 5.9.0. Rudimentary detection was
+> [added](https://github.com/luanti-org/luanti/pull/14400) in 5.9.0, with [full support](https://github.com/luanti-org/luanti/pull/14542) being added
+> in 5.10.0.
 
 In release 5.10.0 the touchscreen interface was improved to use a grid layout for controls with text being listed under the controls so users no longer
 had to guess what they did.
@@ -110,9 +108,8 @@ In release 5.11.0 an editor was added for rearranging the controls.
 
 {{< video src="https://samsinventory.docs.luanti.org/files/videos/touchscreen-editor.mp4" type="video/mp4" >}}
 
-{{< notice warning >}}
-The controls listed below maybe outdated.
-{{< /notice >}}
+> [!WARNING]
+> The controls listed below maybe outdated.
 
 | Action                  | Control                                      |
 | ----------------------- | -------------------------------------------- |

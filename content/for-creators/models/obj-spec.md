@@ -57,12 +57,11 @@ Luanti supports the following commands:
   * Subsequent faces belong to a new material (separate texture / tile)
   * Texture slots / indices are determined by order of appearance
 
-{{< notice info >}}
-Irrlicht's `.obj` reader happens to be quite lax at the moment -
-just looking at the first few characters needed to tell commands apart,
-ignoring superfluous parameters, ignoring unsupported commands -
-but you must not rely on this.
-{{< /notice >}}
+> [!IMPORTANT]
+> Irrlicht's `.obj` reader happens to be quite lax at the moment -
+> just looking at the first few characters needed to tell commands apart,
+> ignoring superfluous parameters, ignoring unsupported commands -
+> but you must not rely on this.
 
 ## Coordinate System
 
@@ -75,21 +74,19 @@ whereas `.obj` uses V-up, hence the `v` coordinate (texture Y-coordinate) is fli
 
 The center of a node or object respectively is the origin of the `.obj`.
 
-{{< notice note >}}
-For legacy reasons, entities use a 10x scale for meshes: 10 units = 1 node.
-Nodes, however, use a 1 node = 1 unit scale.
-This means a full node extends from (-0.5, -0.5, -0.5) to (0.5, 0.5, 0.5);
-whereas a 1³ cube entity would extend from (-5, -5, -5) to (5, 5, 5).
-{{< /notice >}}
+> [!NOTE]
+> For legacy reasons, entities use a 10x scale for meshes: 10 units = 1 node.
+> Nodes, however, use a 1 node = 1 unit scale.
+> This means a full node extends from (-0.5, -0.5, -0.5) to (0.5, 0.5, 0.5);
+> whereas a 1³ cube entity would extend from (-5, -5, -5) to (5, 5, 5).
 
-{{< notice tip >}}
-You can use node `visual_scale` to compensate this inconsistency,
-e.g. if you want to use the same model for a node and entity.
-(Using the `visual_size` object property instead is not recommended,
-as it propagates to children when using attachments;
-you would have to divide the child visual size by the parent's
-visual size to undo this, and remember to multiply again when detaching.)
-{{< /notice >}}
+> [!TIP]
+> You can use node `visual_scale` to compensate this inconsistency,
+> e.g. if you want to use the same model for a node and entity.
+> (Using the `visual_size` object property instead is not recommended,
+> as it propagates to children when using attachments;
+> you would have to divide the child visual size by the parent's
+> visual size to undo this, and remember to multiply again when detaching.)
 
 ## Examples
 

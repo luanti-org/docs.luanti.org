@@ -9,9 +9,8 @@ aliases:
 
 This page shows the various special features which [map generators](/for-creators/mapgen) have and explains how to use them.
 
-{{< notice note >}}
-This page doesn't list all available mapgen features. For a full reference, search for `mg_flags` and `mg*_spflags` in [minetest.conf.example](https://github.com/luanti-org/luanti/blob/master/minetest.conf.example) instead.
-{{< /notice >}}
+> [!NOTE]
+> This page doesn't list all available mapgen features. For a full reference, search for `mg_flags` and `mg*_spflags` in [minetest.conf.example](https://github.com/luanti-org/luanti/blob/master/minetest.conf.example) instead.
 
 ## Features shared between all mapgens except singlenode
 

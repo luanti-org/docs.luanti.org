@@ -10,9 +10,8 @@ The regular Windows builds provided on the [download page](https://www.luanti.or
 
 ## Running the Server
 
-{{< notice warning >}}
-As of 5.8.0, Luanti no longer ships with a default game, meaning you will have to provide your own game to use with the server. You can browse the games on [ContentDB](https://content.luanti.org/packages/?type=game) and download one to put in the `games/` folder for your server.
-{{< /notice >}}
+> [!WARNING]
+> As of 5.8.0, Luanti no longer ships with a default game, meaning you will have to provide your own game to use with the server. You can browse the games on [ContentDB](https://content.luanti.org/packages/?type=game) and download one to put in the `games/` folder for your server.
 
 1.  Open command prompt by going in the Luanti installation folder. Then in the "bin" folder, click the blue "File" icon in the top left of the screen. In the drop down menu click "Open Windows Powershell here".
 2.  Type this: `.\luanti.exe --server`.

@@ -1,7 +1,7 @@
 baseURL = 'https://docs.luanti.org/'
 locale = 'en-us'
 title = 'Luanti Documentation'
-theme = ['hugo-notice', 'hugo-book']
+theme = ['hugo-book']
 enableGitInfo = true
 
 [params]

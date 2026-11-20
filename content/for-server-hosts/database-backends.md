@@ -53,9 +53,8 @@ To migrate a database to a new backend, use the corresponding argument mentioned
 luantiserver --migrate-players <name of new backend> --world <path to your world directory>
 ```
 
-{{< notice note >}}
-Additional configuration in `world.mt` is required beforehand for migrating to the Redis and PostgreSQL backend. See corresponding backend section below for more information.
-{{< /notice >}}
+> [!NOTE]
+> Additional configuration in `world.mt` is required beforehand for migrating to the Redis and PostgreSQL backend. See corresponding backend section below for more information.
 
 ## Backend comparison table
 
@@ -84,9 +83,8 @@ SQLite3 is the default backend for all Luanti backends, it is always supported b
 
 ### LevelDB
 
-{{< notice warning >}}
-LevelDB as a database suffers from **serious reliability issues** that are well known both inside and outside of Luanti (See [References](#references) for LevelDB horror stories). Random corruption may occur including to but not limited to during power loss or any other unexpected shutdown where the database is not safely closed. **It should be used with caution.**
-{{< /notice >}}
+> [!WARNING]
+> LevelDB as a database suffers from **serious reliability issues** that are well known both inside and outside of Luanti (See [References](#references) for LevelDB horror stories). Random corruption may occur including to but not limited to during power loss or any other unexpected shutdown where the database is not safely closed. **It should be used with caution.**
 
 LevelDB is an embedded key-value data store that can offer better speeds compared to SQLite. The persistent database is also compressed with Snappy compression leading to smaller file sizes.
 
@@ -98,9 +96,8 @@ Redis is an in-memory key-value datastore that can be used both as a cache and f
 
 As of March 2024 Redis switched to a non-free license for future versions. Forks of the final free Redis version, such as [Redict](https://redict.io) and [Valkey](https://valkey.io), may serve as a compatible drop-in replacement for Luanti's Redis support.
 
-{{< notice note >}}
-The use of Redis was deprecated in 5.9.0 and was set to be removed in 5.10, but is no longer deprecated (see [Luanti issue #14822](https://github.com/luanti-org/luanti/issues/14822)).
-{{< /notice >}}
+> [!NOTE]
+> The use of Redis was deprecated in 5.9.0 and was set to be removed in 5.10, but is no longer deprecated (see [Luanti issue #14822](https://github.com/luanti-org/luanti/issues/14822)).
 
 #### Extra world.mt settings for Redis
 

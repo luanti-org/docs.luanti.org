@@ -6,9 +6,8 @@ title: Linux
 
 ## Obtaining a server binary
 
-{{< notice info >}}
-If you are going to be running a Luanti server on a non-headless system, using the regular `luanti` binary with the `--server` argument works the same as `luantiserver`. If you are on a headless Linux system without a graphical environment, `luantiserver` is recommended as it is smaller and does not have extra dependencies that are unnecessary for a server.
-{{< /notice >}}
+> [!IMPORTANT]
+> If you are going to be running a Luanti server on a non-headless system, using the regular `luanti` binary with the `--server` argument works the same as `luantiserver`. If you are on a headless Linux system without a graphical environment, `luantiserver` is recommended as it is smaller and does not have extra dependencies that are unnecessary for a server.
 
 Usually your Linux distribution of choice will have `luantiserver` in its official repositories. However this package may be several releases outdated, so obtaining a server binary through other means is to be recommended.
 
@@ -20,9 +19,8 @@ Usually your Linux distribution of choice will have `luantiserver` in its offici
 
 ## Running the Server
 
-{{< notice warning >}}
-As of 5.8.0, Luanti no longer ships with a default game, meaning you will have to provide your own game to use with the server. You can browse the games on [ContentDB](https://content.luanti.org/packages/?type=game) and download one to put in the `games/` folder for your server.
-{{< /notice >}}
+> [!WARNING]
+> As of 5.8.0, Luanti no longer ships with a default game, meaning you will have to provide your own game to use with the server. You can browse the games on [ContentDB](https://content.luanti.org/packages/?type=game) and download one to put in the `games/` folder for your server.
 
 1. Open a terminal.
 2. Navigate to wherever you've put your Luanti server files (referred to as /Luanti/ from now on), and run the server with `/bin/luantiserver`.

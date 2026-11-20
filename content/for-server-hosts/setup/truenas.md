@@ -4,9 +4,8 @@ title: TrueNAS
 
 # TrueNAS configuration
 
-{{< notice info >}}
-This guide is written by a community member helping another community member setting up the server without first hand knowledge or experience
-{{< /notice >}}
+> [!IMPORTANT]
+> This guide is written by a community member helping another community member setting up the server without first hand knowledge or experience
 
 luanti is available as a [TrueNAS App](https://apps.truenas.com/catalog/luanti/). Please first follow the guide for installing an app: https://apps.truenas.com/managing-apps/installing-apps/. 
 

@@ -14,9 +14,8 @@ The granularity of the persisted snapshots is determined by the `map_save_interv
 
 Two backends are available for ModStorage: JSON and SQLite3.
 
-{{< notice warning >}}
-The JSON backend is incapable of saving raw binary data due to JSON restrictions. Even though the SQLite3 backend supports arbitrary bytestrings, you may not rely on saving arbitrary bytestrings to work, since you can't ensure that the SQLite3 backend is being used.
-{{< /notice >}}
+> [!WARNING]
+> The JSON backend is incapable of saving raw binary data due to JSON restrictions. Even though the SQLite3 backend supports arbitrary bytestrings, you may not rely on saving arbitrary bytestrings to work, since you can't ensure that the SQLite3 backend is being used.
 
 If the SQLite3 backend is used, it is usually more efficient to leverage the key-value store than to store fully serialized data structures; fully serializing the data takes linear time in the size of the data whereas updating the key-value store only takes linear time in the size of the changes with the SQLite3 backend; for the JSON backend it is irrelevant - it has to fully serialize the data every map save interval anyways, increasing the risk of data loss if writing the file fails due to a hard crash (or freeze) of the Luanti server process.
 
