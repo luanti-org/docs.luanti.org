@@ -1,38 +1,46 @@
 baseURL = 'https://docs.luanti.org/'
 locale = 'en-us'
 title = 'Luanti Documentation'
-theme = ['hugo-book']
+theme = ['hextra']
 enableGitInfo = true
 
 [params]
-    BookTheme = 'auto'
-    BookSection = '*'
-    BookRepo = 'https://github.com/luanti-org/docs.luanti.org'
-    BookEditPath = 'edit/master'
-    BookFavicon = 'favicon.svg'
+    [params.navbar]
+        displayTitle = true
+        displayLogo = true
+        [params.navbar.logo]
+            path = 'luanti.svg'
+    [params.editURL]
+        enable = true
+        base = 'https://github.com/luanti-org/docs.luanti.org/edit/master/content'
 
-# Links shown in the site header, and at the bottom of the side menu on narrow screens
+# Links in the site header
 [menu]
-    [[menu.after]]
+    [[menu.main]]
         name = 'Luanti'
         url = 'https://www.luanti.org/'
         weight = 10
-        params = { class = 'site-header-link' }
-    [[menu.after]]
+    [[menu.main]]
         name = 'ContentDB'
         url = 'https://content.luanti.org/'
         weight = 20
-        params = { class = 'site-header-link' }
-    [[menu.after]]
+    [[menu.main]]
         name = 'Forums'
         url = 'https://forum.luanti.org/'
         weight = 30
-        params = { class = 'site-header-link' }
-    [[menu.after]]
+    [[menu.main]]
+        name = 'Search'
+        weight = 40
+        params = { type = 'search' }
+    [[menu.main]]
         name = 'GitHub'
         url = 'https://github.com/luanti-org/docs.luanti.org'
-        weight = 40
-        params = { class = 'site-header-link' }
+        weight = 50
+        params = { icon = 'github' }
+
+# Docs layout (side menu, ToC) for all pages
+[[cascade]]
+    type = 'docs'
 
 [module]
     [[module.mounts]]
