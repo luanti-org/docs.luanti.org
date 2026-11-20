@@ -13,6 +13,8 @@ enableGitInfo = true
     [params.editURL]
         enable = true
         base = 'https://github.com/luanti-org/docs.luanti.org/edit/master/content'
+    [params.footer]
+        displayPoweredBy = false
 
 # Links in the site header
 [menu]
