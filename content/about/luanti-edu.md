@@ -8,7 +8,8 @@ aliases:
 
 # LuantiEDU
 
-{{< notice info >}} This page is a work-in-progress, and some detailed guides are unavailable. {{< /notice >}}
+> [!NOTE]
+> This page is a work-in-progress, and some detailed guides are unavailable.
 
 ![](/images/LuantiEDU-Logo.png)
 

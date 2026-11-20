@@ -105,9 +105,8 @@ Many of these problems can be removed or minimised by advanced planning and awar
 - Install a protection mod, such as [areas](https://content.luanti.org/packages/ShadowNinja/areas/) or [protectors](https://content.luanti.org/packages/TenPlus1/protector/). These allow players to protect areas, which cannot be changed by other players.
 - Enable rollback by adding `enable_rollback_recording = true` to minetest.conf. Rollback can tell you which player placed a node, and allows a player's actions to be reverted.
 
-{{< notice warning >}}
-The engine rollback functionality is very limited and can't roll back griefing caused by mod-made node changes (e.g. spawning a bunch of trees or covering things in water). In addition to rollback, you should also always make regular backups of the map database.
-{{< /notice >}}
+> [!WARNING]
+> The engine rollback functionality is very limited and can't roll back griefing caused by mod-made node changes (e.g. spawning a bunch of trees or covering things in water). In addition to rollback, you should also always make regular backups of the map database.
 
 - Install a mod to help you manage bans, such as [xban2](https://content.luanti.org/packages/kaeza/xban2/).
 - On the other hand, if you are setting up a private server, install a whitelist mod such as [whitelist](https://content.luanti.org/packages/Zughy/whitelist/).

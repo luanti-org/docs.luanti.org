@@ -6,10 +6,10 @@
   "language": "en",
   // patterns - regular expressions that can be referenced in ignoreRegExpList
   "patterns": [
-    // fenced code blocks: ``` or ~~~
+    // fenced code blocks: ``` or ~~~ (also inside blockquotes and alerts: > ```)
     {
       "name": "markdown-code-block",
-      "pattern": "/^\\s*(`{3,}|~{3,})[\\s\\S]*?^\\s*\\1/gm"
+      "pattern": "/^[\\s>]*(`{3,}|~{3,})[\\s\\S]*?^[\\s>]*\\1/gm"
     },
     // inline code: `code`
     {

@@ -85,9 +85,8 @@ A table consisting of the following parameters
   - The engine was built with curl support
   - `core.request_http_api()` is called from the mod's `init.lua` file and not in a function
 
-{{< notice warning >}}
-Store the result in a local variable, not a global, so that other mods cannot access it. Other mods should request their own access.
-{{< /notice >}}
+> [!WARNING]
+> Store the result in a local variable, not a global, so that other mods cannot access it. Other mods should request their own access.
 
 An example of how to use this API (handling both existence and permission
 being granted) is as follows:

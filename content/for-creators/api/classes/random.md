@@ -16,9 +16,8 @@ Not restricted by mod security, these functions are available to both SSMs and C
 
 Seed the random. Luanti already does this for you using the system time.
 
-{{< notice info >}}
-Do not seed the random to turn it into a deterministic random source as other mods may expect it to be "non-deterministic".
-{{< /notice >}}
+> [!IMPORTANT]
+> Do not seed the random to turn it into a deterministic random source as other mods may expect it to be "non-deterministic".
 
 Conversely, do not rely on the random to have any particular seed either; other mods & the engine may have seeded it (using the system time) to be "non-deterministic".
 
@@ -40,21 +39,17 @@ math.randomseed(reseed)
 
 Get a random number. Very versatile; allows getting floats between `0` and `1` or integers in a range.
 
-{{< notice note >}}
-The random numbers between `0` and `1` do not provide a full 52-bit mantissa full of entropy; they usually have around 32 bits of entropy.
-{{< /notice >}}
+> [!NOTE]
+> The random numbers between `0` and `1` do not provide a full 52-bit mantissa full of entropy; they usually have around 32 bits of entropy.
 
-{{< notice warning >}}
-When using this to obtain integers, make sure that both the upper & lower bound as well as their difference are within the C `int` range - otherwise you may get overflows & errors.
-{{< /notice >}}
+> [!WARNING]
+> When using this to obtain integers, make sure that both the upper & lower bound as well as their difference are within the C `int` range - otherwise you may get overflows & errors.
 
-{{< notice warning >}}
-This is not portable; different builds on different platforms will produce different random numbers. PUC Lua 5.1 builds use a system-provided random generator. LuaJIT builds use LuaJIT's PRNG implementation. Do not use `math.random` in mapgen, for example.
-{{< /notice >}}
+> [!WARNING]
+> This is not portable; different builds on different platforms will produce different random numbers. PUC Lua 5.1 builds use a system-provided random generator. LuaJIT builds use LuaJIT's PRNG implementation. Do not use `math.random` in mapgen, for example.
 
-{{< notice tip >}}
-Use `math.random` as your go-to versatile "non-deterministic" random source.
-{{< /notice >}}
+> [!TIP]
+> Use `math.random` as your go-to versatile "non-deterministic" random source.
 
 ## Random Number Generators
 
@@ -72,9 +67,8 @@ If `min` and `max` are both omitted, they default to `-2^31` (`-2147483648`) and
 
 #### `:rand_normal_dist(min, max, [num_trials])`
 
-{{< notice warning >}}
-No successful use of this function is documented. Consider implementing your own normal distribution instead.
-{{< /notice >}}
+> [!WARNING]
+> No successful use of this function is documented. Consider implementing your own normal distribution instead.
 
 `min` and `max` are required; they need to be integers.
 
@@ -100,25 +94,22 @@ Constructor: Takes a `seed` and returns a `PseudoRandom` object.
 
 If `min` and `max` are both omitted, they default to `0` and `2^16-1` (`32767`) respectively.
 
-{{< notice warning >}}
-Requires `((max - min) == 32767) or ((max-min) <= 6553))` for a proper distribution.
-{{< /notice >}}
+> [!WARNING]
+> Requires `((max - min) == 32767) or ((max-min) <= 6553))` for a proper distribution.
 
 ### `SecureRandom`
 
 System-provided cryptographically secure random: An attacker should not be able to predict the generated sequence of random numbers. Use this when generating cryptographic keys or tokens.
 
-{{< notice note >}}
-On Windows, the Win32 Crypto API is used to retrieve cryptographically secure random values which is available on every supported version of Windows. On any other platform it is retrieved from `/dev/urandom` which should be available on all Unix-like platforms such as Linux and Android.
-{{< /notice >}}
+> [!NOTE]
+> On Windows, the Win32 Crypto API is used to retrieve cryptographically secure random values which is available on every supported version of Windows. On any other platform it is retrieved from `/dev/urandom` which should be available on all Unix-like platforms such as Linux and Android.
 
 #### `SecureRandom()`
 
 Constructor: Returns a SecureRandom object.
 
-{{< notice info >}}
-Previously this could return `nil` if it can't retrieve a source of randomness, but Luanti 5.10 will always return an object and throw an error on very obscure platforms where it is not available. From a modder's point of view you can rely on it always being available now.
-{{< /notice >}}
+> [!IMPORTANT]
+> Previously this could return `nil` if it can't retrieve a source of randomness, but Luanti 5.10 will always return an object and throw an error on very obscure platforms where it is not available. From a modder's point of view you can rely on it always being available now.
 
 #### `:next_bytes([count])`
 

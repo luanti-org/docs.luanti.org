@@ -42,11 +42,10 @@ For nodes, the situation is unfortunately more complicated [^compat] and depends
 If you use only glTF models, all you have to remember is that models use 10x scale.
 If you use `.obj` models for nodes, you additionally have to remember that they use 1:1 scale.
 
-{{< notice tip >}}
-You can use the `visual_scale` multiplier for nodes to achieve the expected scale. (You could also use `visual_size` for entities. However, the scale also propagates to any attached children.
-While this can be compensated by changing the `visual_size` of children,
-it is usually preferable to scale models correctly for use with entities in order to keep things simple.)
-{{< /notice >}}
+> [!TIP]
+> You can use the `visual_scale` multiplier for nodes to achieve the expected scale. (You could also use `visual_size` for entities. However, the scale also propagates to any attached children.
+> While this can be compensated by changing the `visual_size` of children,
+> it is usually preferable to scale models correctly for use with entities in order to keep things simple.)
 
 [^compat]: due to backwards compatibility reasons
 
@@ -110,9 +109,8 @@ Supported by practically every model editor.
 
 Recommended for simple static models.
 
-{{< notice tip >}}
-`.obj` files may be optimized by stripping leading or trailing zeroes and removing comments (lossless) or truncating digits (lossy). See [here](https://github.com/ExeVirus/Compress-Obj) for a tool that does this.
-{{< /notice >}}
+> [!TIP]
+> `.obj` files may be optimized by stripping leading or trailing zeroes and removing comments (lossless) or truncating digits (lossy). See [here](https://github.com/ExeVirus/Compress-Obj) for a tool that does this.
 
 The precise subset supported by Luanti is specified [here](/for-creators/models/obj-spec).
 
@@ -133,23 +131,20 @@ It already exceeds the capabilities of the alternative model file formats Luanti
 If you can tolerate not supporting older clients,
 using glTF, especially for animated models, is strongly recommended.
 
-{{< notice tip >}}
-If a model does not work as expected, you can use Khronos' official [glTF validator](https://github.khronos.org/glTF-Validator/)
-to check it for [glTF specification](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html) compliance.
+> [!TIP]
+> If a model does not work as expected, you can use Khronos' official [glTF validator](https://github.khronos.org/glTF-Validator/)
+> to check it for [glTF specification](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html) compliance.
+>
+> If you're a VS Code user, the [glTF tools extension](https://marketplace.visualstudio.com/items?itemName=cesium.gltf-vscode)
+> is helpful for debugging models in the editor; it also runs the glTF validator.
 
-If you're a VS Code user, the [glTF tools extension](https://marketplace.visualstudio.com/items?itemName=cesium.gltf-vscode)
-is helpful for debugging models in the editor; it also runs the glTF validator.
-{{< /notice >}}
+> [!TIP]
+> Luanti does not support embedded images in glTF models. You can use [gltfutil](https://github.com/luanti-org/modtools/blob/main/gltfutil.py) to extract or strip textures.
 
-{{< notice tip >}}
-Luanti does not support embedded images in glTF models. You can use [gltfutil](https://github.com/luanti-org/modtools/blob/main/gltfutil.py) to extract or strip textures.
-{{< /notice >}}
-
-{{< notice note >}}
-In contrast to `.b3d` and `.x`, glTF animation speeds are typically in seconds rather than frames.
-When exporting, make sure to use the correct frame rate setting.
-When using glTF models in Luanti, you will normally want to use a speed of `1`.
-{{< /notice >}}
+> [!NOTE]
+> In contrast to `.b3d` and `.x`, glTF animation speeds are typically in seconds rather than frames.
+> When exporting, make sure to use the correct frame rate setting.
+> When using glTF models in Luanti, you will normally want to use a speed of `1`.
 
 ### `.b3d` format
 
