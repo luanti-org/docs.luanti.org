@@ -1,6 +1,5 @@
 ---
 title: For Players
-bookCollapseSection: true
 aliases:
   - /tutorials
 ---

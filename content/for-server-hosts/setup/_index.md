@@ -1,6 +1,5 @@
 ---
 title: Setting up a server
-bookCollapseSection: true
 aliases:
   - /Setting_up_a_server
   - /Setting_up_a_server/Debian

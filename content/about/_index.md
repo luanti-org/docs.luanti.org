@@ -1,6 +1,5 @@
 ---
 title: About
-bookCollapseSection: true
 aliases:
   - /about-this-site
 ---
