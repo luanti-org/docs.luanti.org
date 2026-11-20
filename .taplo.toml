@@ -1,0 +1,5 @@
+# TOML formatting (Taplo, used by the "Even Better TOML" VS Code extension)
+[formatting]
+    indent_tables = true
+    indent_entries = true
+    indent_string = "    "
