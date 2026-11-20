@@ -30,6 +30,8 @@ defaults:
 jobs:
   # Build job
   build:
+    # Forks have no Pages to deploy to (the deploy job is skipped too)
+    if: github.repository == 'luanti-org/docs.luanti.org'
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.168.0
