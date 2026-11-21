@@ -5,8 +5,6 @@ aliases:
   - /list-of-hardcoded-features
 ---
 
-# List of hardcoded features
-
 This is a **list of hardcoded features** in Luanti. A hardcoded feature is a feature with a certain functionality that behaves always in a certain fixed way that cannot be customized. Luanti in general wants to allow its mods and games to customize pretty much everything, so in the long run, any hardcoded feature should be made customizable. Note not all hardcoded features are created equal, some are less annoying than others, while for some features it really doesn't matter that they are hardcoded. Also, this list should be more seen as a documentation, not as a feature request to un-hardcode everything in this list.
 
 ## Gameplay

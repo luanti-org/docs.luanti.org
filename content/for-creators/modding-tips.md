@@ -6,8 +6,6 @@ aliases:
   - /content-dev/modding-tips
 ---
 
-# Modding Tips
-
 This page is a random collection of various tips and tricks, and solutions to common tasks/problems that occur frequently in mod/game development. See also: [Modding FAQ](/about/faq/#game-and-mod-development)
 
 ## Troubleshooting

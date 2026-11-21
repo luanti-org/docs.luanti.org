@@ -2,8 +2,6 @@
 title: Blitz3d file format specification
 ---
 
-# Blitz3d file format specification
-
 This is a reformatted version of the specification of the Blitz3D file format, version 0.01,
 presumably by `marksibly@blitzbasic.co.nz`, originally available on `http://www.blitzbasic.co.nz`
 (which no longer operates) and placed in the public domain.

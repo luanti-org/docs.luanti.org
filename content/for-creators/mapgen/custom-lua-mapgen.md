@@ -4,8 +4,6 @@ aliases:
   - /mapgen/custom-lua-mapgen/
 ---
 
-# Custom Lua Mapgen
-
 The Luanti engine provides several built-in map generators implemented in C++, where biomes and decorations can be registered by mods. In addition to this you can also write your own mapgen in Lua. This is done by hooking into the `singlenode` mapgen (by default consisting only of `air`) and generating your own terrain using the Lua API.
 
 ## Performance

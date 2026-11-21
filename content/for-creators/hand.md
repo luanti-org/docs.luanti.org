@@ -5,8 +5,6 @@ aliases:
   - /hand
 ---
 
-# Hand
-
 The **hand** is the most basic “tool” in Luanti. The hand is capable of breaking blocks and [punching](/for-players/punching). But these features might differ in games. The hand is automatically selected when you wield nothing.
 
 ## The “implicit” hand

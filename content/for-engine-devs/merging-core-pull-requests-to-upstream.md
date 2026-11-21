@@ -6,8 +6,6 @@ aliases:
   - /engine-dev-process/merging-core-pull-requests-to-upstream
 ---
 
-# Merging core pull requests to upstream
-
 This page contains **technical guidelines** for core developers when deciding whether to merge a pull request.
 
 For determining who is allowed to do what, see [Organization](/for-engine-devs/organization).

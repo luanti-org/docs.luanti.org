@@ -7,8 +7,6 @@ aliases:
   - /engine/items
 ---
 
-# Items
-
 **Items** are things that can be stored in an [inventory](/for-players/inventory). This includes tools, weapons, [nodes](/for-players/nodes) and pure crafting elements that may or may not have additional behaviors ("craftitems").
 
 ## Item stack

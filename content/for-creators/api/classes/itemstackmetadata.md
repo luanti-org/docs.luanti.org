@@ -4,8 +4,6 @@ aliases:
   - /api/classes/itemstackmetadata
 ---
 
-# ItemStackMetaData
-
 ItemStackMetaData is a subclass of [MetaData](/for-creators/api/classes/metadata/) obtained via `stack:get_meta()` allowing for persistent storage of key-value pairs tied to ItemStacks.
 
 > [!WARNING]

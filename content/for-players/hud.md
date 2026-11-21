@@ -4,8 +4,6 @@ aliases:
   - /HUD
 ---
 
-# HUD
-
 > [!WARNING]
 > This article is incomplete. Please help expand this article to include more useful information.
 

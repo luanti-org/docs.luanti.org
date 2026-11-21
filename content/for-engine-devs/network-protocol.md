@@ -5,8 +5,6 @@ aliases:
   - /engine/network-protocol
 ---
 
-# Engine/Network Protocol
-
 ## High-level protocol
 
 The high-level protocol is clearly written down and updated in [networkprotocol.h](https://github.com/luanti-org/luanti/blob/master/src/network/networkprotocol.h).

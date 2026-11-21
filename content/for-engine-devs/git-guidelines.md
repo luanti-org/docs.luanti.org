@@ -6,8 +6,6 @@ aliases:
   - /engine-dev-process/git-guidelines
 ---
 
-# Git Guidelines
-
 This page is mostly directed to core team members with commit or triage access to upstream repositories.
 
 For determining who is allowed to do what, see [Organization](/for-engine-devs/organization).

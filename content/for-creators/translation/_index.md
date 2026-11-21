@@ -4,10 +4,7 @@ aliases:
   - /Translating
   - /Translation
   - /translation
-bookCollapseSection: true
 ---
-
-# Translation
 
 This page explains how to translate Luanti.
 

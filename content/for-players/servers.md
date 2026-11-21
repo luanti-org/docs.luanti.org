@@ -5,8 +5,6 @@ aliases:
   - /server
 ---
 
-# Servers
-
 Luanti **servers** allow players to play online with other people. They can be run from a dedicated server, a Virtual Private Server or a home computer.
 
 This is not a list of servers, please see the [Luanti Server List](https://luanti.org/servers) or [Luanti Forum servers section](https://forum.luanti.org/viewforum.php?f=10) instead.

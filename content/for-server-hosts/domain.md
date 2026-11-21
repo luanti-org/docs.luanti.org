@@ -6,8 +6,6 @@ aliases:
   - /server/domain
 ---
 
-# How to get a domain name for your server
-
 ## What is DNS
 
 _Skip to Step 1 if you already know about dynamic DNS._

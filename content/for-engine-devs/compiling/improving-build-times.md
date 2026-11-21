@@ -4,8 +4,6 @@ aliases:
   - /compiling/improving-build-times
 ---
 
-# Improving build times
-
 This page contains useful tips for improving build times when compiling Luanti. This is useful when you are repeatedly building Luanti for testing or if you want to make incremental builds as quick as possible.
 
 The instructions assume you are on Linux, as that's where you can usually expect the best compile times in general.

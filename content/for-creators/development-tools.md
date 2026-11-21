@@ -6,8 +6,6 @@ aliases:
   - /content-dev/development-tools
 ---
 
-# Development Tools
-
 This page contains a list of tools that are useful for developing games and mods for Luanti, or working with parts of the engine.
 
 In addition to this list, you can also see the [Development Tools](https://content.luanti.org/packages/?tag=developer_tools) tag on ContentDB for mods useful for development and the [modtools](https://github.com/luanti-org/modtools) repository for officially maintained modding tools.

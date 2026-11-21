@@ -4,8 +4,6 @@ aliases:
   - /api/filesystem
 ---
 
-# Filesystem
-
 Luanti provides various utility functions to help with managing paths, files & directories.
 
 > [!IMPORTANT]

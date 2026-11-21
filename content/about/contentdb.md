@@ -5,8 +5,6 @@ aliases:
   - /contentdb
 ---
 
-# ContentDB
-
 **ContentDB** (short for "Content Database") is the official source to download content such as mods, games and texture packs (collectively referred to as "packages") that have been developed by the Luanti community. It's the fastest and most convenient method to obtain those things, and is available both in the client and on the web.
 
 But ContentDB isn't just about supporting the in-game content downloader; it's common for technical users to find and review packages using the ContentDB website, but install using Git rather than the in-game installer. ContentDB's purpose is to be a well-formatted source of information about mods, games, and texture packs for Luanti.

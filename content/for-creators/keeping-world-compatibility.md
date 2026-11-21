@@ -4,8 +4,6 @@ aliases:
   - /keeping-world-compatibility
 ---
 
-# Keeping world compatibility
-
 If your game or mod is stable and played by many players then it is a good idea to keep compatibility with old worlds as much as possible, in order to prevent unknown or glitched nodes showing up in players worlds.
 
 ## Aliases

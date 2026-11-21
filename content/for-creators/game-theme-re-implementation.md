@@ -4,8 +4,6 @@ aliases:
   - /game-theme-reimplementation
 ---
 
-# Game Theme Re-implementation
-
 The part of the main menu that controls the game theming aspects is implemented with `mm_game_theme`, in `game_theme.lua`. If you wish to rebrand the main menu, dealing with the complexity of this implementation can be rather unnecessary if you just want a single background and header that shows up on every tab.
 
 What `mm_game_theme` does is essentially just abstract away calls to `core.set_background`, a function which controls background textures, but also header and footer textures. See the entry for it in `menu_lua_api.md`:

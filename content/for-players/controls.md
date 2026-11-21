@@ -5,8 +5,6 @@ aliases:
   - /controls
 ---
 
-# Controls
-
 This is an overview of all controls used in Luanti.
 
 ## Changing controls

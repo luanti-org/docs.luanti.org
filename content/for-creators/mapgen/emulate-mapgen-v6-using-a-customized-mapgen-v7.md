@@ -5,8 +5,6 @@ aliases:
   - /mapgen/emulate-mapgen-v6-using-a-customised-mapgen-v7
 ---
 
-# How to emulate mapgen v6 using a customized mapgen v7
-
 Some players like aspects of [Mapgen](/for-creators/mapgen) v6, but the biomes are hardcoded, so it's not possible for games to register their own biomes. It is also very different from the other mapgens in how it works and is more difficult to support in games.
 
 It is actually possible to approximately emulate Mapgen v6 in Mapgen v7 using customized settings. This is only possible in version 5.2.0 or later due to the “randomwalk” caves now being more configurable, allowing Mapgen v7 to have caves like in Mapgen v6.

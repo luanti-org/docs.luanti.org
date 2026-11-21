@@ -5,8 +5,6 @@ aliases:
   - /profiler-graph
 ---
 
-# Profiler graph
-
 The profiler graphs show the performance of Luanti in a more detailed fashion. This information is useful for engine developers. The profiler graphs are shown when you hit the debug key (F5 by default) twice.
 
 [![Profiler graph](/images/Profiler_graph.webp)](/images/Profiler_graph.webp)

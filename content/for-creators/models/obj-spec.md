@@ -2,8 +2,6 @@
 title: Luanti .obj file format specification
 ---
 
-# Luanti `.obj` file format specification
-
 The `.obj` file format supported by Luanti is a subset of [Wavefront Object (`.obj`) Files](https://web.archive.org/web/20250620145323/https://paulbourke.net/dataformats/obj/).
 
 Material (`.mtl`) files are not supported; `.obj` files can not be animated.

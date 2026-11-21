@@ -5,8 +5,6 @@ aliases:
   - /getting-started
 ---
 
-# Getting Started
-
 Welcome to Luanti! This page explains what Luanti is all about, how to get it, and how to start playing your first games alone or online.
 
 ## “What is this strange ‘Luanti’ thing I keep hearing about?”

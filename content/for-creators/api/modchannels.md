@@ -4,8 +4,6 @@ aliases:
   - /api/modchannels
 ---
 
-# Modchannels
-
 Allows server side mods (SSMs) communication to client side mods (CSMs) and vice versa.
 
 ## Server Side API

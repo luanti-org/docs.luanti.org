@@ -5,8 +5,6 @@ aliases:
   - /itemstrings
 ---
 
-# Itemstrings
-
 **Itemstrings** are the internal names for items, blocks, nodes (everything which can be stored in an [inventory](/for-players/inventory)).
 
 ## Syntax

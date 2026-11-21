@@ -4,8 +4,6 @@ aliases:
   - /api/classes/nodemetadata
 ---
 
-# NodeMetaData
-
 NodeMetaData allows extending the basic node storage with a per-world, per-in-world-node persistent string key-value store implementing all methods of MetaData allowing you to associate arbitrary data with any node. Additionally, node metadata allows storing inventories for nodes like chests or furnaces.
 
 The traditional node storage in Luanti is usually limited to:

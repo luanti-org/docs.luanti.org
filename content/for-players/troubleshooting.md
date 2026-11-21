@@ -5,8 +5,6 @@ aliases:
   - /troubleshooting
 ---
 
-# Troubleshooting
-
 This page lists common technical problems like crashes and error messages (enclosed in quotation marks) and possible solutions or explanations. For general questions, refer to [FAQ](/about/faq).
 
 For information on how to report bugs, read [Reporting bugs](/for-players/reporting-bugs).

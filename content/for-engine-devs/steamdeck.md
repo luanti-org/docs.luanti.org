@@ -5,8 +5,6 @@ aliases:
   - /steamdeck
 ---
 
-# Steam Deck
-
 This page contains information useful for developing Luanti for the Steam Deck. Contact rubenwardy with any questions.
 
 ## Usage as an end user

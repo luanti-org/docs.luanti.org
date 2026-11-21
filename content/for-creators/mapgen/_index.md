@@ -5,10 +5,7 @@ aliases:
   - /Map-Database
   - /Mapgen
   - /mapgen
-bookCollapseSection: true
 ---
-
-# Map generator
 
 The **map generator** (“mapgen” for short) is the Luanti component that procedurally generates the world around the player.
 

@@ -5,8 +5,6 @@ aliases:
   - /world-boundaries
 ---
 
-# World Boundaries
-
 Luanti's world is not infinitely large. Therefore, you can theoretically reach the world boundaries if you just travel far enough. How easy it would be for a player to reach the boundary depends on what movement options are provided by the game, or if the game has allocated certain vertical or horizontal space for separate dimensions that are teleported to in gameplay.
 
 The world boundary is an invisible barrier which isn't supposed to be passed by normal means. Beyond the world boundaries, no node can be placed and there is just an endless void technically occupied by the Ignore node. Luanti's world is a huge cube with a side length of ca. 60000 nodes and the dimensions (X, Y and Z) ranges from −30912 to 30927 by default. The theoretical boundaries are at the signed 16-bit integer limit, but have been cut short in order to reduce bugs that may be exhibited at the theoretical boundary.

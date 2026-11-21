@@ -6,8 +6,6 @@ aliases:
   - /content-dev/mod-interoperability
 ---
 
-# Mod interoperability
-
 This page is aimed towards modders and lists a couple of mods and conventions which are known in the community.
 
 The main goal is to improve interoperability between mods and reduce code duplication. Often it is better to use existing APIs rather than trying to reinvent the wheel to reduce code duplication, redundancy and overall chaos. Of course, deciding to not use existing APIs may still be a viable choice if they do not suit your needs.

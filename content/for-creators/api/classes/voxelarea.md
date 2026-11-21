@@ -4,8 +4,6 @@ aliases:
   - /api/classes/voxelarea
 ---
 
-# VoxelArea
-
 The `VoxelArea` metatable provides an OOP-like utility for dealing with LuaVoxelManip (specifically, for doing the index math).
 
 ## `VoxelArea.new(self, o)`

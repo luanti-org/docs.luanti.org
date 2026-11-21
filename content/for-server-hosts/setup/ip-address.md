@@ -2,8 +2,6 @@
 title: Getting Your IP Address
 ---
 
-# Getting Your IP Address
-
 When hosting from home it is necessary to know both your external and internal IP and understanding the difference between the two. The guide will reference these addresses multiple times later so it is good to know what they are for you.
 
 ## External IP
@@ -40,7 +38,7 @@ Your internal IP will be the address listed as "IPv4 Address".
 2. Type `netstat -nr`
 3. Figure it out
 
-# Checking for CGNAT
+## Checking for CGNAT
 
 Carrier-grade NAT (CGNAT) is a technique used by some ISPs where many customers will share one single IP address, in order to conserve the amount of IPv4 addresses the ISP owns. As mentioned above this also means that you will be unable to host a server from home without additional steps, as it won't be directly accessible from the wider Internet. So if you are going to be hosting from home you should first check whether you are behind CGNAT.
 
@@ -58,7 +56,7 @@ Follow the steps for your operating system to run a traceroute:
 1. Open a terminal.
 2. Type `traceroute <external IP>` (requires traceroute to be installed)
 
-## Analysing the traceroute
+### Analysing the traceroute
 
 Whether you are behind CGNAT or not can be determined based on the amount of hops the traceroute will return. If the traceroute returns a single hop and then finishes then you are not behind CGNAT:
 
@@ -69,7 +67,7 @@ traceroute to 78.71.XX.XX (78.71.XX.XX), 30 hops max, 60 byte packets
 
 However if there are multiple hops to the external IP, especially ones within the 100.64.0.0 to 100.127.255.255 range that are reserved for CGNAT, or if the traceroute doesn’t complete at all then you are behind CGNAT and will not be able to host a publicly available server without extra steps.
 
-## If you are behind CGNAT
+### If you are behind CGNAT
 
 First of all, try contacting your ISP or check their website. Some ISPs are willing to move you onto a bare IP (may also be referred to as a "public" IP) if requested, by contacting them directly or through a page on their website. If asked for the motivation, say that you want to host a game server.
 

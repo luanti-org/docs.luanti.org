@@ -5,8 +5,6 @@ aliases:
   - /mapgen/features
 ---
 
-# Map generator features
-
 This page shows the various special features which [map generators](/for-creators/mapgen) have and explains how to use them.
 
 > [!NOTE]

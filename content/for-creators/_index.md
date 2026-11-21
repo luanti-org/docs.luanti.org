@@ -4,10 +4,7 @@ aliases:
   - /Modding_Intro
   - /modding-intro
   - /content-dev
-bookCollapseSection: true
 ---
-
-# For Creators
 
 Luanti is a platform for creating and sharing games, mods, texture packs, and more. This section also hosts information about translating content for other audiences.
 

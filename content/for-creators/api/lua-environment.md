@@ -4,8 +4,6 @@ aliases:
   - /api/lua-environment
 ---
 
-# Lua Environment
-
 Luanti uses Lua 5.1. The environment in which Luanti executes mods depends on four factors:
 
 1. The operating system

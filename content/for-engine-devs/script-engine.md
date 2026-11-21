@@ -5,8 +5,6 @@ aliases:
   - /engine/script-engine
 ---
 
-# Engine/Script Engine
-
 ## Conventions
 
 - Script Engine uses a modular design separating code with different purpose as much as possible.

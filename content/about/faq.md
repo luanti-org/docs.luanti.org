@@ -5,8 +5,6 @@ aliases:
   - /faq
 ---
 
-# FAQ
-
 This is a collection of some **frequently asked questions** about Luanti. For technical problems, refer to [Troubleshooting](/for-players/troubleshooting).
 
 ## What is Luanti?

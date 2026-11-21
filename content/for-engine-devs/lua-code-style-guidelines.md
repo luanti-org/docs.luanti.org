@@ -6,8 +6,6 @@ aliases:
   - /engine-dev-process/lua-code-style-guidelines
 ---
 
-# Lua code style guidelines
-
 This is largely inspired by [the Python style guide](https://www.python.org/dev/peps/pep-0008) except for some indentation and
 language differences. When in doubt, consult that guide (if applicable).
 

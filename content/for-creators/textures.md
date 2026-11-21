@@ -4,8 +4,6 @@ aliases:
   - /textures
 ---
 
-# Textures
-
 This page lists the image formats that Luanti supports for textures, along with information on optimizing them or working with them programmatically.
 
 ## PNG (`.png`)

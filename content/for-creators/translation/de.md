@@ -5,8 +5,6 @@ aliases:
   - /translation/de
 ---
 
-# German translation notes
-
 This page contains information for German translators.
 
 {{% comment %}} cspell:disable {{% /comment %}}

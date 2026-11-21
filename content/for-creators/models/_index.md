@@ -2,10 +2,7 @@
 title: Models
 aliases:
   - /models
-bookCollapseSection: true
 ---
-
-# Models
 
 Luanti supports a few model file formats. Modern Luanti versions are moving towards glTF as the primary format.
 

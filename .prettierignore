@@ -19,8 +19,4 @@ node_modules
 test-results
 
 # Upstream submodules
-themes/hugo-book
-themes/hugo-notice
-
-# Copy of themes/hugo-book/layouts/baseof.html, keep it identical to ease updates
-layouts/baseof.html
+themes/hextra

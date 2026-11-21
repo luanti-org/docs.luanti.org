@@ -1,11 +1,10 @@
 ---
-title: Android
+title: Compiling Luanti for Android
+linkTitle: Android
 aliases:
   - /developing-luanti-for-android/
   - /compiling/android
 ---
-
-# Compiling Luanti for Android
 
 The instructions in this article were written for and tested on Linux,
 but the tools used here should also work on other platforms.

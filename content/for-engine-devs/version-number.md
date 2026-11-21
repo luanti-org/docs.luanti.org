@@ -5,8 +5,6 @@ aliases:
   - /version-number
 ---
 
-# Version Number
-
 The **version number** of Luanti is used to keep different versions of Luanti apart.
 
 ## Stable releases

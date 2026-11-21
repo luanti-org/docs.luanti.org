@@ -4,8 +4,6 @@ aliases:
   - /models/blockbench
 ---
 
-# Using Blockbench
-
 Blockbench is a 3D modelling software designed for making low-poly and voxel models, making it suitable for making Luanti models.
 As Blockbench supports exporting to `.obj` it is very easy to create static models and export them directly into Luanti.
 

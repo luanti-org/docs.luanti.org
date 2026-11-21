@@ -4,8 +4,6 @@ aliases:
   - /api/http-api
 ---
 
-# HTTP API
-
 Enables mods to make HTTP requests.
 
 ## Settings

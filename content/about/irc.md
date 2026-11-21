@@ -5,8 +5,6 @@ aliases:
   - /irc
 ---
 
-# IRC
-
 Internet Relay Chat (IRC) is one of the platforms that Luanti uses for real-time chat. IRC also serves as a common ground between other platforms such as Discord and Matrix.
 
 All the engaged people from the community and the developer team can be found there, and most prolific modders will also be available there.

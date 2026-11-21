@@ -4,8 +4,6 @@ aliases:
   - /right-to-a-name
 ---
 
-# Right to a Name
-
 Right to a Name (abbreviated RTAN, alternatively RTaN) is a policy enforced by ContentDB where every modname (the technical name of a mod) needs to be unique. For the official policy see [Package Inclusion Policy and Guidance § 3.1. Right to a Name](https://content.luanti.org/policy_and_guidance/#31-right-to-a-name).
 
 ## Motivation

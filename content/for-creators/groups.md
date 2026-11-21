@@ -5,8 +5,6 @@ aliases:
   - /groups
 ---
 
-# Groups
-
 **Groups** is a concept for [nodes](/for-players/nodes), [items](/for-players/items) and [tools](/for-players/tool) in Luanti. Any of these may be a member of a group or multiple groups, or none at all. Groups are used mainly for crafting recipes, to determine damage, to determine digging time and lots of other stuff as well.
 
 > [!NOTE]

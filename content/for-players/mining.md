@@ -5,8 +5,6 @@ aliases:
   - /mining
 ---
 
-# Mining
-
 **Mining** is one of the most basic activities in Luanti. Mining is the activity of removing a node with a mining [tool](/for-players/tool).
 
 ## How to mine

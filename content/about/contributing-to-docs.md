@@ -11,8 +11,6 @@ aliases:
   - /about/rules
 ---
 
-# Contributing to Docs
-
 Luanti Documentation is written in Markdown and transformed into HTML by [Hugo](https://gohugo.io), a free and open-source static site generator. The source code is currently hosted on GitHub and deployed with GitHub Actions.
 
 ## Local Development
@@ -91,11 +89,11 @@ Finally, this text is spell-checked again.
 
 ### Proposing changes
 
-At the bottom of each page is an `edit this page` button. Clicking this will open up GitHub's web text editor where you can make text changes and commit. Alternatively you can use GitHub's VS Code interface from the repo page by clicking the `.` key.
+On wide screens, each page has an `Edit this page on GitHub` link in the right column, below the table of contents. Clicking it will open up GitHub's web text editor where you can make text changes and commit. Alternatively you can use GitHub's VS Code interface from the repo page by clicking the `.` key.
 
 Changes are reviewed via the common "fork and pull request" approach. If you're unfamiliar, this should serve as a quick guide. Feel free to reach out to #luanti-docs in IRC, Discord, or Matrix for further assistance :)
 
-- Please fork the repo (the `edit this page` option at the bottom of each page will walk you through this)
+- Please fork the repo (the `Edit this page on GitHub` link will walk you through this)
 - Web-based
   - Once the repo is forked, go to the repo page and click `.`: this will open VS Code in the browser
   - Checkout a branch (bottom left, second option in)
@@ -126,7 +124,7 @@ aliases:
 
 Front matter should be in YAML.
 
-The `title` attribute is required on every markdown file, and in the case of directory `_index.md` files, the `bookCollapseSection` attribute should be set to `true`.
+The `title` attribute is required on every markdown file. Use `linkTitle` for a shorter name in the side menu.
 
 If you move or rename a Markdown file, add an [`aliases`](https://gohugo.io/content-management/urls/#aliases) value for redirects to keep the old URL working.
 

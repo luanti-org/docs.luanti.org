@@ -4,8 +4,6 @@ aliases:
   - /api/texture-modifiers
 ---
 
-# Texture Modifiers
-
 Texture modifiers - strings instructing Luanti to manipulate images - are, besides dynamic media, the only way to dynamically generate textures at runtime.
 
 They can also be used to simplify mods by generating repetitive textures such as differently colored tool textures.

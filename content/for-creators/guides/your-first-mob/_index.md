@@ -2,8 +2,6 @@
 title: Your first mob
 ---
 
-# Your first mob
-
 This guide walks you through creating a simple mob.
 
 It covers basics of using entities, the go-to tool for any in-world objects that need to be more "dynamic" than a node, i.e. moving.

@@ -4,8 +4,6 @@ aliases:
   - /engine/compatibility-guideline
 ---
 
-# Compatibility Guideline
-
 *This file was written based on engine version 5.14.0-dev after PR 16796.*
 
 When implementing features or extending the behavior of existing APIs, we generally want the following:

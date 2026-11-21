@@ -1,11 +1,8 @@
 ---
 title: About
-bookCollapseSection: true
 aliases:
   - /about-this-site
 ---
-
-# About
 
 Luanti (formerly [Minetest](https://blog.luanti.org/2024/10/13/Introducing-Our-New-Name/)) is a free and open-source voxel game engine with its own [distribution platform](/about/contentdb) and [client](/about/luanti). Players, creators, server hosts, and engine developers can find more information here about how to get started with Luanti.
 

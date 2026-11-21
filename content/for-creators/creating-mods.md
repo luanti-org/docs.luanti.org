@@ -2,8 +2,6 @@
 title: Creating mods
 ---
 
-# Creating mods
-
 Luanti has a scripting API which is used to program games and [mods](/for-players/mods), allowing creators to create new experiences or extend existing ones with mods. The API is accessed using [Lua](https://www.lua.org/), an easy-to-use programming language. Version 5.1 of Lua is used, but many people run LuaJIT for greater performance. The only thing you will need is _basic_ programming knowledge.
 
 The official Luanti Lua API reference can be found at [api.luanti.org](https://api.luanti.org/), with guides hosted in the [API section of this site](/for-creators/api).

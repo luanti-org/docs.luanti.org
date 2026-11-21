@@ -1,9 +1,9 @@
-[submodule "themes/hugo-book"]
-	path = themes/hugo-book
-	url = https://github.com/alex-shpak/hugo-book
 [submodule "external/flint"]
 	path = external/flint
 	url = https://github.com/luanti-org/flint.git
 [submodule "external/luma"]
 	path = external/luma
 	url = https://github.com/luanti-org/luma.git
+[submodule "themes/hextra"]
+	path = themes/hextra
+	url = https://github.com/imfing/hextra.git

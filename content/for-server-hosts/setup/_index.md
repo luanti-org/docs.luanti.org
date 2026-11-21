@@ -1,14 +1,11 @@
 ---
 title: Setting up a server
-bookCollapseSection: true
 aliases:
   - /Setting_up_a_server
   - /Setting_up_a_server/Debian
   - /setting-up-a-server
   - /server/setup
 ---
-
-# Setting up a server
 
 This page is a guide, separated into sections, for setting up a Luanti server. It assumes you want to run a server that is publicly facing the Internet, as compared to a LAN server if you want to play with players on the same network.
 

@@ -1,10 +1,7 @@
 ---
 title: For Server Hosts
-bookCollapseSection: true
 # Previous aliases moved to /for-players/servers
 ---
-
-# For Server Hosts
 
 Server hosts setup and manage multiplayer Luanti servers.
 

@@ -5,8 +5,6 @@ aliases:
   - /celeron55
 ---
 
-# celeron55
-
 [![](/images/celeron55/C55.jpg)](/images/celeron55/C55.jpg)
 
 celeron55 _(old picture)_

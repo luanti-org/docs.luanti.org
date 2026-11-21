@@ -4,8 +4,6 @@ aliases:
   - /api/classes/vector
 ---
 
-# Vector API
-
 The `vector` type used to be a simple `table` with `x`, `y`, and `z` values.
 However it has more recently been given metatable methods for convenience.
 Unless otherwise noted, the `vector` type always refers to the metatable-enhanced variety.

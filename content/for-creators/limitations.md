@@ -4,8 +4,6 @@ aliases:
   - /limitations
 ---
 
-# Limitations
-
 This page lists various limitations that exist in the Luanti engine. This list could also be seen as a wishlist for far fetched features.
 
 Also see the [List of hardcoded features](/for-creators/list-of-hardcoded-features) page for behavior in the engine that is mostly hardcoded.

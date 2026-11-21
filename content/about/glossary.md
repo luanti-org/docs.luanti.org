@@ -5,8 +5,6 @@ aliases:
   - /glossary
 ---
 
-# Glossary
-
 This page contains a hopefully complete list of terminology related to Luanti.
 
 ## Luanti and its components

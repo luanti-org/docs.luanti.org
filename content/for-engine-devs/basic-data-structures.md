@@ -5,8 +5,6 @@ aliases:
   - /engine/basic-data-structures
 ---
 
-# Basic data structures
-
 ## IRC logs on this subject
 
 [minetest-delta/2011-11-07](http://web.archive.org/web/20160309052711/http://logs.2pktfkt.de/minetest-delta/2011-11-07.html) [minetest-delta/2011-11-08](http://web.archive.org/web/20160308105531/http://logs.2pktfkt.de/minetest-delta/2011-11-08.html)
