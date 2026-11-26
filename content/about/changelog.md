@@ -9,6 +9,22 @@ aliases:
 Note that not all changes made to the code between releases are listed here. Fixes to bugs that were introduced after the previous release, small internal changes, code style fixes, and changes of the like are not listed.
 If you want a list of _every_ change made between releases see the [commit log](https://github.com/luanti-org/luanti/commits/master).
 
+## 5.18.0 → 5.18.1
+
+**[Release](https://github.com/luanti-org/luanti/releases/tag/5.18.1)**
+
+Released on 27 November 2026.
+
+⚠️ **This release fixes security vulnerabilities affecting the client.** ⚠️
+
+### Client / Audiovisuals
+- Fix client hang on invalid particles, and wrong `"sheet_d2"` synchronization (_ZenonSeth_)
+- Fix crash caused by invalid `"plantlike_rooted"` node registrations (_cs384_)
+- Android: Fix stuck progress indicator (_9LJ9_)
+
+### Misc / Maintenance
+- Update the build system (_sfan5_)
+
 
 ## 5.17.0 → 5.18.0
 
