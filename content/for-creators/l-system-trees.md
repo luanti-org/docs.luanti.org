@@ -10,6 +10,8 @@ aliases:
 
 Luanti has two types of trees built in: Small simple ones like the trees in the vanilla Minetest Game, and more complex ones generated using a L-system and a tree definition. L-system trees can be spawned with `core.spawn_tree` and are defined by a `treedef` table.
 
+You can experiment with L-system trees in your browser using the [L-system tree editor](https://workbench.luanti.org/l-system/editor).
+
 The following chat log might be helpful in understanding how L-system trees work: [#minetest 2013-08-08](http://irc.minetest.ru/minetest/2013-08-08#i_3250058)
 
 ## Turtle graphics
@@ -83,6 +85,8 @@ And after the 3rd recursion this is the result:
 
 [![recursive y](/images/mtwikitreegen.webp)](/images/mtwikitreegen.webp)
 
+[Open this tree in the L-system tree editor](https://workbench.luanti.org/l-system/editor#eyJ2IjoyLCJkZWYiOnsiYXhpb20iOiJUVFRUVEEiLCJydWxlc19hIjoiW15UVFRUVEFdWyZUVFRUVEFdIiwiYW5nbGUiOjMwLCJpdGVyYXRpb25zIjozLCJ0cnVuayI6ImRlZmF1bHQ6dHJlZSJ9LCJidWlsZGVyIjp7InRlbXBsYXRlIjoiY3VzdG9tIiwidmFsdWVzIjp7fX19)
+
 ### Replacing by chance
 
 The symbols a, b, c, d work like the symbols A, B, C, and D, respectively, but they will only be replaced by chance.
@@ -93,15 +97,6 @@ The symbols a, b, c, d work like the symbols A, B, C, and D, respectively, but t
 | b      | Replace with rule set B with a 80% chance, do nothing otherwise |
 | c      | Replace with rule set C with a 70% chance, do nothing otherwise |
 | d      | Replace with rule set D with a 60% chance, do nothing otherwise |
-
----
-
-title: L-system tree examples
-aliases:
-
-- /L-system_tree_examples
-
----
 
 ## L-system tree examples
 
@@ -122,6 +117,8 @@ treedef={
    thin_branches = true
 }
 ```
+
+[Open this tree in the L-system tree editor](https://workbench.luanti.org/l-system/editor#eyJ2IjoyLCJkZWYiOnsiYXhpb20iOiJBL0EvQS9BL0EvQS9BL0EvQS9BL0EvQSIsInJ1bGVzX2EiOiJbQitCK0IrQl0iLCJydWxlc19iIjoiW0ZGRkZGRkZGRkZdIiwidHJ1bmsiOiJtYXBnZW5fdHJlZSIsImFuZ2xlIjozMCwiaXRlcmF0aW9ucyI6MSwicmFuZG9tX2xldmVsIjowLCJ0cnVua190eXBlIjoic2luZ2xlIiwidGhpbl9icmFuY2hlcyI6dHJ1ZX0sImJ1aWxkZXIiOnsidGVtcGxhdGUiOiJjdXN0b20iLCJ2YWx1ZXMiOnt9fX0)
 
 [![Giant Dry Shrub](/images/Giant_Dry_Shrub.webp)](/images/Giant_Dry_Shrub.webp)
 
@@ -149,6 +146,8 @@ treedef = {
 ```
 
 {{% comment %}} cspell:enable {{% /comment %}}
+
+[Open this tree in the L-system tree editor](https://workbench.luanti.org/l-system/editor#eyJ2IjoyLCJkZWYiOnsiYXhpb20iOiJGRkZGRkFGRkJGIiwicnVsZXNfYSI6IlsmJiZGRkZGRiYmRkZGRl1bJiYmKysrK0ZGRkZGJiZGRkZGXVsmJiYtLS0tRkZGRkYmJkZGRkZdIiwicnVsZXNfYiI6IlsmJiYrK0ZGRkZGJiZGRkZGXVsmJiYtLUZGRkZGJiZGRkZGXVsmJiYtLS0tLS1GRkZGRiYmRkZGRl0iLCJ0cnVuayI6Im1hcGdlbl90cmVlIiwibGVhdmVzIjoibWFwZ2VuX2xlYXZlcyIsImFuZ2xlIjozMCwiaXRlcmF0aW9ucyI6MiwicmFuZG9tX2xldmVsIjowLCJ0cnVua190eXBlIjoic2luZ2xlIiwidGhpbl9icmFuY2hlcyI6dHJ1ZSwiZnJ1aXRfY2hhbmNlIjoxMCwiZnJ1aXQiOiJtYXBnZW5fYXBwbGUifSwiYnVpbGRlciI6eyJ0ZW1wbGF0ZSI6ImN1c3RvbSIsInZhbHVlcyI6e319fQ)
 
 [![Apple Tree](/images/Apple_Tree.webp)](/images/Apple_Tree.webp)
 
@@ -194,8 +193,11 @@ treedef={
 
 {{% comment %}} cspell:enable {{% /comment %}}
 
+[Open this tree in the L-system tree editor](https://workbench.luanti.org/l-system/editor#eyJ2IjoyLCJkZWYiOnsiYXhpb20iOiJGRkZGRkZjY2NjQSIsInJ1bGVzX2EiOiJbQl0vL1tCXS8vW0JdLy9bQl0iLCJydWxlc19iIjoiJlRUVFQmVFReXkcmJi0tLS1HR0dHR0crK0dHRysrZmZmZmZmZkdHKytHKytHZmZmZmZmZmYtLUctLWZmZmZmZmZmRysrRysrZmZmZmZmZmZmLS1HLS1mZmZmZmZmZmYrK0crK2ZmZmZmZmZmZi0tRy0tZmZmZmZmZmZHKytHKytHZmZmZmZmZmYtLUctLWZmZmZmZmZHR15eRyYmLS0tLUdHR0dHR0crK0dHR0dHRysrZmZmZkdHRysrRysrR0dmZmZmZi0tRy0tZmZmZmZmRysrRysrZmZmZmZmZi0tRy0tZmZmZmZmRysrRysrR0dmZmZmZi0tRy0tZmZmZkdHRyIsInJ1bGVzX2MiOiIvIiwidHJ1bmsiOiJkZWZhdWx0OmFjYWNpYV90cmVlIiwibGVhdmVzIjoiZGVmYXVsdDphY2FjaWFfbGVhdmVzIiwiYW5nbGUiOjQ1LCJpdGVyYXRpb25zIjozLCJyYW5kb21fbGV2ZWwiOjAsInRydW5rX3R5cGUiOiJzaW5nbGUiLCJ0aGluX2JyYW5jaGVzIjp0cnVlfSwiYnVpbGRlciI6eyJ0ZW1wbGF0ZSI6ImN1c3RvbSIsInZhbHVlcyI6e319fQ)
+
 (no screenshot available)
 
 ## See also
 
+- [L-system tree editor](https://workbench.luanti.org/l-system/editor) (a browser-based editor for designing and previewing L-system trees)
 - [L-System Tree Utility](https://forum.luanti.org/viewtopic.php?f=11&t=9458) (a mod which helps to create L-system trees in-game)
