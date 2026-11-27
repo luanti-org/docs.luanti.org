@@ -41,7 +41,7 @@ So we’re currently stuck with mod-based solutions, sadly.
 
 #### Player Physics API
 
-Player Physics API is a mod by Wuzzy that basically implements what has been suggested for Luanti. It resolves this conflict by providing a “common ground” for mods to work together in this regard. You can find this mod here: [https://forum.luanti.org/viewtopic.php?f=11&t=22172](https://forum.luanti.org/viewtopic.php?f=11&t=22172)
+Player Physics API is a mod by Wuzzy that basically implements what has been suggested for Luanti. It resolves this conflict by providing a “common ground” for mods to work together in this regard. You can find this mod here: [https://content.luanti.org/packages/Wuzzy/playerphysics/](https://content.luanti.org/packages/Wuzzy/playerphysics/)
 
 It works by letting mods add and remove “modifiers” to a certain physical attribute, and the final result is created by multiplying all modifiers together.
 

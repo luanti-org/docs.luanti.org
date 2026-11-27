@@ -42,13 +42,13 @@ Since version 5.0.0, the preferred way to make mods and games translatable is wi
 
 ##### Help modpack
 
-The [Help](https://forum.luanti.org/viewtopic.php?f=9&t=15912) modpack is a sophisticated in-game help system. It allows you to write help texts for almost everything; it could be used to document items, mods or even an entire game, entirely within the game only.
+The [Help](https://content.luanti.org/packages/Wuzzy/doc/) modpack is a sophisticated in-game help system. It allows you to write help texts for almost everything; it could be used to document items, mods or even an entire game, entirely within the game only.
 
 The following Help mods are relevant for modding:
 
-- [Item Help](https://forum.luanti.org/viewtopic.php?f=9&t=15912) [doc\_items]: Allows you to add long item explanations, an usage help and automatically generated help texts for items
-- [Lookup Tool](https://forum.luanti.org/viewtopic.php?f=9&t=15912) [doc\_identifier]: The lookup tool opens up the appropriate help entry on almost everything it punches. It almost works out of the box, but manual intervention from the modder is required for any custom entity
-- [Documentation System](https://forum.luanti.org/viewtopic.php?f=9&t=15912) [doc]: Low-level core API (for advanced users). Allows you to add your own entries and even entire help categories from scratch. Also has many utility functions
+- [Item Help](https://content.luanti.org/packages/Wuzzy/doc/) [doc\_items]: Allows you to add long item explanations, an usage help and automatically generated help texts for items
+- [Lookup Tool](https://content.luanti.org/packages/Wuzzy/doc/) [doc\_identifier]: The lookup tool opens up the appropriate help entry on almost everything it punches. It almost works out of the box, but manual intervention from the modder is required for any custom entity
+- [Documentation System](https://content.luanti.org/packages/Wuzzy/doc/) [doc]: Low-level core API (for advanced users). Allows you to add your own entries and even entire help categories from scratch. Also has many utility functions
 
 To get started with this modpack quickly, there's an example mod to demonstrate how to use these mods: [doc_example](http://repo.or.cz/minetest_doc_example.git)
 
@@ -58,17 +58,17 @@ To get started with this modpack quickly, there's an example mod to demonstrate 
 
 If you want to add temporary or permanent status effects for players (such as poisoning), you can use this:
 
-- [Player Effects](https://forum.luanti.org/viewtopic.php?f=11&t=9689) [playereffects]
-- [Player Monoids](https://forum.luanti.org/viewtopic.php?f=11&t=14895) [player\_monoids]
+- [Player Effects](https://content.luanti.org/packages/Wuzzy/playereffects/) [playereffects]
+- [Player Monoids](https://content.luanti.org/packages/Byakuren/player_monoids/) [player\_monoids]
 
 #### RPG-like elements
 
 This includes things usually found in RPGs (role-playing games) like stats, leveling up, experience points, quests, etc.
 
-- [Mana](https://forum.luanti.org/viewtopic.php?f=11&t=11154) [mana]: Adds a new player attribute (mana), could be used as resource for magic spells, weapons, tools, etc.
+- [Mana](https://content.luanti.org/packages/Wuzzy/mana/) [mana]: Adds a new player attribute (mana), could be used as resource for magic spells, weapons, tools, etc.
 - [Sunburn](https://forum.luanti.org/viewtopic.php?f=9&t=13199) [sunburn]: Makes sunlight dangerous, by causing sunburn (damage in direct sunlight)
-- [SkillsFramework](https://forum.luanti.org/viewtopic.php?f=9&t=11406) [skillsframework] Skills
-- [Quest framework](https://forum.luanti.org/viewtopic.php?f=11&t=11265) [quests]: Quest framework
+- [SkillsFramework](https://content.luanti.org/packages/domtron%20vox/skillsframework/) [skillsframework] Skills
+- [Quest framework](https://content.luanti.org/packages/TeTpaAka/quests/) [quests]: Quest framework
 - [sys4_quests](https://forum.luanti.org/viewtopic.php?f=9&t=14222) [sys4\_quests]: Another quest framework, depends on [quests]
 
 #### Mobs
@@ -109,11 +109,11 @@ Many mods offer convenience functions to add new new nodes which follow a simple
   - [Furniture](https://forum.luanti.org/viewtopic.php?f=11&t=14910) [furniture]: Tables, chairs and stools
   - [more shelves](https://forum.luanti.org/viewtopic.php?f=11&t=15724) [moreshelves]: Shelves
   - [flower pots](https://forum.luanti.org/viewtopic.php?f=9&t=15265) [flowerpots]: Flower pots
-  - [Minetest Game Plus](https://forum.luanti.org/viewtopic.php?f=9&t=15731) [mtg\_plus]: Cups
+  - [Minetest Game Plus](https://content.luanti.org/packages/Wuzzy/mtg_plus/) [mtg\_plus]: Cups
   - [corrupt shapes](https://forum.luanti.org/viewtopic.php?f=9&t=15399) [csh]: Additional shapes: Cylinders and related shapes
-  - [mymillwork](https://forum.luanti.org/viewtopic.php?f=11&t=10425) [mymillwork]: Additional shapes: Crown moulds, beams, columns, baseboards
-  - [kaeza's/VanessaE's signs library](https://forum.luanti.org/viewtopic.php?f=11&t=13762) [signs\_lib]: Advanced signs
-  - [Biome library](https://forum.luanti.org/viewtopic.php?f=11&t=12999) [biome\_lib]: Growing plants
+  - [mymillwork](https://content.luanti.org/packages/Don/mymillwork/) [mymillwork]: Additional shapes: Crown moulds, beams, columns, baseboards
+  - [kaeza's/VanessaE's signs library](https://content.luanti.org/packages/mt-mods/signs_lib/) [signs\_lib]: Advanced signs
+  - [Biome library](https://content.luanti.org/packages/mt-mods/biome_lib/) [biome\_lib]: Growing plants
   - [Display API](https://github.com/pyrollo/display_api) [display\_api]: Nodes with a dynamic display, e.g. digital clocks. See [Display Modpack](https://forum.luanti.org/viewtopic.php?f=11&t=13563)
   - [Font API](https://github.com/pyrollo/font_api) [font\_api]: Make textures from text and fonts. See [Display Modpack](https://forum.luanti.org/viewtopic.php?f=11&t=13563)
   - [Signs API](https://github.com/pyrollo/signs_api) [signs\_api]: Combining Font API and Display API, easy creation of any kind of signs. See [Display Modpack](https://forum.luanti.org/viewtopic.php?f=11&t=13563)
@@ -170,7 +170,7 @@ Recommendation: First check if any of the node's callback functions are appropri
 
 #### Preventing pistons from pushing or pulling your node
 
-The [Mesecons](https://forum.luanti.org/viewtopic.php?f=11&t=628) modpack has pistons which are able to push and pull other blocks around. By default, this happens for pretty much all blocks. If you want to prevent this behavior for your block, you have to explicitly exclude your block.
+The [Mesecons](https://content.luanti.org/packages/Jeija/mesecons/) modpack has pistons which are able to push and pull other blocks around. By default, this happens for pretty much all blocks. If you want to prevent this behavior for your block, you have to explicitly exclude your block.
 
 To do this for a node “example:myblock”, add `mesecons_mvps` to your optional dependencies in `mod.conf` and the following code after the registration function of your node:
 
@@ -192,19 +192,19 @@ If you create a new player attribute/stat (like health) and you want to expose i
 
 For showing messages to players.
 
-- [Central Message](https://forum.luanti.org/viewtopic.php?f=9&t=12720) [central\_message]: Simple API to show messages at the center of the screen for a short time
+- [Central Message](https://content.luanti.org/packages/Wuzzy/central_message/) [central\_message]: Simple API to show messages at the center of the screen for a short time
 
 Some mods enhance or change the inventory menu and provide an API to add buttons and other things to the inventory menu. This can come in handy if you have made your own formspec and seek for ways to access them.
 
 - Simple Fast Inventory [sfinv]: Part of Minetest Game, you can add custom tabs to the inventory menu. See [SFINV Tutorial](https://rubenwardy.com/minetest_modding_book/en/chapters/sfinv.html)
-- [Simple Fast Inventory Buttons](https://forum.luanti.org/viewtopic.php?f=9&t=16079&p=244441) [sfinv\_buttons]: Adds a new tab “More” to the inventory menu of Minetest Game, in which mods can add buttons for doing any action you want
-- [Unified Inventory](https://forum.luanti.org/viewtopic.php?f=11&t=12767) [unified\_inventory]: Supports adding buttons for doing any action you want (undocumented API)
+- [Simple Fast Inventory Buttons](https://content.luanti.org/packages/Wuzzy/sfinv_buttons/) [sfinv\_buttons]: Adds a new tab “More” to the inventory menu of Minetest Game, in which mods can add buttons for doing any action you want
+- [Unified Inventory](https://content.luanti.org/packages/RealBadAngel/unified_inventory/) [unified\_inventory]: Supports adding buttons for doing any action you want (undocumented API)
 - [Inventory++](https://forum.luanti.org/viewtopic.php?f=11&t=6204) [inventory\_plus]: Supports adding buttons for adding “sub-menus” to the inventory menu. This mod does not work well together with newer versions of Minetest Game but it may still be usable for some other games
 
 #### Formspecs
 
-- [Smart Formspecs](https://forum.luanti.org/viewtopic.php?f=11&t=7553&p=116028) [smartfs]: Simplification and enhancement of the formspec API
-- [Select Item](https://forum.luanti.org/viewtopic.php?t=20109) [select\_item]: Dialog to select an item
+- [Smart Formspecs](https://content.luanti.org/packages/rubenwardy/smartfs/) [smartfs]: Simplification and enhancement of the formspec API
+- [Select Item](https://content.luanti.org/packages/Wuzzy/select_item/) [select\_item]: Dialog to select an item
 
 ### Decoration
 
@@ -212,18 +212,18 @@ Some mods enhance or change the inventory menu and provide an API to add buttons
 
 If your mod provides blocks in multiple colors, there are various mods and conventions to consider for ensuring the best interoperability.
 
-It is strongly recommended you only use colors which follow an agreed-upon set of predefined colors. A basic set of 15 colors is defined in the “dye” mod in Minetest Game. Read the source code to learn more. Other mods provide an extended set of dyes. The mod [Unified Dyes](https://forum.luanti.org/viewtopic.php?id=2178) [unifieddyes] extends the set of colors to 90 colors.
+It is strongly recommended you only use colors which follow an agreed-upon set of predefined colors. A basic set of 15 colors is defined in the “dye” mod in Minetest Game. Read the source code to learn more. Other mods provide an extended set of dyes. The mod [Unified Dyes](https://content.luanti.org/packages/mt-mods/unifieddyes/) [unifieddyes] extends the set of colors to 90 colors.
 
 Other specific mods for consideration:
 
 - Colorization by crafting: Consider if you want to add crafting recipes by adding a dye and your item (like wool in Minetest Game, read it source code to learn how it works)
 - [Color Machine](https://forum.luanti.org/viewtopic.php?f=11&t=6670) [colormachine]: Coloring support will be provided by the mod itself, as long as the authors update the mod. Your task would to to make sure that the names of the textures and nodes follow naming conventions
 - [Paint Roller](https://forum.luanti.org/viewtopic.php?f=11&t=9170) [paint\_roller]: Use the API of this mod to enable the paint roller to colorize your blocks
-- [mypaint](https://forum.luanti.org/viewtopic.php?f=11&t=14274) [mypaint]: This mod allows to paint in arbitrary colors using paint buckets and brushes; internally it seems to work very different than the other mods
+- [mypaint](https://content.luanti.org/packages/Don/mypaint/) [mypaint]: This mod allows to paint in arbitrary colors using paint buckets and brushes; internally it seems to work very different than the other mods
 
 #### Other
 
-- [Font API](https://github.com/pyrollo/display_modpack/tree/master/font_api) [font\_api]: A library for displaying text on entities. Part of [Display Modpack](https://forum.luanti.org/viewtopic.php?t=19365)
+- [Font API](https://github.com/pyrollo/display_modpack/tree/master/font_api) [font\_api]: A library for displaying text on entities. Part of [Display Modpack](https://content.luanti.org/packages/mt-mods/display_modpack/)
 
 ## Groups
 

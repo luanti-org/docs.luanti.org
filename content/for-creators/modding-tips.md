@@ -103,7 +103,7 @@ A good mod is one that still works when a lot of other mods are used. Read [Mod_
 
 Here's a list of things to check in your game or mod to improve general quality and to avoid common pitfalls. Not all things might apply for your game, always use good judgement.
 
-Note: Some of these can be checked quickly with [QA-Block](https://forum.luanti.org/viewtopic.php?t=15759). See also: [Development Tools](/Development_Tools).
+Note: Some of these can be checked quickly with [QA-Block](https://content.luanti.org/packages/bell07/qa_block/). See also: [Development Tools](/Development_Tools).
 
 ### Preventing crashes, exploits and bugs
 
@@ -182,7 +182,7 @@ Note: Some of these can be checked quickly with [QA-Block](https://forum.luanti.
 
 [^5]: Detached inventories are sent to everyone unless you specify a name in the registration. So other players using a modified/hacked client could theoretically alter any detached inventory without an attached name.
 
-[^6]: The keyword “`local`” should be your new friend. Everything that does not need to be visible outside should be made local. This will avoid a lot of weird bugs caused by mods overwriting their global variables each other. As a rule of thumb, your mod should only have up to 1 global variable which is also the same name as the mod. Make this a table in which you include all global stuff. You can use [QA-Block](https://forum.luanti.org/viewtopic.php?t=15759) to find suspicious global variables.
+[^6]: The keyword “`local`” should be your new friend. Everything that does not need to be visible outside should be made local. This will avoid a lot of weird bugs caused by mods overwriting their global variables each other. As a rule of thumb, your mod should only have up to 1 global variable which is also the same name as the mod. Make this a table in which you include all global stuff. You can use [QA-Block](https://content.luanti.org/packages/bell07/qa_block/) to find suspicious global variables.
 
 [^7]: See also: [MT-replace-deprecated.sh](/MT-replace-deprecated.sh)
 
