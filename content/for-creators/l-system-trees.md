@@ -12,7 +12,7 @@ Luanti has two types of trees built in: Small simple ones like the trees in the 
 
 You can experiment with L-system trees in your browser using the [L-system tree editor](https://workbench.luanti.org/l-system/editor).
 
-The following chat log might be helpful in understanding how L-system trees work: [#minetest 2013-08-08](http://irc.minetest.ru/minetest/2013-08-08#i_3250058)
+The following chat log might be helpful in understanding how L-system trees work: [#minetest 2013-08-08](http://irc.luanti.org/minetest/2013-08-08#i_3250058)
 
 ## Turtle graphics
 
@@ -124,7 +124,7 @@ treedef={
 
 ### Apple tree
 
-Works in any game with basic map generation. This tree is used as the example tree in the mod “[L-System Tree Utility](https://forum.luanti.org/viewtopic.php?f=11&t=9458)”.
+Works in any game with basic map generation. This tree is used as the example tree in the mod “[L-System Tree Utility](https://content.luanti.org/packages/Wuzzy/ltool/)”.
 
 {{% comment %}} cspell:disable {{% /comment %}}
 
@@ -200,4 +200,4 @@ treedef={
 ## See also
 
 - [L-system tree editor](https://workbench.luanti.org/l-system/editor) (a browser-based editor for designing and previewing L-system trees)
-- [L-System Tree Utility](https://forum.luanti.org/viewtopic.php?f=11&t=9458) (a mod which helps to create L-system trees in-game)
+- [L-System Tree Utility](https://content.luanti.org/packages/Wuzzy/ltool/) (a mod which helps to create L-system trees in-game)
