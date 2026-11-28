@@ -20,7 +20,7 @@
     "hugo-extended": "^0.170.0"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.14.0",
+    "@axe-core/playwright": "^4.14.1",
     "@playwright/test": "^1.65.1",
     "cspell": "^10.5.2",
     "linkinator": "^8.1.0",
